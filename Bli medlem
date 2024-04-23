@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bli medlem</title>
+    <style>
+        .container {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .text {
+            width: 60%;
+            padding-right: 20px;
+        }
+
+        .image {
+            flex: 1;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .text, .image {
+                width: 100%;
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="text">
+            <h2>Bli medlem</h2>
+            <p>Vad kul att du vill bli medlem i Kombo! När du blir medlem ställs du automatiskt i Kombos bostadskö. Vill du vara medlem men inte bo i huset är du givetvis precis lika välkommen!</p>
+            <p>Medlemskapet kostar 200 kronor per år.</p>
+        </div>
+        <div class="image">
+            <!-- BIld HÄR -->
+     
+        </div>
+    </div>
+</body>
+</html>
