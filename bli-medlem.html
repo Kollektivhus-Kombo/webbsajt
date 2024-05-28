@@ -132,13 +132,13 @@
           modal.style.display = "block";
 
           const formData = new FormData(this);
-          const url = 'https://docs.google.com/forms/d/e/1FAIpQLSdewvYCRSRxuA4_n6TbcyfjMawj6mqGoVQ6x-kCivn5eWYIWQ/formResponse?&submit=Submit?usp=pp_url';
+          const url = 'https://script.google.com/macros/s/AKfycbyxOI_34hifgQxJf2VimwQBhaaL5lXPNMeIEDukjDoksm5VonrEG3Hr01qSviGsKoa37w/exec';
 
           const params = new URLSearchParams();
-          params.append('entry.24890623', document.getElementById("email").value);
-          params.append('entry.1626068865', document.getElementById("name").value);
-          params.append('entry.1947408006', document.getElementById("dob".value);
-          params.append('entry.1052747683', 'Ja');
+          params.append('email', document.getElementById("email"));
+          params.append('name', document.getElementById("name"));
+          params.append('birth', document.getElementById("dob"));
+          params.append('gdpr', 'Ja');
 
           for (const pair of formData.entries()) {
               params.append(pair[0], pair[1]);
