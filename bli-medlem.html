@@ -129,8 +129,35 @@
 
       document.getElementById("registration-form").addEventListener("submit", function(event) {
           event.preventDefault();
-            modal.style.display = "block";
-        });
+          modal.style.display = "block";
+
+          const formData = new FormData(this);
+          const url = 'https://docs.google.com/forms/d/e/1FAIpQLSdewvYCRSRxuA4_n6TbcyfjMawj6mqGoVQ6x-kCivn5eWYIWQ/formResponse?&submit=Submit?usp=pp_url';
+
+          const params = new URLSearchParams();
+          params.append('entry.24890623', document.getElementById("email").value);
+          params.append('entry.1626068865', document.getElementById("name").value);
+          params.append('entry.1947408006', document.getElementById("dob".value);
+          params.append('entry.1052747683', 'Ja');
+
+          for (const pair of formData.entries()) {
+              params.append(pair[0], pair[1]);
+          }
+
+          fetch(url, {
+              method: 'POST',
+              body: params
+          }).then(response => {
+              if (response.ok) {
+                  alert('Form submitted successfully.');
+              } else {
+                  alert('Form submission failed.');
+              }
+          }).catch(error => {
+              console.error('Error:', error);
+              alert('Form submission error.');
+          });
+      });
         
       window.onclick = function(event) {
         if (event.target == modal) {
