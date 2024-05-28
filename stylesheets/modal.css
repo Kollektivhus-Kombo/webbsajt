@@ -21,7 +21,7 @@
   position: relative;
 }
 
-.modal-content-wrapper img {
+.celebrate {
   position: absolute;
   z-index: 1;
   left: 0;
@@ -40,7 +40,7 @@
 }
 
 .modal-content p {
-  font-size: 24px;
+  font-size: 16px;
 }
 
 .modal-content a {
@@ -49,10 +49,6 @@
 
 @media screen and (min-width: 700px) {
   .modal-content p {
-    font-size: 32px;
-  }
-
-  .celebrate {
-    height: 160px;
+    font-size: 16px;
   }
 }
