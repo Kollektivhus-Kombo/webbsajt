@@ -29,6 +29,10 @@
   height: 110px;
 }
 
+.inline-qr {
+  height: 2200px;
+}
+
 .modal-content {
   position: relative;
   z-index: 2;
