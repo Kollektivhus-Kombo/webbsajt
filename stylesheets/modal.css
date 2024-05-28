@@ -56,3 +56,9 @@
     height: 160px;
   }
 }
+
+.inline-qr {
+    display: inline-block;
+    vertical-align: middle; /* Adjusts the vertical alignment of the image */
+    margin-left: 10px; /* Adds some space between the text and the image */
+}
