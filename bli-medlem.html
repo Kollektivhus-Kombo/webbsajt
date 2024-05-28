@@ -135,9 +135,9 @@
           const url = 'https://script.google.com/macros/s/AKfycbyxOI_34hifgQxJf2VimwQBhaaL5lXPNMeIEDukjDoksm5VonrEG3Hr01qSviGsKoa37w/exec';
 
           const params = new URLSearchParams();
-          params.append('email', document.getElementById("email"));
-          params.append('name', document.getElementById("name"));
-          params.append('birth', document.getElementById("dob"));
+          params.append('email', document.getElementById("email").value);
+          params.append('name', document.getElementById("name").value);
+          params.append('birth', document.getElementById("dob").value);
           params.append('gdpr', 'Ja');
 
           for (const pair of formData.entries()) {
