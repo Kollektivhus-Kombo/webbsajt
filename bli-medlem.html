@@ -132,7 +132,7 @@
           modal.style.display = "block";
 
           const formData = new FormData(this);
-          const url = 'https://script.google.com/macros/s/AKfycbzJLiq7rTEeB8RxeJ7pyGWZEEoDzEPBEjR5N1mL3bkUTCSmcynjbXEr7Nleiw8836O5Hg/exec';
+          const url = 'https://script.google.com/macros/s/AKfycbzOh3ruxTQ2N2AzvFFqIYSH5B54HSjlvrhk64rqId6cf0p_4KbqwkYRIX8bA5HB9nRWlQ/exec';
 
           const params = new URLSearchParams();
           params.append('email', document.getElementById("email").value);
@@ -149,9 +149,9 @@
               body: params
           }).then(response => {
               if (response.ok) {
-                  alert('Form submitted successfully.');
+                  //nothing
               } else {
-                  alert('Form submission failed.');
+                  alert('Något gick fel.\nSkicka gärna ett mejl till kombo.styrelse@gmail.com\nmed informationen och betala medlemsavgiften.');
               }
           }).catch(error => {
               console.error('Error:', error);
