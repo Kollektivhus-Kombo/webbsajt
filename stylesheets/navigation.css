@@ -1,6 +1,6 @@
 /* === NAVIGATION === */
 .navigation {
-  background-color: #faf7f4; /* varm ton istället för helt vit */
+  background-color: var(--color-background); /* samma som resten av sidan */
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   padding: 22px 0;
   margin-bottom: 32px;
@@ -18,93 +18,4 @@
   align-items: center;
   gap: 20px;
   list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-/* === Individuella länkar === */
-.navigation-link a {
-  color: #2b2b2b;
-  font-size: 18px;
-  font-weight: 600;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  transition: all 0.2s ease;
-  padding: 6px 10px;
-  border-radius: 8px;
-}
-
-/* === Hover-effekt === */
-.navigation-link a:hover {
-  background-color: #f2e8e5;
-  color: #a13c2f; /* tegelröd ton */
-  transform: translateY(-1px);
-}
-
-/* === Logotyp === */
-.navigation-link img {
-  max-width: 140px;
-  transition: transform 0.3s ease;
-}
-
-.navigation-link img:hover {
-  transform: scale(1.05);
-}
-
-/* === Responsivitet === */
-@media screen and (min-width: 700px) {
-  .navigation {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 0;
-    margin-bottom: 48px;
-  }
-
-  .navigation-links {
-    gap: 28px;
-    justify-content: flex-end;
-  }
-
-  .navigation-link a {
-    font-size: 20px;
-    padding: 8px 14px;
-  }
-
-  .navigation-link img {
-    max-width: 180px;
-  }
-}
-
-/* === "Insidan" – markerad som låst === */
-.navigation-link a.locked {
-  position: relative;
-  opacity: 0.7;
-  cursor: not-allowed;
-  pointer-events: none; /* inte klickbar */
-}
-
-/* Textändring vid hover (visar att sidan är låst) */
-.navigation-link a.locked::after {
-  content: "🔒 Endast för medlemmar";
-  position: absolute;
-  left: 50%;
-  bottom: -22px;
-  transform: translateX(-50%);
-  font-size: 12px;
-  color: #a13c2f;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.navigation-link a.locked:hover::after {
-  opacity: 1;
-}
-
-/* === Aktiv sida === */
-.navigation-link a.active {
-  color: #a13c2f;
-  border-bottom: 2px solid #a13c2f;
-}
+  pa
