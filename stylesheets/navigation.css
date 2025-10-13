@@ -1,12 +1,12 @@
-/* === NAVIGATION – förbättrad design === */
+/* === NAVIGATION === */
 .navigation {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 20px 0;
+  background-color: #faf7f4; /* varm ton istället för helt vit */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 22px 0;
   margin-bottom: 32px;
   display: flex;
   flex-direction: column;
   gap: 16px;
-  background-color: #fff;
   font-family: "Source Sans 3", sans-serif;
 }
 
@@ -38,9 +38,8 @@
 
 /* === Hover-effekt === */
 .navigation-link a:hover {
-  background-color: #f5f5f5;
-  text-decoration: none;
-  color: #00796b;
+  background-color: #f2e8e5;
+  color: #a13c2f; /* tegelröd ton */
   transform: translateY(-1px);
 }
 
@@ -54,7 +53,7 @@
   transform: scale(1.05);
 }
 
-/* === Responsivitet för större skärmar === */
+/* === Responsivitet === */
 @media screen and (min-width: 700px) {
   .navigation {
     flex-direction: row;
@@ -79,10 +78,35 @@
   }
 }
 
-/* === Aktiv länk (om du vill markera sidan man är på) === */
+/* === "Insidan" – markerad som låst === */
+.navigation-link a.locked {
+  position: relative;
+  opacity: 0.7;
+  cursor: not-allowed;
+  pointer-events: none; /* inte klickbar */
+}
+
+/* Textändring vid hover (visar att sidan är låst) */
+.navigation-link a.locked::after {
+  content: "🔒 Endast för medlemmar";
+  position: absolute;
+  left: 50%;
+  bottom: -22px;
+  transform: translateX(-50%);
+  font-size: 12px;
+  color: #a13c2f;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.navigation-link a.locked:hover::after {
+  opacity: 1;
+}
+
+/* === Aktiv sida === */
 .navigation-link a.active {
-  color: #00796b;
-  border-bottom: 2px solid #00796b;
+  color: #a13c2f;
+  border-bottom: 2px solid #a13c2f;
 }
 
   .navigation-link img {
