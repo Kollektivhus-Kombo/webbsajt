@@ -1,105 +1,80 @@
-/* === GRUNDLÄGGANDE LAYOUT === */
+/* layout.css - struktur, kolumner, spacing och bilder */
 .container {
-  padding: 0 24px;
-  margin: 0 auto 40px;
-  max-width: 1100px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding-left: 24px;
+  padding-right: 24px;
 }
 
-@media screen and (min-width: 700px) {
-  .container {
-    padding: 0 48px;
-    margin-bottom: 48px;
-  }
-}
-
-/* === TVÅKOLONNS-LAYOUT === */
+/* Two-column block */
 .two-column {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 40px;
+  gap: 32px;
   align-items: start;
+  margin-top: 12px;
 }
 
-@media screen and (min-width: 700px) {
+@media (min-width: 700px) {
   .two-column {
     grid-template-columns: 1fr 1fr;
-    gap: 60px;
+    gap: 48px;
   }
 }
 
-/* === BILDKOLUMN === */
+/* Bildkolumn */
 .column-image {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .column-image figure {
   max-width: 360px;
-  width: 100%;
   text-align: center;
+  margin: 0;
 }
 
 .column-image img {
   width: 100%;
   height: auto;
   border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
 }
 
 .column-image figcaption {
-  margin-top: 12px;
+  margin-top: 10px;
   font-size: 14px;
   color: #555;
   font-style: italic;
 }
 
-/* === TEXTINNEHÅLL === */
-.content-max-width {
-  max-width: 800px;
-  margin: 0 auto;
-  line-height: 1.7;
-}
+/* Content max width (för läsbarhet) */
+.content-max-width { max-width: 800px; }
 
-/* === SPACERS === */
-.spacer-l {
-  height: 64px;
-}
+/* Spacers */
+.spacer-l { height: 64px; }
+.spacer-m { height: 40px; }
 
-.spacer-m {
-  height: 40px;
-}
+/* Image utility */
+.image-m { max-width: 340px; max-height: 340px; border-radius: 10px; }
 
-/* === BILDER === */
-.image-m {
-  max-width: 340px;
-  max-height: 340px;
-  border-radius: 10px;
-}
-
-/* === KNAPPAR === */
+/* Buttons */
 .button-l {
   display: inline-block;
-  padding: 14px 28px;
-  background-color: #00796b;
-  border: none;
+  padding: 12px 24px;
   border-radius: 8px;
+  background-color: var(--color-accent);
   color: #fff;
-  font-weight: 600;
   text-decoration: none;
-  transition: all 0.25s ease;
-  cursor: pointer;
-  font-family: "Source Sans 3", sans-serif;
+  border: none;
+  font-weight: 600;
+}
+.button-l:hover { background-color: var(--color-accent-dark); transform: translateY(-2px); }
+
+/* Småskärmar */
+@media (max-width: 420px) {
+  .container { padding-left: 16px; padding-right: 16px; }
+  .two-column { gap: 20px; }
 }
 
-.button-l:hover {
-  background-color: #004d40;
-  transform: translateY(-2px);
-}
-
-/* === RESPONSIVT MAXBREDD FÖR INNEHÅLL === */
-@media screen and (min-width: 1200px) {
-  .container {
-    max-width: 1200px;
-  }
-}
