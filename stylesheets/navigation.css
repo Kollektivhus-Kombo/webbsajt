@@ -1,69 +1,89 @@
+/* === NAVIGATION – förbättrad design === */
 .navigation {
-  border-bottom: 1px solid #000;
-  padding: 26px 0;
-  margin-bottom: 26px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 20px 0;
+  margin-bottom: 32px;
   display: flex;
-  align-items: start;
   flex-direction: column;
-  gap: 18px;
-}
-
-.navigation-links {
-  margin: 0;
-  padding: 0;
-  text-indent: 0;
-  list-style-type: none;
-  display: flex;
-  justify-content: space-between;
   gap: 16px;
-  width: 100%;
+  background-color: #fff;
+  font-family: "Source Sans 3", sans-serif;
 }
 
+/* === Länkar === */
+.navigation-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* === Individuella länkar === */
 .navigation-link a {
-  color: #000;
-  font-size: 21px;
+  color: #2b2b2b;
+  font-size: 18px;
   font-weight: 600;
   text-decoration: none;
   display: flex;
   align-items: center;
   gap: 6px;
+  transition: all 0.2s ease;
+  padding: 6px 10px;
+  border-radius: 8px;
 }
 
+/* === Hover-effekt === */
 .navigation-link a:hover {
-  text-decoration: underline;
+  background-color: #f5f5f5;
+  text-decoration: none;
+  color: #00796b;
+  transform: translateY(-1px);
 }
 
+/* === Logotyp === */
 .navigation-link img {
-  max-width: 130px;
+  max-width: 140px;
+  transition: transform 0.3s ease;
 }
 
+.navigation-link img:hover {
+  transform: scale(1.05);
+}
+
+/* === Responsivitet för större skärmar === */
 @media screen and (min-width: 700px) {
   .navigation {
-    display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    flex-direction: row;
-    padding: 42px 0;
-    margin-bottom: 42px;
-    gap: 24px;
+    padding: 30px 0;
+    margin-bottom: 48px;
   }
 
   .navigation-links {
-    width: auto;
-    gap: 24px;
-    max-width: 900px;
-    width: 100%;
-    align-items: center;
+    gap: 28px;
+    justify-content: flex-end;
   }
 
   .navigation-link a {
-    color: #000;
-    font-size: 28px;
-    font-weight: 600;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
+    font-size: 20px;
+    padding: 8px 14px;
   }
+
+  .navigation-link img {
+    max-width: 180px;
+  }
+}
+
+/* === Aktiv länk (om du vill markera sidan man är på) === */
+.navigation-link a.active {
+  color: #00796b;
+  border-bottom: 2px solid #00796b;
+}
 
   .navigation-link img {
     max-width: 200px;
