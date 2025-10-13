@@ -1,86 +1,114 @@
-/* === NAVIGATION === */
+/* navigation.css - stabil, enkel och responsiv navigation */
+/* För bästa resultat: inkludera globals.css före denna fil så variabler finns tillgängliga. */
+
 .navigation {
-  background-color: var(--color-background); /* samma ton som resten av sidan */
-  border-bottom: 1px solid #000;
-  padding: 20px 0;
+  background-color: var(--color-background); /* samma ton som sidan */
+  border-bottom: 1px solid var(--color-border);
+  padding: 18px 0;
   margin-bottom: 26px;
+}
+
+/* Inre container för layout (används med .container i HTML) */
+.navigation.container {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 12px;
+  justify-content: space-between;
+  gap: 16px;
+  padding-left: 0;
+  padding-right: 0;
 }
 
-/* === Logga === */
-.navigation-link img {
-  max-width: 160px;
+/* Logotyp */
+.navigation .navigation-link.logo {
+  display: flex;
+  align-items: center;
+}
+.navigation .navigation-link.logo img {
+  max-width: 180px;
   height: auto;
+  display: block;
 }
 
-/* === Länklista === */
+/* Länkarna */
 .navigation-links {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
+  gap: 24px;
+  align-items: center;
+  justify-content: flex-end;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
 }
 
-/* === Länkar === */
+/* Individuell länk */
 .navigation-link a {
-  color: #000;
+  color: var(--color-text);
   font-size: 18px;
   font-weight: 600;
   text-decoration: none;
   display: inline-block;
-  transition: all 0.2s ease-in-out;
+  padding: 6px 8px;
+  border-radius: 6px;
+  transition: color 160ms ease, background-color 160ms ease, transform 160ms ease;
+  line-height: 1;
 }
 
-/* === Hover – tegelrött === */
+/* Hover – tegelröd (ingen konstig förskjutning av radhöjd) */
 .navigation-link a:hover {
-  color: #a13c2f; /* tegelröd */
-  text-decoration: underline;
+  color: var(--color-accent);
+  background-color: var(--color-accent-light);
+  transform: translateY(-1px);
 }
 
-/* === Desktop-layout === */
-@media screen and (min-width: 700px) {
-  .navigation {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 40px;
-  }
-
-  .navigation-links {
-    justify-content: flex-end;
-    gap: 32px;
-  }
-
-  .navigation-link a {
-    font-size: 20px;
-  }
-
-  .navigation-link img {
-    max-width: 200px;
-  }
-}
-
-/* === Låst länk (“Insidan”) === */
+/* Låst länk - "Insidan" */
 .navigation-link a.locked {
-  opacity: 0.6;
+  opacity: 0.65;
   cursor: not-allowed;
-  position: relative;
+  pointer-events: none; /* ej klickbar */
+  background: transparent;
+  color: var(--color-text);
 }
 
-.navigation-link a.locked:hover {
-  color: #000; /* ingen färgändring på hover */
-  text-decoration: none;
-}
-
+/* Låst-ikon efter text (diskret) */
 .navigation-link a.locked::after {
-  content: "🔒";
+  content: " 🔒";
   margin-left: 6px;
   font-size: 14px;
 }
 
+/* Aktiv länk (valfritt) */
+.navigation-link a.active {
+  color: var(--color-accent);
+  border-bottom: 2px solid var(--color-accent);
+}
+
+/* Mobil vy: stapla logga + länkar centrerat */
+@media (max-width: 700px) {
+  .navigation.container {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .navigation .navigation-link.logo {
+    order: 0;
+  }
+
+  .navigation-links {
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .navigation-link a { font-size: 17px; }
+}
+
+/* Desktop finjustering */
+@media (min-width: 700px) {
+  .navigation {
+    padding: 22px 0;
+  }
+
+  .navigation .navigation-link.logo img { max-width: 200px; }
+  .navigation-link a { font-size: 20px; }
+}
