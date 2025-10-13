@@ -1,70 +1,105 @@
+/* === GRUNDLÄGGANDE LAYOUT === */
 .container {
-  padding-left: 32px;
-  padding-right: 32px;
-  margin-bottom: 24px;
+  padding: 0 24px;
+  margin: 0 auto 40px;
+  max-width: 1100px;
 }
 
 @media screen and (min-width: 700px) {
   .container {
-    padding-left: 52px;
-    padding-right: 52px;
-    margin-bottom: 32px;
+    padding: 0 48px;
+    margin-bottom: 48px;
   }
 }
 
+/* === TVÅKOLONNS-LAYOUT === */
 .two-column {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 32px;
+  gap: 40px;
+  align-items: start;
 }
 
 @media screen and (min-width: 700px) {
   .two-column {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 32px;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
   }
 }
 
+/* === BILDKOLUMN === */
 .column-image {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .column-image figure {
-  max-width: 300px;
+  max-width: 360px;
+  width: 100%;
+  text-align: center;
 }
 
-@media screen and (min-width: 700px) {
-  .content-max-width {
-    max-width: 800px;
-  }
+.column-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
 }
 
+.column-image figcaption {
+  margin-top: 12px;
+  font-size: 14px;
+  color: #555;
+  font-style: italic;
+}
+
+/* === TEXTINNEHÅLL === */
+.content-max-width {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* === SPACERS === */
 .spacer-l {
-  height: 52px;
+  height: 64px;
 }
 
 .spacer-m {
-  height: 34px;
+  height: 40px;
 }
 
+/* === BILDER === */
 .image-m {
-  max-width: 300px;
-  max-height: 300px;
+  max-width: 340px;
+  max-height: 340px;
+  border-radius: 10px;
 }
 
+/* === KNAPPAR === */
 .button-l {
   display: inline-block;
-  padding: 16px 32px;
-  background-color: #f9ffef;
-  border: 1px solid #000;
-  color: #000;
+  padding: 14px 28px;
+  background-color: #00796b;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 600;
   text-decoration: none;
-  transition: all 150ms ease-in-out;
+  transition: all 0.25s ease;
+  cursor: pointer;
+  font-family: "Source Sans 3", sans-serif;
 }
 
 .button-l:hover {
-  background-color: #000;
-  color: #f9ffef;
+  background-color: #004d40;
+  transform: translateY(-2px);
+}
+
+/* === RESPONSIVT MAXBREDD FÖR INNEHÅLL === */
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
 }
