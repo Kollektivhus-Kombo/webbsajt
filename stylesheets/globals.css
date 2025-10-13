@@ -1,120 +1,77 @@
-/* === FÄRGTEMA === */
+/* globals.css - färger, typsnitt och basstilar */
 :root {
-  --color-background: #f9f6f3; /* mjukt beige/vitt */
-  --color-surface: #faf7f4;     /* ljusare variant, för t.ex. navigation */
-  --color-text: #2b2b2b;        /* mörkgrå för bättre läsbarhet */
-  --color-accent: #a13c2f;      /* tegelröd huvudfärg */
-  --color-accent-light: #f2e8e5;/* ljus tegelröd ton för hover */
-  --color-border: rgba(0, 0, 0, 0.08);
+  --color-background: #f9f6f3; /* huvudbakgrund */
+  --color-surface: #faf7f4;     /* ytor (ej använt överallt men tillgängligt) */
+  --color-text: #2b2b2b;        /* huvudtext */
+  --color-accent: #a13c2f;      /* tegelröd */
+  --color-accent-dark: #802f24; /* mörkare tegelröd */
+  --color-accent-light: #f2e8e5;/* ljus tegelton för hover-yta */
+  --color-border: rgba(0,0,0,0.08);
+  --max-width: 1100px;
 }
 
-/* === GLOBAL STIL === */
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
+  font-size: 16px;
 }
 
-*, *::before, *::after {
-  box-sizing: inherit;
-}
+*, *::before, *::after { box-sizing: inherit; }
 
 body {
   margin: 0;
-  font-family: "Source Sans 3", sans-serif;
+  font-family: "Source Sans 3", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
   color: var(--color-text);
   background-color: var(--color-background);
   line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* === RUBRIKER === */
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Source Serif 4", serif;
+/* Rubriker - serif för mer personligt uttryck */
+h1,h2,h3,h4,h5,h6 {
+  font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
   color: var(--color-accent);
-  margin-top: 0;
-  line-height: 1.3;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.25;
 }
 
-h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
+h1 { font-size: 2rem; }
+h2 { font-size: 1.6rem; }
+h3 { font-size: 1.25rem; }
 
-h2 {
-  font-size: 1.6rem;
-  margin-bottom: 0.8rem;
-}
+p { margin: 0 0 1.2rem 0; }
 
-h3 {
-  font-size: 1.3rem;
-  margin-bottom: 0.6rem;
-}
+/* Länkar */
+a { color: var(--color-accent); text-decoration: none; transition: color 180ms ease; }
+a:hover { color: var(--color-accent-dark); text-decoration: underline; }
 
-/* === TEXT === */
-p {
-  margin-bottom: 1.2rem;
-  max-width: 700px;
-}
+/* Bilder */
+img { max-width: 100%; display: block; }
 
-a {
-  color: var(--color-accent);
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
+/* Utility */
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 24px; }
+@media (min-width: 700px) { .container { padding: 0 48px; } }
 
-a:hover {
-  color: #802f24; /* mörkare tegelröd vid hover */
-}
+/* Rensade HR */
+hr { border: none; border-top: 1px solid var(--color-border); margin: 40px 0; }
 
-/* === FIGURE OCH BILDER === */
-figure {
-  margin: 0;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
-/* === KNAPPAR === */
-button,
-.button-l {
-  display: inline-block;
+/* Knappar (default) */
+button, .button-l {
+  font-family: inherit;
   background-color: var(--color-accent);
   color: #fff;
   border: none;
-  padding: 14px 28px;
+  padding: 12px 20px;
   border-radius: 8px;
-  font-weight: 600;
   cursor: pointer;
-  font-family: "Source Sans 3", sans-serif;
-  transition: all 0.25s ease;
+  font-weight: 600;
+  transition: transform 180ms ease, background-color 180ms ease;
 }
+button:hover, .button-l:hover { background-color: var(--color-accent-dark); transform: translateY(-2px); }
 
-button:hover,
-.button-l:hover {
-  background-color: #802f24; /* mörkare tegelrött */
-  transform: translateY(-2px);
+/* Responsiv textjustering */
+@media (min-width: 1000px) {
+  h1 { font-size: 2.4rem; }
+  h2 { font-size: 1.8rem; }
 }
-
-/* === LAYOUT / YTA === */
-.container {
-  background-color: transparent;
-}
-
-hr {
-  border: none;
-  border-top: 1px solid var(--color-border);
-  margin: 40px 0;
-}
-
-/* === RESPONSIV JUSTERING === */
-@media screen and (min-width: 700px) {
-  h1 {
-    font-size: 2.4rem;
-  }
-
-  h2 {
-    font-size: 1.8rem;
-  }
-}
-
