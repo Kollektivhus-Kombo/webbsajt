@@ -1,19 +1,22 @@
-/* Header */
+/* Navigation */
 .navigation {
   width: 100%;
   background-color: #fff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: color 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
-/* Container */
+/* Container med flex-layout */
 .nav-container {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between; /* logga till vänster, länkar till höger */
   align-items: center;
-  padding: 20px 48px;
+  justify-content: space-between;
   max-width: 1440px;
   margin: 0 auto;
+  padding: 20px 48px;
   height: 104px;
 }
 
@@ -21,49 +24,54 @@
 .nav-logo img {
   height: 60px;
   width: auto;
-  display: block;
 }
 
-/* Navigationslänkar */
+/* Länkar i mitten */
 .nav-links {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 48px; /* mindre gap, bättre för flexibla layouter */
+  gap: 48px;
   list-style: none;
   margin: 0;
   padding: 0;
+  flex-grow: 1;
+  justify-content: center;
 }
 
 .nav-links a {
   text-decoration: none;
-  color: #222;
+  color: #222; /* standardtextfärg */
   font-size: 16px;
   font-weight: 500;
-  transition: color 0.2s ease;
+  transition: color 0.3s ease;
 }
 
-.nav-links a:hover {
-  color: #0066cc;
+/* Insidan-knappen höger */
+.nav-button .insidan-btn {
+  background-color: #6D3234;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
 }
 
-/* Låst länk */
-.nav-links .locked {
-  opacity: 0.5;
-  pointer-events: none;
+/* Scroll-effekt: text blir tegelröd */
+.scrolled .nav-links a {
+  color: #6D3234;
 }
 
-/* Responsiv design */
+/* Responsive */
 @media (max-width: 900px) {
   .nav-container {
     flex-direction: column;
-    gap: 16px;
     height: auto;
+    padding: 16px 24px;
   }
-
   .nav-links {
-    flex-wrap: wrap;
     justify-content: center;
     gap: 24px;
+    margin: 12px 0;
   }
 }
+
