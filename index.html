@@ -1,23 +1,56 @@
-<!-- Navigationsmeny -->
-<nav class="navigation">
-  <div class="nav-container">
-    <!-- Logotyp vänster -->
-    <div class="nav-logo">
-      <a href="index.html">
-        <img src="media/logo.png" alt="Kollektivhuset Kombo logo" />
-      </a>
-    </div>
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kollektivhuset Kombo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
-    <!-- Länkar i mitten -->
-    <ul class="nav-links">
-      <li><a href="medlem.html">Medlemskap och bostadskö</a></li>
-      <li><a href="stadgar.html">Stadgar</a></li>
-      <li><a href="kontakt.html">Kontakta oss</a></li>
-    </ul>
+  <!-- Navigationsmeny -->
+  <nav class="navigation">
+    <div class="nav-container">
+      <!-- Logotyp vänster -->
+      <div class="nav-logo">
+        <a href="index.html">
+          <img src="media/logo.png" alt="Kollektivhuset Kombo logo" />
+        </a>
+      </div>
 
-    <!-- Knapp till höger -->
-    <div class="nav-button">
-      <a href="#" class="insidan-btn">Insidan</a>
+      <!-- Länkar i mitten -->
+      <ul class="nav-links">
+        <li><a href="medlem.html">Medlemskap och bostadskö</a></li>
+        <li><a href="stadgar.html">Stadgar</a></li>
+        <li><a href="kontakt.html">Kontakta oss</a></li>
+      </ul>
+
+      <!-- Knapp till höger -->
+      <div class="nav-button">
+        <a href="#" class="insidan-btn">Insidan</a>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
+
+  <!-- Huvudinnehåll -->
+  <main>
+    <section class="container">
+      <h1>Välkommen till Kollektivhuset Kombo</h1>
+      <p>
+        Här kan du läsa mer om vårt kollektivhus, våra värderingar och hur du kan bli medlem.
+      </p>
+      <p>
+        Scrolla ned för att se bakgrundsfärgen i menyn ändras till en varm tegelröd ton.
+      </p>
+      <div style="height: 1500px;"></div> <!-- bara för att kunna scrolla -->
+    </section>
+  </main>
+
+  <!-- JavaScript för scroll-effekt -->
+  <script>
+    const nav = document.querySelector('.navigation');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 0) {
+        nav.classList.add('scrolled');
+
+
