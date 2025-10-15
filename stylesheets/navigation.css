@@ -1,35 +1,35 @@
 /* Header */
 .navigation {
   width: 100%;
-  background-color: #fff; /* byt färg efter Figma */
+  background-color: #fff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
-/* Container med Figma auto-layout */
+/* Container */
 .nav-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-between; /* logga till vänster, länkar till höger */
   align-items: center;
   padding: 20px 48px;
   max-width: 1440px;
   margin: 0 auto;
   height: 104px;
-  gap: 232px; /* enligt Figma */
 }
 
 /* Logotyp */
 .nav-logo img {
-  height: 60px; /* justera efter din Figma-design */
+  height: 60px;
   width: auto;
+  display: block;
 }
 
-/* Länkar */
+/* Navigationslänkar */
 .nav-links {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 32px; /* avstånd mellan länkar */
+  gap: 48px; /* mindre gap, bättre för flexibla layouter */
   list-style: none;
   margin: 0;
   padding: 0;
@@ -37,14 +37,14 @@
 
 .nav-links a {
   text-decoration: none;
-  color: #222; /* byt färg efter Figma */
+  color: #222;
   font-size: 16px;
   font-weight: 500;
   transition: color 0.2s ease;
 }
 
 .nav-links a:hover {
-  color: #0066cc; /* accentfärg */
+  color: #0066cc;
 }
 
 /* Låst länk */
@@ -53,18 +53,17 @@
   pointer-events: none;
 }
 
-/* Responsiv version */
-@media (max-width: 768px) {
+/* Responsiv design */
+@media (max-width: 900px) {
   .nav-container {
     flex-direction: column;
     gap: 16px;
-    padding: 16px 24px;
     height: auto;
   }
 
   .nav-links {
     flex-wrap: wrap;
     justify-content: center;
+    gap: 24px;
   }
 }
-
