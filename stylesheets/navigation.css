@@ -1,114 +1,70 @@
-/* navigation.css - stabil, enkel och responsiv navigation */
-/* För bästa resultat: inkludera globals.css före denna fil så variabler finns tillgängliga. */
-
+/* Header */
 .navigation {
-  background-color: var(--color-background); /* samma ton som sidan */
-  border-bottom: 1px solid var(--color-border);
-  padding: 18px 0;
-  margin-bottom: 26px;
+  width: 100%;
+  background-color: #fff; /* byt färg efter Figma */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
-/* Inre container för layout (används med .container i HTML) */
-.navigation.container {
+/* Container med Figma auto-layout */
+.nav-container {
   display: flex;
-  align-items: center;
+  flex-direction: row;
   justify-content: space-between;
-  gap: 16px;
-  padding-left: 0;
-  padding-right: 0;
+  align-items: center;
+  padding: 20px 48px;
+  max-width: 1440px;
+  margin: 0 auto;
+  height: 104px;
+  gap: 232px; /* enligt Figma */
 }
 
 /* Logotyp */
-.navigation .navigation-link.logo {
-  display: flex;
-  align-items: center;
-}
-.navigation .navigation-link.logo img {
-  max-width: 180px;
-  height: auto;
-  display: block;
+.nav-logo img {
+  height: 60px; /* justera efter din Figma-design */
+  width: auto;
 }
 
-/* Länkarna */
-.navigation-links {
+/* Länkar */
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 32px; /* avstånd mellan länkar */
   list-style: none;
   margin: 0;
   padding: 0;
-  display: flex;
-  gap: 24px;
-  align-items: center;
-  justify-content: flex-end;
-  flex-wrap: wrap;
 }
 
-/* Individuell länk */
-.navigation-link a {
-  color: var(--color-text);
-  font-size: 18px;
-  font-weight: 600;
+.nav-links a {
   text-decoration: none;
-  display: inline-block;
-  padding: 6px 8px;
-  border-radius: 6px;
-  transition: color 160ms ease, background-color 160ms ease, transform 160ms ease;
-  line-height: 1;
+  color: #222; /* byt färg efter Figma */
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.2s ease;
 }
 
-/* Hover – tegelröd (ingen konstig förskjutning av radhöjd) */
-.navigation-link a:hover {
-  color: var(--color-accent);
-  background-color: var(--color-accent-light);
-  transform: translateY(-1px);
+.nav-links a:hover {
+  color: #0066cc; /* accentfärg */
 }
 
-/* Låst länk - "Insidan" */
-.navigation-link a.locked {
-  opacity: 0.65;
-  cursor: not-allowed;
-  pointer-events: none; /* ej klickbar */
-  background: transparent;
-  color: var(--color-text);
+/* Låst länk */
+.nav-links .locked {
+  opacity: 0.5;
+  pointer-events: none;
 }
 
-/* Låst-ikon efter text (diskret) */
-.navigation-link a.locked::after {
-  content: " 🔒";
-  margin-left: 6px;
-  font-size: 14px;
-}
-
-/* Aktiv länk (valfritt) */
-.navigation-link a.active {
-  color: var(--color-accent);
-  border-bottom: 2px solid var(--color-accent);
-}
-
-/* Mobil vy: stapla logga + länkar centrerat */
-@media (max-width: 700px) {
-  .navigation.container {
+/* Responsiv version */
+@media (max-width: 768px) {
+  .nav-container {
     flex-direction: column;
-    align-items: center;
-    gap: 12px;
-  }
-
-  .navigation .navigation-link.logo {
-    order: 0;
-  }
-
-  .navigation-links {
-    justify-content: center;
     gap: 16px;
+    padding: 16px 24px;
+    height: auto;
   }
 
-  .navigation-link a { font-size: 17px; }
-}
-
-/* Desktop finjustering */
-@media (min-width: 700px) {
-  .navigation {
-    padding: 22px 0;
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
   }
-
-  .navigation .navigation-link.logo img { max-width: 200px; }
-  .navigation-link a { font-size: 20px; }
 }
+
