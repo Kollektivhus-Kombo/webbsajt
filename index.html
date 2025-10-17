@@ -4,260 +4,32 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kollektivhuset Kombo</title>
+
+    <!-- Google Fonts -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&display=swap"
       rel="stylesheet"
     />
+
     <style>
-      /* ------------------------------
-         GRUNDSTILAR
-      ------------------------------ */
       body {
+        font-family: "Source Sans 3", sans-serif;
+        background-color: #f5f3f0;
         margin: 0;
-        font-family: "Inter", sans-serif;
-        color: #333;
-        background-color: #f7f4f1; /* varm, ljus ton inspirerad av tegel */
+        color: #2b2b2b;
         line-height: 1.6;
       }
 
-      a {
-        text-decoration: none;
-        color: inherit;
-      }
-
-      .container {
-        width: 90%;
-        max-width: 1100px;
-        margin: 0 auto;
-      }
-
-      /* ------------------------------
-         NAVIGATION
-      ------------------------------ */
-      header {
-        background-color: #fff;
-        border-bottom: 2px solid #b65a43;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0.8rem 2rem;
-      }
-
-      header img {
-        height: 45px;
-      }
-
+      /* --- NAVIGATION --- */
       nav {
         display: flex;
         align-items: center;
-        gap: 3rem;
-      }
-
-      nav a {
-        font-weight: 500;
-        color: #222;
-        transition: color 0.3s ease;
-      }
-
-      nav a:hover {
-        color: #8a3b2d;
-      }
-
-      .insidan-btn {
-        background-color: #5c2a24;
-        color: #fff;
-        padding: 0.5rem 1.2rem;
-        border-radius: 6px;
-        font-weight: 500;
-        transition: background-color 0.3s ease;
-      }
-
-      .insidan-btn:hover {
-        background-color: #b65a43;
-      }
-
-      /* ------------------------------
-         HERO-SEKTION
-      ------------------------------ */
-      .hero {
-        background-color: #f7f4f1;
-        padding: 4rem 0 2rem;
-      }
-
-      .hero h1 {
-        font-size: 2.4rem;
-        color: #b65a43;
-        font-weight: 700;
-        margin-bottom: 2rem;
-      }
-
-      /* ------------------------------
-         INTRO-SEKTION (bilder + text)
-      ------------------------------ */
-      .intro {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 2rem;
-        align-items: start;
-        margin-bottom: 3rem;
-      }
-
-      .intro-images {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-      }
-
-      .intro-images img {
-        width: 100%;
-        border-radius: 6px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-      }
-
-      .intro-text {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-      }
-
-      .intro-text p {
-        margin-bottom: 1.5rem;
-      }
-
-      .btn-primary {
-        align-self: flex-start;
-        background-color: transparent;
-        border: 1.5px solid #b65a43;
-        color: #b65a43;
-        padding: 0.6rem 1.5rem;
-        border-radius: 4px;
-        font-weight: 500;
-        transition: all 0.3s ease;
-        letter-spacing: 0.5px;
-      }
-
-      .btn-primary:hover {
-        background-color: #b65a43;
-        color: #fff;
-      }
-
-      /* ------------------------------
-         TEXTSEKTIONER
-      ------------------------------ */
-      .content {
-        margin-bottom: 3rem;
-      }
-
-      .content p {
-        margin-bottom: 1.5rem;
-      }
-
-      /* ------------------------------
-         FOOTER
-      ------------------------------ */
-      footer {
-        text-align: center;
-        padding: 2rem;
-        color: #666;
-        font-size: 0.9rem;
-        border-top: 1px solid #d6ccc2;
+        justify-content: space-between;
+        padding: 1rem 3rem;
         background-color: #fff;
+        border-bottom: 3px solid #b65a43;
       }
 
-      /* ------------------------------
-         RESPONSIVT
-      ------------------------------ */
-      @media (max-width: 768px) {
-        nav {
-          gap: 1.2rem;
-        }
-
-        .hero h1 {
-          font-size: 2rem;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <!-- NAVIGATION -->
-    <header>
-      <img src="media/logo.png" alt="Kollektivhuset Kombo logotyp" />
-      <nav>
-        <a href="medlem.html">Medlemskap och bostadskö</a>
-        <a href="stadgar.html">Stadgar</a>
-        <a href="kontakt.html">Kontakt</a>
-      </nav>
-      <a
-        href="https://insidan.kollektivhuskombo.se/"
-        target="_blank"
-        class="insidan-btn"
-        >Insidan</a
-      >
-    </header>
-
-    <!-- HERO -->
-    <section class="hero container">
-      <h1>Välkommen till Kombo kollektivhus!</h1>
-
-      <div class="intro">
-        <div class="intro-images">
-          <img
-            src="media/kollektivhuset_kvällssol.png"
-            alt="Kollektivhuset Kombo i kvällssol"
-          />
-          <img
-            src="media/kollektivhuset_tegelvägg.png"
-            alt="Tegelvägg med entré till Kombo"
-          />
-          <img
-            src="media/image-16.png"
-            alt="Barn vid entrén till Kollektivhuset Kombo"
-          />
-        </div>
-
-        <div class="intro-text">
-          <p>
-            Vi är en ideell förening och ett levande kollektiv av människor som
-            valt att dela mer än bara en adress. Här hjälps vi åt, umgås och
-            bygger gemenskap genom både vardag och fest. Just nu bor vi ungefär
-            75 personer i huset – 50 vuxna och 25 barn – och tillsammans
-            strävar vi efter att leva på ett sätt som är både hållbart och
-            hjärtligt.
-          </p>
-          <a href="medlem.html" class="btn-primary">Bli medlem →</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- TEXTDEL -->
-    <section class="content container">
-      <p>
-        Två kvällar i veckan dukar vi upp till gemensam middag där vi turas om
-        att laga mat. Det blir ofta en plats för skratt, samtal och nya idéer –
-        lika mycket en måltid som en mötesplats.
-      </p>
-      <p>
-        Utöver våra egna, fullt utrustade lägenheter delar vi på omkring 300
-        kvadratmeter gemensamma utrymmen. Här finns lek-, hobby-, gäst- och
-        vardagsrum, en stor matsal med uteplats och två fantastiska
-        takterrasser med utsikt över staden. De här ytorna används flitigt,
-        både för planerade aktiviteter och spontant umgänge. Vi har haft allt
-        från loppisar och fester till luciatåg för barnen och filmkvällar för
-        hela huset.
-      </p>
-      <p>
-        Våra beslut fattar vi tillsammans på husmötet – det är där idéer blir
-        verklighet. Familjebostäder är vår förvaltare och en uppskattad
-        samarbetspartner sedan många år tillbaka.
-      </p>
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-      © 2025 Kollektivhuset Kombo. Alla rättigheter förbehållna.
-    </footer>
-  </body>
-</html>
-
-
+      nav img {
+        height: 40p
 
