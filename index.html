@@ -4,183 +4,236 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kollektivhuset Kombo</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
-
     <style>
-      :root {
-        --dark-red: #6b2a25;
-        --text-color: #111;
-      }
-
+      /* ------------------------------
+         GRUNDSTILAR
+      ------------------------------ */
       body {
         margin: 0;
-        font-family: "Source Sans 3", sans-serif;
-        color: var(--text-color);
+        font-family: "Inter", sans-serif;
+        color: #333;
+        background-color: #f7f4f1; /* varm ljus bakgrund */
+        line-height: 1.6;
       }
 
-      /* ---------- NAVBAR ---------- */
-      nav.navigation {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0.8rem 2rem;
-        border-bottom: 3px solid var(--dark-red);
-        background-color: white;
-      }
-
-      .nav-logo img {
-        height: 45px;
-      }
-
-      .nav-links {
-        display: flex;
-        gap: 3rem;
-        flex: 1;
-        justify-content: center;
-      }
-
-      .nav-links a {
+      a {
         text-decoration: none;
-        color: var(--text-color);
-        font-weight: 500;
-        font-size: 1rem;
-        transition: color 0.2s ease;
-      }
-
-      .nav-links a:hover {
-        color: var(--dark-red);
-      }
-
-      .nav-insidan {
-        background-color: var(--dark-red);
-        color: white;
-        padding: 0.4rem 1rem;
-        border-radius: 6px;
-        text-decoration: none;
-        font-weight: 600;
-        transition: background-color 0.2s ease, transform 0.1s ease;
-      }
-
-      .nav-insidan:hover {
-        background-color: #541f1b;
-        transform: scale(1.03);
+        color: inherit;
       }
 
       .container {
-        max-width: 1000px;
-        margin: 2rem auto;
-        padding: 0 1rem;
+        width: 90%;
+        max-width: 1100px;
+        margin: 0 auto;
       }
 
-      h1 {
-        text-align: center;
+      /* ------------------------------
+         NAVIGATION
+      ------------------------------ */
+      header {
+        background-color: #fff;
+        border-bottom: 2px solid #b65a43;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.8rem 2rem;
+      }
+
+      header img {
+        height: 45px;
+      }
+
+      nav {
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+      }
+
+      nav a {
+        font-weight: 500;
+        color: #222;
+        transition: color 0.3s ease;
+      }
+
+      nav a:hover {
+        color: #8a3b2d; /* mörkröd hover */
+      }
+
+      .insidan-btn {
+        background-color: #5c2a24;
+        color: #fff;
+        padding: 0.5rem 1.2rem;
+        border-radius: 6px;
+        font-weight: 500;
+        transition: background-color 0.3s ease;
+      }
+
+      .insidan-btn:hover {
+        background-color: #b65a43;
+      }
+
+      /* ------------------------------
+         HERO-SEKTION
+      ------------------------------ */
+      .hero {
+        background-color: #f7f4f1;
+        padding: 4rem 0 2rem;
+      }
+
+      .hero h1 {
+        font-size: 2.4rem;
+        color: #b65a43;
+        font-weight: 700;
         margin-bottom: 2rem;
-        font-size: 2rem;
       }
 
-      .two-column {
+      /* ------------------------------
+         INTRO-SEKTION (bilder + text)
+      ------------------------------ */
+      .intro {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         gap: 2rem;
         align-items: start;
+        margin-bottom: 3rem;
       }
 
-      @media (max-width: 820px) {
-        .two-column {
-          grid-template-columns: 1fr;
-        }
+      .intro-images {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
       }
 
-      figure {
-        margin: 0;
-        text-align: center;
-      }
-
-      img {
+      .intro-images img {
         width: 100%;
-        border-radius: 8px;
+        border-radius: 6px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
       }
 
-      figcaption {
-        font-size: 0.9rem;
-        color: #555;
-        margin-top: 0.5rem;
+      .intro-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
       }
 
+      .intro-text p {
+        margin-bottom: 1.5rem;
+      }
+
+      .btn-primary {
+        align-self: flex-start;
+        background-color: transparent;
+        border: 1.5px solid #b65a43;
+        color: #b65a43;
+        padding: 0.6rem 1.5rem;
+        border-radius: 4px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        letter-spacing: 0.5px;
+      }
+
+      .btn-primary:hover {
+        background-color: #b65a43;
+        color: #fff;
+      }
+
+      /* ------------------------------
+         TEXTSEKTIONER
+      ------------------------------ */
+      .content {
+        margin-bottom: 3rem;
+      }
+
+      .content p {
+        margin-bottom: 1.5rem;
+      }
+
+      /* ------------------------------
+         FOOTER
+      ------------------------------ */
       footer {
         text-align: center;
-        padding: 2rem 0;
-        border-top: 1px solid #eee;
+        padding: 2rem;
         color: #666;
         font-size: 0.9rem;
+        border-top: 1px solid #d6ccc2;
+        background-color: #fff;
+      }
+
+      /* ------------------------------
+         RESPONSIVT
+      ------------------------------ */
+      @media (max-width: 768px) {
+        nav {
+          gap: 1.2rem;
+        }
+
+        .hero h1 {
+          font-size: 2rem;
+        }
       }
     </style>
   </head>
-
   <body>
-    <nav class="navigation">
-      <div class="nav-logo">
-        <a href="/">
-          <img src="media/logo.png" alt="Kollektivhuset Kombo logo" />
-        </a>
-      </div>
-
-      <div class="nav-links">
+    <!-- NAVIGATION -->
+    <header>
+      <img src="media/logo.png" alt="Kollektivhuset Kombo logo" />
+      <nav>
         <a href="medlem.html">Medlemskap och bostadskö</a>
         <a href="stadgar.html">Stadgar</a>
         <a href="kontakt.html">Kontakt</a>
-      </div>
+      </nav>
+      <a href="https://insidan.kollektivhuskombo.se/" target="_blank" class="insidan-btn">Insidan</a>
+    </header>
 
-      <a href="https://insidan.kollektivhuskombo.se/" target="_blank" class="nav-insidan">
-        Insidan
-      </a>
-    </nav>
+    <!-- HERO -->
+    <section class="hero container">
+      <h1>Välkommen till Kombo kollektivhus!</h1>
 
-    <div class="container">
-      <h1>Kollektivhuset Kombo</h1>
-      <div class="two-column">
-        <div>
-          <p>
-            Kombo är en ideell förening och vi som bor i huset deltar i
-            arbetsgrupper som tillsammans skapar det gemensamma. I nuläget är vi
-            25 barn och 50 vuxna, och vi strävar efter att leva klimatmässigt
-            hållbart. Vi har gemensamma middagar två gånger i veckan där vi
-            turas om att laga mat.
-          </p>
-          <p>
-            Förutom våra egna, fullt utrustade lägenheter har vi tillgång till
-            300 kvadratmeter av gemensamma utrymmen. Vi har lek-, hobby-, gäst-
-            och vardagsrum, matsal med uteplats samt två fantastiska takterrasser.
-          </p>
-          <p>
-            Dessa utrymmen nyttjas ofta för både planerat och spontant umgänge.
-            Utöver våra gemensamma middagar har vi haft fester, loppisar,
-            luciatåg för barnen och filmkvällar för alla åldrar.
-          </p>
-          <p>
-            Beslut fattar vi på husmötet. Familjebostäder är vår förvaltare och
-            samarbetspartner sedan många år.
-          </p>
+      <div class="intro">
+        <div class="intro-images">
+          <img src="media/image-1.png" alt="Fasad i kvällssol" />
+          <img src="media/image-2.png" alt="Detalj av tegelvägg" />
+          <img src="media/image-16.png" alt="Entré till Kollektivhuset Kombo" />
         </div>
-        <div class="column column-image">
-          <figure>
-            <img src="media/image-16.png" alt="Kollektivhuset Kombo på Hägerstensåsen" />
-            <figcaption>Kollektivhuset Kombo på Hägerstensåsen</figcaption>
-          </figure>
+
+        <div class="intro-text">
+          <p>
+            Vi är en ideell förening och ett levande kollektiv av människor som valt att dela mer än bara en adress.
+            Här hjälps vi åt, umgås och bygger gemenskap genom både vardag och fest.
+            Just nu bor vi ungefär 75 personer i huset – 50 vuxna och 25 barn – och tillsammans strävar vi efter att
+            leva på ett sätt som är både hållbart och hjärtligt.
+          </p>
+          <a href="medlem.html" class="btn-primary">Bli medlem →</a>
         </div>
       </div>
-    </div>
+    </section>
 
+    <!-- TEXTDEL -->
+    <section class="content container">
+      <p>
+        Två kvällar i veckan dukar vi upp till gemensam middag där vi turas om att laga mat.
+        Det blir ofta en plats för skratt, samtal och nya idéer – lika mycket en måltid som en mötesplats.
+      </p>
+      <p>
+        Utöver våra egna, fullt utrustade lägenheter delar vi på omkring 300 kvadratmeter gemensamma utrymmen.
+        Här finns lek-, hobby-, gäst- och vardagsrum, en stor matsal med uteplats och två fantastiska takterrasser med
+        utsikt över staden. De här ytorna används flitigt, både för planerade aktiviteter och spontant umgänge.
+        Vi har haft allt från loppisar och fester till luciatåg för barnen och filmkvällar för hela huset.
+      </p>
+      <p>
+        Våra beslut fattar vi tillsammans på husmötet – det är där idéer blir verklighet.
+        Familjebostäder är vår förvaltare och en uppskattad samarbetspartner sedan många år tillbaka.
+      </p>
+    </section>
+
+    <!-- FOOTER -->
     <footer>
-      <p>© 2025 Kollektivhuset Kombo | Hägerstensåsen</p>
+      © 2025 Kollektivhuset Kombo. Alla rättigheter förbehållna.
     </footer>
   </body>
 </html>
-
-
