@@ -31,5 +31,64 @@
       }
 
       nav img {
-        height: 40p
+        height: 40px;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 3rem;
+        align-items: center;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: #2b2b2b;
+        font-weight: 500;
+        transition: color 0.3s;
+      }
+
+      .nav-links a:hover {
+        color: #b65a43;
+      }
+
+      .insidan-btn {
+        background-color: #5c2a24;
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: background-color 0.3s;
+      }
+
+      .insidan-btn:hover {
+        background-color: #7a3b33;
+      }
+
+      /* --- HEADER SECTION --- */
+      header {
+        max-width: 1000px;
+        margin: 4rem auto;
+        padding: 0 1rem;
+      }
+
+      header h1 {
+        color: #b65a43;
+        font-size: 2.2rem;
+        font-weight: 700;
+        margin-bottom: 2rem;
+      }
+
+      .intro-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        align-items: start;
+      }
+
+      .image-gallery {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto auto;
+
 
