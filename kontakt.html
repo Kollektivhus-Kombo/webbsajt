@@ -1,80 +1,183 @@
 <!DOCTYPE html>
-<html lang="sv_SE">
+<html lang="sv">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kollektivhuset Kombo |  Kontakt</title>
-    <link rel="stylesheet" href="stylesheets/navigation.css" />
-    <link rel="stylesheet" href="stylesheets/layout.css" />
-    <link rel="stylesheet" href="stylesheets/globals.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <title>Kollektivhuset Kombo | Kontakt</title>
+
     <link
-      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&display=swap"
       rel="stylesheet"
     />
+
+    <style>
+      /* === NAVIGATION === */
+      .navigation {
+        width: 100%;
+        background-color: #f9f5f3;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      }
+
+      .nav-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 12px 48px;
+        height: 80px;
+        box-sizing: border-box;
+      }
+
+      .nav-logo img {
+        height: 50px;
+        width: auto;
+        display: block;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 40px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        flex-grow: 1;
+        justify-content: center;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: #222;
+        font-size: 16px;
+        font-weight: 500;
+        transition: color 0.3s ease;
+      }
+
+      .nav-links a:hover {
+        color: #6d3234;
+      }
+
+      .nav-button .insidan-btn {
+        background-color: #6d3234;
+        color: #fff;
+        text-decoration: none;
+        padding: 8px 18px;
+        border-radius: 20px;
+        font-weight: 500;
+        transition: background-color 0.3s ease;
+      }
+
+      .nav-button .insidan-btn:hover {
+        background-color: #8a4042;
+      }
+
+      body {
+        font-family: "Source Sans 3", sans-serif;
+        background-color: #f9f5f3;
+        margin: 0;
+        line-height: 1.7;
+      }
+
+      .container {
+        max-width: 1100px;
+        margin: 3rem auto;
+        padding: 0 1.5rem;
+      }
+
+      .two-column {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+      }
+
+      .two-column > div {
+        flex: 1 1 45%;
+      }
+
+      .column-image img {
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
+      }
+
+      @media (max-width: 900px) {
+        .nav-container {
+          flex-direction: column;
+          height: auto;
+          padding: 12px 24px;
+        }
+
+        .nav-links {
+          justify-content: center;
+          gap: 24px;
+          margin: 8px 0;
+        }
+
+        .two-column {
+          flex-direction: column;
+        }
+      }
+    </style>
   </head>
+
   <body>
-    <nav class="navigation container">
-      <div class="navigation-link">
-        <a href="/"
-          ><img alt="Kollektivhuset Kombo logo" src="media/logo.png" />
-          <span class="sr-only">Kollektivhuset Kombo</span>
-        </a>
+    <!-- Navigation -->
+    <nav class="navigation">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <a href="/"><img src="media/logo.png" alt="Kollektivhuset Kombo logotyp" /></a>
+        </div>
+
+        <ul class="nav-links">
+          <li><a href="medlem.html">Medlemskap och bostadskö</a></li>
+          <li><a href="stadgar.html">Stadgar</a></li>
+          <li><a href="kontakt.html">Kontakta oss</a></li>
+        </ul>
+
+        <div class="nav-button">
+          <a href="https://insidan.kollektivhuskombo.se/" target="_blank" class="insidan-btn">Insidan</a>
+        </div>
       </div>
-      <ul class="navigation-links">
-        <li class="navigation-link">
-          <a href="medlem.html">Medlemskap och bostadskö</a>
-        </li>
-        <li class="navigation-link"><a href="stadgar.html">Stadgar</a></li>
-        <li class="navigation-link"><a href="kontakt.html">Kontakta oss</a></li>
-        <li class="navigation-link">
-          <a href="https://insidan.kollektivhuskombo.se/" target="_blank"
-            >Insidan
-            <!-- Nyckel ikon -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="21"
-              viewBox="0 0 30 31"
-              fill="none"
-            >
-              <path
-                d="M27.0894 3.74126C23.271 -0.077165 17.0815 -0.077165 13.263 3.74126C10.3402 6.6641 9.6576 10.9727 11.2075 14.5473L1.44336 24.2499C1.21622 24.4765 1.03817 24.7475 0.92029 25.046C0.802414 25.3444 0.747239 25.6639 0.7582 25.9846L0.871111 28.9998C1.42796 29.3129 1.44593 30.3009 1.44593 30.3009L3.98641 30.4959C4.63565 30.5164 5.26435 30.2675 5.72113 29.8107L6.5269 29.005C7.02986 28.502 7.3147 27.7912 7.18896 27.0932C7.10941 26.6595 7.19666 26.2541 7.47124 25.9795C7.79457 25.6561 8.30011 25.5946 8.82103 25.7562C9.25471 25.8922 9.72688 25.805 10.0502 25.4842L10.1606 25.3739C10.5994 24.9556 10.6481 24.4706 10.5634 24.0651C10.4326 23.4339 10.6584 22.9129 11.0023 22.451C11.3025 22.0481 11.8747 21.8813 12.37 21.8736C13.2656 21.8608 13.8481 21.6658 14.482 21.032L16.0165 19.5051C19.6425 21.2116 24.0973 20.5675 27.0946 17.5702C30.9079 13.7492 30.9079 7.55969 27.0894 3.74126ZM23.5995 10.9829C22.5627 12.0196 20.8819 12.0196 19.8478 10.9829C18.811 9.9462 18.811 8.26538 19.8478 7.23122C20.8845 6.1945 22.5653 6.1945 23.5995 7.23122C24.6362 8.26538 24.6362 9.9462 23.5995 10.9829Z"
-                fill="#FFCA28"
-              />
-            </svg>
-          </a>
-        </li>
-      </ul>
     </nav>
-    <div class="container">
+
+    <!-- Innehåll -->
+    <main class="container">
       <h1>Kontakta oss</h1>
       <div class="two-column">
-        <!--Kolumn vänster-->
+        <!-- Kolumn vänster -->
         <div>
           <p>
             <a href="mailto:styrelse@kollektivhuskombo.se">styrelse@kollektivhuskombo.se</a>
           </p>
           <p>
-            Inteckningsvägen 100</br>
+            Inteckningsvägen 100<br />
             129 31 Hägersten
           </p>
           <p>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2037.257588387821!2d17.97735107720431!3d59.29525507459787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f77178213fc41%3A0xd8acaf4032055833!2sKollektivhuset%20KOMBO!5e0!3m2!1ssv!2sse!4v1716935601274!5m2!1ssv!2sse" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2037.257588387821!2d17.97735107720431!3d59.29525507459787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f77178213fc41%3A0xd8acaf4032055833!2sKollektivhuset%20KOMBO!5e0!3m2!1ssv!2sse!4v1716935601274!5m2!1ssv!2sse"
+              width="100%"
+              height="450"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
           </p>
         </div>
-        <!--Kolumn höger-->
+
+        <!-- Kolumn höger -->
         <div class="column column-image">
-          <div class="center-figure">
-            <figure>
-              <img src="media/image-11.png" alt="" />
-              <figcaption>Kombo kollektivhus på Hägerstensåsen</figcaption>
-            </figure>
-          </div>
+          <figure>
+            <img src="media/image-11.png" alt="Kombo kollektivhus på Hägerstensåsen" />
+            <figcaption>Kombo kollektivhus på Hägerstensåsen</figcaption>
+          </figure>
         </div>
       </div>
-    </div>
-    <div class="spacer-l"></div>
+    </main>
   </body>
 </html>
+
