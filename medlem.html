@@ -13,6 +13,41 @@
       href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap"
       rel="stylesheet"
     />
+    <style>
+      /* Enkel uppdatering direkt här för demonstration */
+      .two-column {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+      .two-column > div {
+        flex: 1 1 45%;
+      }
+      .column-image img {
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
+      }
+      .button-l {
+        display: inline-block;
+        padding: 0.75rem 1.5rem;
+        background-color: #ffca28;
+        color: #000;
+        font-weight: 600;
+        text-decoration: none;
+        border-radius: 8px;
+        transition: background 0.3s ease;
+      }
+      .button-l:hover {
+        background-color: #e6b800;
+      }
+      @media (max-width: 768px) {
+        .two-column {
+          flex-direction: column;
+        }
+      }
+    </style>
   </head>
   <body>
     <nav class="navigation container">
@@ -47,9 +82,7 @@
         </li>
       </ul>
     </nav>
-    <!-- <div class="container">
-      <div class="content-max-width"></div>
-    </div> -->
+
     <div class="container">
       <h1>Medlem i Kombo</h1>
       <div class="two-column">
@@ -79,7 +112,7 @@
               medlem!
             </p>
             <p>
-              <a class="button-l" href="/bli-medlem.html">Bli medlem I Kombo</a>
+              <a class="button-l" href="/bli-medlem.html">Bli medlem i Kombo</a>
             </p>
             <p>
               När en bostad blir tillgänglig får du möjlighet till
@@ -104,7 +137,7 @@
               tillämpar så kallade presumtionshyror på nyproduktion.
             </p>
             <p>
-              Titta gärna i <a target=_blank rel="noopener noreferrer" href=media/bofaktablad.pdf>Bofaktabladet</a>
+              Titta gärna i <a target="_blank" rel="noopener noreferrer" href="media/bofaktablad.pdf">Bofaktabladet</a>
               för att se planlösningar för samtliga lägenheter.
             </p>
           </div>
@@ -114,6 +147,8 @@
         </div>
       </div>
     </div>
+
     <div class="spacer-l"></div>
   </body>
 </html>
+
