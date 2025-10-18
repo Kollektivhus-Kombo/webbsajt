@@ -1,246 +1,182 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kollektivhuset Kombo | Stadgar</title>
-    <link rel="stylesheet" href="stylesheets/navigation.css" />
-    <link rel="stylesheet" href="stylesheets/layout.css" />
-    <link rel="stylesheet" href="stylesheets/globals.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <title>Kollektivhuset Kombo | Kontakt</title>
+
     <link
-      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&display=swap"
       rel="stylesheet"
     />
+
+    <style>
+      /* === NAVIGATION === */
+      .navigation {
+        width: 100%;
+        background-color: #f9f5f3;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      }
+
+      .nav-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 12px 48px;
+        height: 80px;
+        box-sizing: border-box;
+      }
+
+      .nav-logo img {
+        height: 50px;
+        width: auto;
+        display: block;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 40px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        flex-grow: 1;
+        justify-content: center;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: #222;
+        font-size: 16px;
+        font-weight: 500;
+        transition: color 0.3s ease;
+      }
+
+      .nav-links a:hover {
+        color: #6d3234;
+      }
+
+      .nav-button .insidan-btn {
+        background-color: #6d3234;
+        color: #fff;
+        text-decoration: none;
+        padding: 8px 18px;
+        border-radius: 20px;
+        font-weight: 500;
+        transition: background-color 0.3s ease;
+      }
+
+      .nav-button .insidan-btn:hover {
+        background-color: #8a4042;
+      }
+
+      body {
+        font-family: "Source Sans 3", sans-serif;
+        background-color: #f9f5f3;
+        margin: 0;
+        line-height: 1.7;
+      }
+
+      .container {
+        max-width: 1100px;
+        margin: 3rem auto;
+        padding: 0 1.5rem;
+      }
+
+      .two-column {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+      }
+
+      .two-column > div {
+        flex: 1 1 45%;
+      }
+
+      .column-image img {
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
+      }
+
+      @media (max-width: 900px) {
+        .nav-container {
+          flex-direction: column;
+          height: auto;
+          padding: 12px 24px;
+        }
+
+        .nav-links {
+          justify-content: center;
+          gap: 24px;
+          margin: 8px 0;
+        }
+
+        .two-column {
+          flex-direction: column;
+        }
+      }
+    </style>
   </head>
+
   <body>
-    <nav class="navigation container">
-      <div class="navigation-link">
-        <a href="/"
-          ><img alt="Kollektivhuset Kombo logo" src="media/logo.png" />
-          <span class="sr-only">Home - Kollektivhuset Kombo</span>
-        </a>
+    <!-- Navigation -->
+    <nav class="navigation">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <a href="/"><img src="media/logo.png" alt="Kollektivhuset Kombo logotyp" /></a>
+        </div>
+
+        <ul class="nav-links">
+          <li><a href="medlem.html">Medlemskap och bostadskö</a></li>
+          <li><a href="stadgar.html">Stadgar</a></li>
+          <li><a href="kontakt.html">Kontakta oss</a></li>
+        </ul>
+
+        <div class="nav-button">
+          <a href="https://insidan.kollektivhuskombo.se/" target="_blank" class="insidan-btn">Insidan</a>
+        </div>
       </div>
-      <ul class="navigation-links">
-        <li class="navigation-link">
-          <a href="medlem.html">Medlemskap och bostadskö</a>
-        </li>
-        <li class="navigation-link"><a href="stadgar.html">Stadgar</a></li>
-        <li class="navigation-link"><a href="kontakt.html">Kontakta oss</a></li>
-        <li class="navigation-link">
-          <a href="https://insidan.kollektivhuskombo.se/" target="_blank"
-            >Insidan
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="21"
-              viewBox="0 0 30 31"
-              fill="none"
-            >
-              <path
-                d="M27.0894 3.74126C23.271 -0.077165 17.0815 -0.077165 13.263 3.74126C10.3402 6.6641 9.6576 10.9727 11.2075 14.5473L1.44336 24.2499C1.21622 24.4765 1.03817 24.7475 0.92029 25.046C0.802414 25.3444 0.747239 25.6639 0.7582 25.9846L0.871111 28.9998C1.42796 29.3129 1.44593 30.3009 1.44593 30.3009L3.98641 30.4959C4.63565 30.5164 5.26435 30.2675 5.72113 29.8107L6.5269 29.005C7.02986 28.502 7.3147 27.7912 7.18896 27.0932C7.10941 26.6595 7.19666 26.2541 7.47124 25.9795C7.79457 25.6561 8.30011 25.5946 8.82103 25.7562C9.25471 25.8922 9.72688 25.805 10.0502 25.4842L10.1606 25.3739C10.5994 24.9556 10.6481 24.4706 10.5634 24.0651C10.4326 23.4339 10.6584 22.9129 11.0023 22.451C11.3025 22.0481 11.8747 21.8813 12.37 21.8736C13.2656 21.8608 13.8481 21.6658 14.482 21.032L16.0165 19.5051C19.6425 21.2116 24.0973 20.5675 27.0946 17.5702C30.9079 13.7492 30.9079 7.55969 27.0894 3.74126ZM23.5995 10.9829C22.5627 12.0196 20.8819 12.0196 19.8478 10.9829C18.811 9.9462 18.811 8.26538 19.8478 7.23122C20.8845 6.1945 22.5653 6.1945 23.5995 7.23122C24.6362 8.26538 24.6362 9.9462 23.5995 10.9829Z"
-                fill="#FFCA28"
-              />
-            </svg>
-          </a>
-        </li>
-      </ul>
     </nav>
-    <div class="container">
-      <h1>Stadgar för Kollektivhusföreningen KOMBO</h1>
-      <div class="content-max-width">
-        <p>
-          Den ideella föreningen Kollektivhusföreningen KOMBO med
-          organisationsnummer 802448–1841
-        </p>
-        <p>Stadgar för kollektivhusföreningen Kombo. Antagna 2025-03-23</p>
-        <h2>§ 1 Föreningens firma</h2>
-        <p>
-          Föreningens namn är Ideella föreningen Kollektivhusföreningen KOMBO.
-          Föreningen har sitt säte i Stockholm. Föreningens ordförande och kassör
-          tecknar föreningens firma var för sig. Föreningens bokföring och räkenskaper
-          gäller för kalenderår.
-        </p>
-        <h2>§ 2 Syfte och mål</h2>
-        <p>
-          Föreningen ska främja medlemmarnas mål att skapa en bra boendemiljö
-          i Banken 4 Hägerstensåsen.
-        </p>
-        <p>
-          Föreningen ska sträva efter att i samverkan förenkla vardagslivet
-          och skapa en social gemenskap i den gemensamma boendemiljön.
-        </p>
-        <p>
-          Föreningen ska verka för ett öppet och aktivt föreningsarbete med
-          demokratiska metoder. Arbetet i föreningen ska genomsyras av en
-          medvetenhet om kön, könsöverskridande identitet eller uttryck,
-          etnisk tillhörighet, religion eller annan trosuppfattning,
-          funktionsvariation, sexuell läggning och ålder.
-        </p>
-        <p>
-          Föreningen och dess medlemmar ska sträva efter att uppfylla föreningens
-          mål om ekologisk, ekonomisk och social hållbarhet.
-        </p>
-        <h2>§ 3 Medlemskap</h2>
-        <p>
-          Medlem kan den bli som
-          <ul>
-            <li>är myndig fysisk person,</li>
-            <li>delar och accepterar föreningens syfte och,</li>
-            <li>vid inflytt är beredd att aktivt delta i gemensamma aktiviteter som bl.a. städning och matlag.</li>
-          </ul>
-        </p>
-        <p>
-          Föreningen har två typer av medlemmar: boendemedlemmar och intressemedlemmar.
-          Boendemedlemmar är de som bor i huset och har hyreskontrakt, eller är
-          samboende med medlem med hyreskontrakt, eller är inneboende i minst
-          tre månader. Intressemedlemmar är övriga medlemmar.
-        </p>
-        <p>
-          Boendemedlemmar har rösträtt vid årsmötet och husmöten.
-        </p>
-        <p>
-          Intressemedlemmar har endast närvaro-, förslags- och yttranderätt vid årsmöte och husmöten.
-        </p>
-        <h3>Medlemsavgift och boendeavgift</h3>
-        <p>
-          Medlem ska betala årlig medlemsavgift som fastställs på årsmötet.
-          Årsmötet kan besluta om avgiftsförändring från och med nästkommande år.
-        </p>
-        <p>
-          Boendemedlemmar ska betala en boendeavgift, om årsmötet beslutar om det,
-          för täckande av gemensamma kostnader som inte ingår i förvaltningsavtal
-          med Familjebostäder. Årsmötet kan besluta om avgiftsförändring av
-          boendeavgiften från och med nästkommande år. Vid avflyttning ska boendemedlemmens
-          boendeavgift anses förverkad.
-        </p>
-        <h2>§ 4 Ansvar för boendemedlemmar</h2>
-        <p>
-          Boendemedlemmar ska aktivt delta i matlag, städlag och förväntas delta i arbetsgrupp. 
-        </p>
-        <p>
-          Boendemedlemmar ska informera styrelsen vid inflytt och utflytt av andrahandshyresgäster och inneboende.
-        </p>
-        <p>
-          Styrelsen kan besluta om undantag från deltagande, t.ex. vid sjukdom. 
-        </p>
-        <h2>§ 5 Husmöten</h2>
-        <p>
-          Varje år hålls minst två Husmöten som sammankallas av styrelsen. Datum för Husmöten fastställs av styrelsen. Ytterligare husmöten skall hållas när styrelsen eller minst 1/3 av boendemedlemmarna så önskar. Beslut på husmöte ska fattas med enkel majoritet.
-        <p>
-          Kallelse och dagordning anslås i huset minst en vecka före Husmötet. Motioner samt andra förslag till beslut lämnas skriftligt till styrelsen minst två veckor före mötet.
-        </p>
-        <p>
-          Husmötet och arbetsgrupper ska följa den budget och verksamhetsplan som Årsmötet fastställt. I frågor då avvikelser är nödvändiga ska styrelsen eller firmatecknare godkänna avvikelsen. Beslutet ska dokumenteras. 
-        </p>
-          Specifika beslut kan delegeras till styrelsen eller till arbetsgrupper.
-        </p>
-        <h2>§ 6 Tilldelning av lägenheter</h2>
-        <p>
-          Tilldelning av lägenhet föreslås av Kombo till Familjebostäder enligt fastställda kriterier. 
-        </p>
-        <p>
-          Tilldelning av lägenhet görs av en särskild arbetsgrupp (Kontaktgruppen). Medlemmar i Kontaktgruppen utses av årsmötet och ska bestå av minst tre ordinarie medlemmar och minst två ersättare. 
-        </p>
-        <p>
-          Lägenhetskontrakt tecknas därefter med Familjebostäder.  
-        </p>
-        <h2>§ 7 Uteslutning</h2>
-        <p>
-          Medlem kan uteslutas ur föreningen om denne grovt åsidosätter sina förpliktelser enligt stadgarna eller på annat sätt allvarligt skadar föreningens intressen.
-        </p>
-        <p>
-          Innan beslut om uteslutning fattas ska den berörda medlemmen ges tillfälle att yttra sig om de omständigheter som föranlett uteslutningsärendet.
-        </p>
-        <p>
-          Beslut om uteslutning fattas av styrelsen med kvalificerad majoritet. Beslutet ska meddelas den berörda medlemmen skriftligen.
-        </p>
-        <p>
-          Ärenden om uteslutning sker i samråd med AB Familjebostäder. Hyreskontraktet med Familjebostäder kan förverkas för den som blir utesluten som medlem.
-        </p>
-        <h2>§ 8 Styrelsen</h2>
-        <p>
-          Styrelsen är föreningens verkställande organ och företräder föreningen mot tredje man. Antal ordinarie ledamöter fastställs på årsmötet, dock lägst tre och högst sju. Dessutom kan upp till fyra suppleanter väljas. En styrelseledamot och en suppleant kan vara intressemedlem som inte bor i huset.
-        </p>
-        <p>
-          Styrelsens ledamöter väljs på ett eller två år, suppleanter väljs på ett år. Årsmötet väljer ordförande och kassör bland styrelsens medlemmar.
-        </p>
-        <p>
-          Styrelsen utser inom sig vice ordförande, sekreterare och övriga funktioner. 
-        </p>
-        <p>
-          Styrelsen är beslutsmässig när kallelse utgått i behörig ordning och då minst halva antalet ledamöter är närvarande.
-        </p>
-        <p>
-          Styrelsen ska ansvara för att:
-          <ul>
-            <li>samordna kontakter med Familjebostäder och andra externa aktörer.</li>
-            <li>kalla till och förbereda årsmöten.</li>
-            <li>förvalta föreningens tillgångar</li>
-            <li>föra redovisning över föreningens räkenskaper</li>
-            <li>avge berättelse över verksamhet och ekonomi till årsmötet</li>
-            <li>fastställa datum för husmöten och kalla till husmöten</li>
-          </ul>
-        </p>
-        <p>
-          För granskning av styrelsens förvaltning väljer medlemmarna på årsmötet en revisor och en suppleant. Revisionsberättelse överlämnas till styrelsen senast tre (3) veckor före årsmötet.
-        </p>
-        <h2>§ 9 Årsmöte</h2>
-        <p>
-          Årsmöte är föreningens högsta beslutande organ och hålls en gång per år före mars månads utgång. Mötet är beslutsmässigt när det är utlyst av styrelsen senast två (2) veckor i förväg.
-        </p>
-        <p>
-          Eventuella motioner lämnas till styrelsen senast tre (3) veckor före mötet. Beslut som fattas på årsmöte ska fattas med enkel majoritet.
-        </p>
-        <p>
-          Följande handlingar görs tillgängliga för medlemmarna senast tio (10) dagar före årsmötet:
-          <ul>
-            <li>Ekonomisk redovisning</li>
-            <li>Verksamhetsberättelse</li>
-            <li>Förslag till verksamhetsplan</li>
-            <li>Propositioner (förslag från styrelsen), motioner (förslag från medlemmar) och andra förslag för årsmötet samt styrelsens ställningstaganden till dessa.</li>
-          </ul>
-        </p>
-        <p>
-          Rösträtt på årsmötet har de boendemedlemmar som betalat sin medlemsavgift för innevarande år.
-        </p>
-        <p>
-          På årsmöte behandlas följande dagordning:
-          <ol>
-            <li>Årsmötet öppnas.</li>
-            <li>Val av mötesordförande och protokollförare.</li>
-            <li>Val av justerare tillika rösträknare.</li>
-            <li>Fastställande av röstlängd.</li>
-            <li>Fråga om årsmötet blivit stadgeenligt utlyst.</li>
-            <li>Godkännande av dagordningen.</li>
-            <li>Föredragning av styrelsens verksamhetsberättelse och ekonomiska årsredovisning.</li>
-            <li>Föredragning av revisionsberättelsen.</li>
-            <li>Fråga om ansvarsfrihet för styrelsens ledamöter.</li>
-            <li>Föredragning av förslag till och beslut om</li>
-              <ul>
-                <li>verksamhetsplan.</li>
-                <li>budget och fördelning av över- respektive underskott</li>
-                <li>boende respektive medlemsavgift.</li>
-              </ul>
-            <li>Val av styrelse.</li>
-            <li>Val av revisor.</li>
-            <li>Val av valberedning.</li>
-            <li>Val av kontaktgrupp.</li>
-            <li>Behandling av anmälda ärenden.</li>
-            <li>Årsmötet avslutas.</li>
-            <li>Övriga frågor och information.</li>
-          </ol>
-        </p>
-        <p>
-          Extra årsmöte ska hållas när styrelsen eller en tredjedel av boendemedlemmarna begär det. Dagordningen sammanfaller med ordinarie årsmötespunkterna 1-6 och anpassas i övrigt till de frågor som ska behandlas. Mötet är beslutsmässigt när det är utlyst av styrelsen senast två (2) veckor i förväg.
-        </p>
-        <h2>§ 11 Stadgeändring och upplösning av föreningen</h2>
-        <p>
-          Ändring av stadgar eller upplösning av föreningen sker efter beslut vid två på varandra följande medlemsmöten med 2/3 majoritet av de närvarande, varav ett ska vara årsmöte. Eventuella kvarstående medel efter upplösning tillfaller boendemedlemmarna.
-        </p>
+
+    <!-- Innehåll -->
+    <main class="container">
+      <h1>Kontakta oss</h1>
+      <div class="two-column">
+        <!-- Kolumn vänster -->
+        <div>
+          <p>
+            <a href="mailto:styrelse@kollektivhuskombo.se">styrelse@kollektivhuskombo.se</a>
+          </p>
+          <p>
+            Inteckningsvägen 100<br />
+            129 31 Hägersten
+          </p>
+          <p>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2037.257588387821!2d17.97735107720431!3d59.29525507459787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465f77178213fc41%3A0xd8acaf4032055833!2sKollektivhuset%20KOMBO!5e0!3m2!1ssv!2sse!4v1716935601274!5m2!1ssv!2sse"
+              width="100%"
+              height="450"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </p>
+        </div>
+
+        <!-- Kolumn höger -->
+        <div class="column column-image">
+          <figure>
+            <img src="media/image-11.png" alt="Kombo kollektivhus på Hägerstensåsen" />
+            <figcaption>Kombo kollektivhus på Hägerstensåsen</figcaption>
+          </figure>
+        </div>
       </div>
-    </div>
-    <div class="spacer-l" />
+    </main>
   </body>
 </html>
