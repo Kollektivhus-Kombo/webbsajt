@@ -11,7 +11,7 @@
     />
 
     <style>
-      /* === DIN ORIGINALE NAVIGATION (oförändrad) === */
+      /* === BEHÅLLER DIN NAVIGATION === */
       .navigation {
         width: 100%;
         background-color: #fff;
@@ -97,26 +97,23 @@
         }
       }
 
-      /* === NYA DELAR UNDER HERO === */
-
+      /* === NY DESIGN UNDER HERO === */
       body {
         font-family: "Source Sans 3", sans-serif;
-        background-color: #f5f3f0;
+        background-color: #f9f5f3;
         color: #2b2b2b;
         margin: 0;
         line-height: 1.7;
       }
 
-      /* Hero med bilden du har */
       .hero {
         background: url("media/Frame 3916.png") center/cover no-repeat;
         width: 100%;
         height: 360px;
       }
 
-      /* Innehållsdel */
       main {
-        max-width: 1000px;
+        max-width: 1100px;
         margin: 3rem auto 6rem;
         padding: 0 1.5rem;
       }
@@ -132,45 +129,57 @@
         margin-bottom: 1.5rem;
       }
 
+      /* Bildlayout – en stor + två mindre */
       .image-gallery {
-        display: flex;
-        flex-direction: column;
-        gap: 0.7rem;
+        display: grid;
+        grid-template-rows: auto auto;
+        gap: 0.8rem;
       }
 
       .image-gallery img {
         width: 100%;
-        border-radius: 6px;
+        border-radius: 4px;
         object-fit: cover;
       }
 
+      .bottom-images {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.8rem;
+      }
+
+      /* CTA-knappen */
       .cta-btn {
         display: inline-block;
-        border: 1px solid #b65a43;
-        color: #b65a43;
-        padding: 8px 14px;
+        background-color: #6d3234;
+        color: #fff;
+        padding: 10px 22px;
         border-radius: 4px;
         text-decoration: none;
         font-weight: 600;
-        transition: all 0.3s;
+        letter-spacing: 0.5px;
+        transition: all 0.3s ease;
       }
 
       .cta-btn:hover {
-        background-color: #b65a43;
-        color: #fff;
+        background-color: #8a4042;
       }
 
       footer {
         text-align: center;
         padding: 1rem;
         background-color: #fff;
-        border-top: 3px solid #b65a43;
+        border-top: 3px solid #6d3234;
         color: #555;
         font-size: 0.9rem;
       }
 
       @media (max-width: 900px) {
         .intro-layout {
+          grid-template-columns: 1fr;
+        }
+
+        .bottom-images {
           grid-template-columns: 1fr;
         }
 
@@ -182,7 +191,7 @@
   </head>
 
   <body>
-    <!-- Navigation (orörd) -->
+    <!-- Navigation -->
     <nav class="navigation">
       <div class="nav-container">
         <div class="nav-logo">
@@ -206,10 +215,10 @@
       </div>
     </nav>
 
-    <!-- Hero -->
+    <!-- Hero-bild -->
     <section class="hero"></section>
 
-    <!-- Huvudinnehåll -->
+    <!-- Innehåll -->
     <main>
       <div class="intro-layout">
         <div class="intro-text">
@@ -242,13 +251,15 @@
             samarbetspartner sedan många år tillbaka.
           </p>
 
-          <a href="medlem.html" class="cta-btn">Bli medlem →</a>
+          <a href="medlem.html" class="cta-btn">BLI MEDLEM →</a>
         </div>
 
         <div class="image-gallery">
           <img src="media/kollektivhuset_tegelvagg.png" alt="Kollektivhuset Kombo" />
-          <img src="media/image-16.png" alt="Kollektivhusets fasad" />
-          <img src="media/kollektivhuset_kvällssol.png.jpg" alt="Takterrass" />
+          <div class="bottom-images">
+            <img src="media/image-16.png" alt="Kollektivhusets fasad" />
+            <img src="media/kollektivhuset_kvällssol.png.jpg" alt="Takterrass" />
+          </div>
         </div>
       </div>
     </main>
@@ -258,6 +269,7 @@
     </footer>
   </body>
 </html>
+
 
 
 
