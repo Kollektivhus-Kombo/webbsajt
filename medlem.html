@@ -101,5 +101,139 @@
         margin-top: 2rem;
       }
 
-      .two-column > div
+      .two-column > div {
+        flex: 1 1 45%;
+      }
+
+      .column-image img {
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
+      }
+
+      .button-l {
+        display: inline-block;
+        padding: 0.75rem 1.5rem;
+        background-color: #6d3234;
+        color: #fff;
+        font-weight: 600;
+        text-decoration: none;
+        border-radius: 8px;
+        transition: background 0.3s ease;
+      }
+
+      .button-l:hover {
+        background-color: #8a4042;
+      }
+
+      ul {
+        padding-left: 1.2rem;
+      }
+
+      @media (max-width: 900px) {
+        .nav-container {
+          flex-direction: column;
+          height: auto;
+          padding: 12px 24px;
+        }
+
+        .nav-links {
+          justify-content: center;
+          gap: 24px;
+          margin: 8px 0;
+        }
+
+        main {
+          margin-top: 120px;
+        }
+
+        .two-column {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav class="navigation">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <a href="/"><img src="media/logo.png" alt="Kollektivhuset Kombo logotyp" /></a>
+        </div>
+
+        <ul class="nav-links">
+          <li><a href="medlem.html">Medlemskap och bostadskö</a></li>
+          <li><a href="stadgar.html">Stadgar</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+
+        <div class="nav-button">
+          <a href="https://insidan.kollektivhuskombo.se/" target="_blank" class="insidan-btn">Insidan</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Innehåll -->
+    <main>
+      <h1>Medlem i Kombo</h1>
+      <div class="two-column">
+        <div>
+          <p>
+            Som medlem i Kombo ställs du automatiskt i Kombos bostadskö, och
+            du får därmed möjlighet till en lägenhet i Kombo. Men du får
+            såklart vara medlem i Kombo även om du inte bor med oss!
+            Medlemskapet kostar 200 kr per år! Men det tjänar du snabbt in
+            för...
+          </p>
+          <p>
+            Två dagar i veckan serveras det middag i Kombo, och externa
+            medlemmar som är med i matlag får givetvis äta i Kombo alla de
+            dagar det serveras middag. Att vara med i matlag innebär att man
+            tar 1-2 pass ungefär var femte vecka. Passen är ungefär 2.5 timmar
+            långa och inom matlaget schemalägger vi passen tillsammans så att
+            det passar alla. Måltiderna kostar 40 kr per person! Du hörde
+            rätt! Bra mat, mindre jobb och mindre stök - gott, billigt,
+            trevligt och tidseffektivt! På fredagar serveras efterrätt!
+          </p>
+
+          <h2>Men jag vill ju bo i Kombo! Berätta mer!</h2>
+          <p>Allt du behöver göra för att ställa dig i vår bostadskö är att bli medlem!</p>
+          <a class="button-l" href="/bli-medlem.html">Bli medlem i Kombo</a>
+
+          <p>
+            När en bostad blir tillgänglig får du möjlighet till intresseanmälan.
+            Förutom din lägenhet får du tillgång till alla gemensamma utrymmen!
+            Ta ditt morgonkaffe i solen på takterassen med morgonsol och en AW
+            på den med eftermiddagsol, låt dina barn leka av sig i lekrummet efter maten.
+            Vi har även två gästtrum du kan boka åt vänner och familj som kommer långväga.
+          </p>
+
+          <h3>Här kommer lite information om lägenheterna vi har:</h3>
+          <ul>
+            <li>Ettor, 26,5 kvm, ca 8900 kr.</li>
+            <li>Ett och ett halvt rum, 45,5 kvm, ca 11 000 kr.</li>
+            <li>Tvåor, 60 kvm, ca 14 500 kr.</li>
+            <li>Treor, 73,5 kvm, ca 16 000 kr.</li>
+            <li>Fyror, 90,5 kvm, ca 20 000 kr.</li>
+          </ul>
+          <p>
+            Alla lägenheter har stora balkonger på ca 7m². Familjebostäder tillämpar
+            så kallade presumtionshyror på nyproduktion.
+          </p>
+          <p>
+            Titta gärna i <a target="_blank" rel="noopener noreferrer" href="media/bofaktablad.pdf">Bofaktabladet</a>
+            för att se planlösningar för samtliga lägenheter.
+          </p>
+        </div>
+
+        <div class="column-image">
+          <img src="media/image-17.png" alt="Kollektivhuset Kombo interiör" />
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
+
+
 
