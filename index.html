@@ -11,10 +11,10 @@
     />
 
     <style>
-      /* === BEHÅLLER DIN NAVIGATION === */
+      /* === NAVIGATION === */
       .navigation {
         width: 100%;
-        background-color: #fff;
+        background-color: #f9f5f3;
         position: sticky;
         top: 0;
         z-index: 100;
@@ -97,7 +97,7 @@
         }
       }
 
-      /* === NY DESIGN UNDER HERO === */
+      /* === SIDANS STIL === */
       body {
         font-family: "Source Sans 3", sans-serif;
         background-color: #f9f5f3;
@@ -106,12 +106,25 @@
         line-height: 1.7;
       }
 
+      /* === HERO MED TONÖVERGÅNG === */
       .hero {
-        background: url("media/Frame 3916.png") center/cover no-repeat;
+        position: relative;
         width: 100%;
         height: 360px;
+        background: url("media/Frame 3916.png") center/cover no-repeat;
       }
 
+      .hero::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 120px;
+        background: linear-gradient(to bottom, rgba(249, 245, 243, 0) 0%, #f9f5f3 100%);
+      }
+
+      /* === INNEHÅLL === */
       main {
         max-width: 1100px;
         margin: 3rem auto 6rem;
@@ -168,7 +181,7 @@
       footer {
         text-align: center;
         padding: 1rem;
-        background-color: #fff;
+        background-color: #f9f5f3;
         border-top: 3px solid #6d3234;
         color: #555;
         font-size: 0.9rem;
@@ -269,4 +282,5 @@
     </footer>
   </body>
 </html>
+
 
