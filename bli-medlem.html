@@ -204,6 +204,7 @@
         animation: popup 0.3s ease;
       }
 
+      /* Popup med bakgrundsbild */
       .frame-popup {
         background-image: url("media/Frame 3917.png");
         background-size: cover;
@@ -339,8 +340,7 @@
     <div class="modal" id="modal-medlem">
       <div class="modal-content-wrapper">
         <div class="modal-content frame-popup">
-  
-         
+          <p>Du behöver nu bara betala in medlemsavgiften på 200 kr.</p>
           <p>
             Lättast är via Swish till <strong>123-035 10 72</strong> och meddelandet
             <em>"Medlemsavgift"</em>.
@@ -359,6 +359,7 @@
 
     <script>
       const modal = document.getElementById("modal-medlem");
+      const modalContent = document.querySelector(".modal-content");
 
       document
         .getElementById("registration-form")
@@ -391,14 +392,13 @@
           });
         });
 
-      window.onclick = function (event) {
-        if (event.target == modal) {
+      // Klick utanför stänger popupen
+      window.addEventListener("click", function (event) {
+        if (event.target === modal) {
           modal.style.display = "none";
         }
-      };
+      });
     </script>
   </body>
 </html>
-
-
 
