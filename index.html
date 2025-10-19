@@ -3,210 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kollektivhuset Kombo</title>
+    <title>Kollektivhuset Kombo | Bli medlem</title>
 
     <link
       href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&display=swap"
       rel="stylesheet"
     />
-
-    <style>
-      /* === NAVIGATION === */
-      .navigation {
-        width: 100%;
-        background-color: #f9f5f3;
-        position: sticky;
-        top: 0;
-        z-index: 100;
-        transition: background-color 0.4s ease, color 0.4s ease;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-      }
-
-      .nav-container {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        max-width: 1440px;
-        margin: 0 auto;
-        padding: 12px 48px; /* Mindre padding = lägre höjd */
-        height: 80px; /* Mindre höjd */
-        box-sizing: border-box;
-      }
-
-      .nav-logo img {
-        height: 50px; /* Justerad för mindre navbar */
-        width: auto;
-        display: block;
-      }
-
-      .nav-links {
-        display: flex;
-        gap: 40px;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        flex-grow: 1;
-        justify-content: center;
-      }
-
-      .nav-links a {
-        text-decoration: none;
-        color: #222;
-        font-size: 16px;
-        font-weight: 500;
-        transition: color 0.3s ease;
-      }
-
-      .nav-links a:hover {
-        color: #6d3234; /* 🔥 Blir röd vid hover */
-      }
-
-      .nav-button .insidan-btn {
-        background-color: #6d3234;
-        color: #fff;
-        text-decoration: none;
-        padding: 8px 18px;
-        border-radius: 20px;
-        font-weight: 500;
-        transition: background-color 0.3s ease;
-      }
-
-      .nav-button .insidan-btn:hover {
-        background-color: #8a4042; /* Lite ljusare vid hover */
-      }
-
-      .scrolled {
-        background-color: #f5e3e3;
-      }
-
-      .scrolled .nav-links a {
-        color: #6d3234;
-      }
-
-      main {
-        margin-top: 80px; /* Matchar nya navbar-höjden */
-      }
-
-      @media (max-width: 900px) {
-        .nav-container {
-          flex-direction: column;
-          height: auto;
-          padding: 12px 24px;
-        }
-
-        .nav-links {
-          justify-content: center;
-          gap: 24px;
-          margin: 8px 0;
-        }
-
-        main {
-          margin-top: 120px;
-        }
-      }
-
-      /* === SIDANS STIL === */
-      body {
-        font-family: "Source Sans 3", sans-serif;
-        background-color: #f9f5f3;
-        color: #2b2b2b;
-        margin: 0;
-        line-height: 1.7;
-      }
-
-      /* === HERO MED TONÖVERGÅNG === */
-      .hero {
-        position: relative;
-        width: 100%;
-        height: 360px;
-        background: url("media/Frame 3916.png") center/cover no-repeat;
-      }
-
-      .hero::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 120px;
-        background: linear-gradient(to bottom, rgba(249, 245, 243, 0) 0%, #f9f5f3 100%);
-      }
-
-      /* === INNEHÅLL === */
-      main {
-        max-width: 1100px;
-        margin: 3rem auto 6rem;
-        padding: 0 1.5rem;
-      }
-
-      .intro-layout {
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        gap: 2rem;
-        align-items: start;
-      }
-
-      .intro-text p {
-        margin-bottom: 1.5rem;
-      }
-
-      .image-gallery {
-        display: grid;
-        grid-template-rows: auto auto;
-        gap: 0.8rem;
-      }
-
-      .image-gallery img {
-        width: 100%;
-        border-radius: 4px;
-        object-fit: cover;
-      }
-
-      .bottom-images {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 0.8rem;
-      }
-
-      .cta-btn {
-        display: inline-block;
-        background-color: #6d3234;
-        color: #fff;
-        padding: 10px 22px;
-        border-radius: 4px;
-        text-decoration: none;
-        font-weight: 600;
-        letter-spacing: 0.5px;
-        transition: all 0.3s ease;
-      }
-
-      .cta-btn:hover {
-        background-color: #8a4042;
-      }
-
-      footer {
-        text-align: center;
-        padding: 1rem;
-        background-color: #f9f5f3;
-        border-top: 3px solid #6d3234;
-        color: #555;
-        font-size: 0.9rem;
-      }
-
-      @media (max-width: 900px) {
-        .intro-layout {
-          grid-template-columns: 1fr;
-        }
-
-        .bottom-images {
-          grid-template-columns: 1fr;
-        }
-
-        .hero {
-          height: 250px;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
@@ -220,72 +23,118 @@
         <ul class="nav-links">
           <li><a href="medlem.html">Medlemskap och bostadskö</a></li>
           <li><a href="stadgar.html">Stadgar</a></li>
-          <li><a href="kontakt.html">Kontakt</a></li>
+          <li><a href="kontakt.html">Kontakta oss</a></li>
         </ul>
 
         <div class="nav-button">
-          <a
-            href="https://insidan.kollektivhuskombo.se/"
-            target="_blank"
-            class="insidan-btn"
-            >Insidan</a
-          >
+          <a href="https://insidan.kollektivhuskombo.se/" target="_blank" class="insidan-btn">Insidan</a>
         </div>
       </div>
     </nav>
 
-    <!-- Hero-bild -->
-    <section class="hero"></section>
-
     <!-- Innehåll -->
-    <main>
-      <div class="intro-layout">
-        <div class="intro-text">
+    <main class="container">
+      <div class="two-column">
+        <!-- Kolumn vänster -->
+        <div>
+          <h1>Bli Medlem</h1>
           <p>
-            Vi är en ideell förening och ett levande kollektiv av människor som valt att
-            dela mer än bara en adress. Här hjälps vi åt, umgås och bygger gemenskap
-            genom både vardag och fest. Just nu bor vi ungefär 75 personer i huset – 50
-            vuxna och 25 barn – och tillsammans strävar vi efter att leva på ett sätt
-            som är både hållbart och hjärtligt.
+            Vad kul att du vill bli medlem i Kombo! När du blir medlem ställs du
+            automatiskt i Kombos bostadskö. Vill du vara medlem men inte bo i huset
+            är du givetvis precis lika välkommen!
           </p>
-
-          <p>
-            Två kvällar i veckan dukar vi upp till gemensam middag där vi turas om att
-            laga mat. Det blir ofta en plats för skratt, samtal och nya idéer – lika
-            mycket en måltid som en mötesplats.
-          </p>
-
-          <p>
-            Utöver våra egna, fullt utrustade lägenheter delar vi på omkring 300
-            kvadratmeter gemensamma utrymmen. Här finns lek-, hobby-, gäst- och
-            vardagsrum, en stor matsal med uteplats och två fantastiska takterrasser med
-            utsikt över staden. De här ytorna används flitigt, både för planerade
-            aktiviteter och spontant umgänge. Vi har haft allt från loppisar och fester
-            till luciatåg för barnen och filmkvällar för hela huset.
-          </p>
-
-          <p>
-            Våra beslut fattar vi tillsammans på husmötet – det är där idéer blir
-            verklighet. Familjebostäder är vår förvaltare och en uppskattad
-            samarbetspartner sedan många år tillbaka.
-          </p>
-
-          <a href="medlem.html" class="cta-btn">BLI MEDLEM →</a>
+          <p>Medlemskapet kostar 200 kronor per år.</p>
         </div>
 
-        <div class="image-gallery">
-          <img src="media/kollektivhuset_tegelvagg.png" alt="Kollektivhuset Kombo" />
-          <div class="bottom-images">
-            <img src="media/image-16.png" alt="Kollektivhusets fasad" />
-            <img src="media/kollektivhuset_kvällssol.png.jpg" alt="Takterrass" />
+        <!-- Kolumn höger -->
+        <div class="column column-image">
+          <img src="media/image-16.png" alt="Kollektivhuset Kombo" />
+        </div>
+      </div>
+
+      <!-- Formulär -->
+      <div class="two-column" style="margin-top:2rem;">
+        <form id="registration-form" class="form content-max-width" action="#" method="post">
+          <div class="form-field">
+            <label for="name">För- och efternamn</label>
+            <input type="text" id="name" name="name" required />
           </div>
-        </div>
+          <div class="form-field">
+            <label for="email">Mailadress</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="form-field">
+            <label for="dob">Födelsedatum</label>
+            <input type="date" id="dob" name="dob" required />
+          </div>
+          <div class="form-conditions">
+            <p>
+              Vad kul att du vill bli medlem! Vi på föreningen värdesätter din integritet
+              och vill försäkra dig om att vi tar sparandet av dina personuppgifter på största allvar.
+            </p>
+          </div>
+          <div class="form-field form-field-horizontal">
+            <label for="acceptConditions">Det låter bra! Jag godkänner</label>
+            <input type="checkbox" id="acceptConditions" name="acceptConditions" required />
+          </div>
+          <div>
+            <input type="submit" value="Bli medlem i Kombo" class="button-l" />
+          </div>
+        </form>
       </div>
     </main>
 
-    <footer>
-      © 2025 Kollektivhuset Kombo – Tillsammans bygger vi gemenskap.
-    </footer>
+    <!-- Modal (popup) -->
+    <div class="modal" id="modal-medlem">
+      <div class="modal-content-wrapper">
+        <div class="modal-content">
+          <img class="celebrate" src="media/firework.png" alt="fyrverkeri" />
+          <h2>Grattis!</h2>
+          <p>Ditt medlemskap i Kombo är nu registrerat!</p>
+          <p>Du behöver nu bara betala in medlemsavgiften på 200 kr.</p>
+          <p>Lättast är via Swish till <strong>123-035 10 72</strong> och meddelandet <em>"Medlemsavgift"</em>.</p>
+          <p><img class="inline-qr" src="media/swish-QR-small.png" alt="Swish QR kod"/></p>
+          <p>Det går även via Bankgiro: <strong>5957-6900</strong> (skriv “Medlemsavgift” som meddelande).</p>
+          <a class="button-l" href="/">Tillbaka till startsidan</a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const modal = document.getElementById("modal-medlem");
+
+      document.getElementById("registration-form").addEventListener("submit", function(event) {
+        event.preventDefault();
+        modal.style.display = "block";
+
+        const formData = new FormData(this);
+        const url = 'https://script.google.com/macros/s/AKfycbwmZOFyrtgsQpXl6YSromuWv3Bww04iTzx8hxGeSGJnSD20KXhLNP3kGeh7B_VM--Xisw/exec';
+
+        const params = new URLSearchParams();
+        params.append('email', document.getElementById("email").value);
+        params.append('name', document.getElementById("name").value);
+        params.append('birth', document.getElementById("dob").value);
+        params.append('gdpr', 'Ja');
+
+        for (const pair of formData.entries()) {
+          params.append(pair[0], pair[1]);
+        }
+
+        fetch(url, {
+          method: 'POST',
+          body: params
+        }).catch(error => {
+          console.error('Error:', error);
+          alert('Något gick fel. Skicka gärna ett mejl till styrelse@kollektivhuskombo.se med din information.');
+        });
+      });
+
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+    </script>
   </body>
 </html>
 
