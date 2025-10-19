@@ -195,27 +195,20 @@
       }
 
       .modal-content {
-        background-color: #fff;
-        border-radius: 16px;
+        background-color: transparent;
+        border: none;
+        box-shadow: none;
         max-width: 500px;
-        text-align: center;
-        padding: 3rem 2rem;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
         animation: popup 0.3s ease;
       }
 
-      /* Popup med bakgrundsbild */
       .frame-popup {
+        width: 100%;
         background-image: url("media/Frame 3917.png");
-        background-size: cover;
+        background-size: contain;
+        background-repeat: no-repeat;
         background-position: center;
-        color: #222;
-      }
-
-      .inline-qr {
-        width: 150px;
-        height: auto;
-        margin-top: 1rem;
+        aspect-ratio: 1 / 1;
       }
 
       @keyframes popup {
@@ -336,21 +329,11 @@
       </div>
     </main>
 
-    <!-- Modal -->
+    <!-- Modal (endast bild, ingen text) -->
     <div class="modal" id="modal-medlem">
       <div class="modal-content-wrapper">
-        <div class="modal-content frame-popup">
-          <p>Du behöver nu bara betala in medlemsavgiften på 200 kr.</p>
-          <p>
-            Lättast är via Swish till <strong>123-035 10 72</strong> och meddelandet
-            <em>"Medlemsavgift"</em>.
-          </p>
-          <p><img class="inline-qr" src="media/swish-QR-small.png" alt="Swish QR kod" /></p>
-          <p>
-            Det går även via Bankgiro: <strong>5957-6900</strong> (skriv “Medlemsavgift” som
-            meddelande).
-          </p>
-          <a class="button-l" href="/">Tillbaka till startsidan</a>
+        <div class="modal-content">
+          <div class="frame-popup"></div>
         </div>
       </div>
     </div>
@@ -359,7 +342,6 @@
 
     <script>
       const modal = document.getElementById("modal-medlem");
-      const modalContent = document.querySelector(".modal-content");
 
       document
         .getElementById("registration-form")
@@ -392,13 +374,14 @@
           });
         });
 
-      // Klick utanför stänger popupen
-      window.addEventListener("click", function (event) {
+      // Stänger popup när man klickar utanför bilden
+      window.onclick = function (event) {
         if (event.target === modal) {
           modal.style.display = "none";
         }
-      });
+      };
     </script>
   </body>
 </html>
+
 
