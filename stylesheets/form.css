@@ -1,6 +1,108 @@
+/* === NAVIGATION === */
+.navigation {
+  width: 100%;
+  background-color: #f9f5f3;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 12px 48px;
+  height: 80px;
+  box-sizing: border-box;
+}
+
+.nav-logo img {
+  height: 50px;
+  width: auto;
+  display: block;
+}
+
+.nav-links {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #222;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #6d3234;
+}
+
+.nav-button .insidan-btn {
+  background-color: #6d3234;
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.nav-button .insidan-btn:hover {
+  background-color: #8a4042;
+}
+
+/* === GENERELLT === */
+body {
+  font-family: "Source Sans 3", sans-serif;
+  background-color: #f9f5f3;
+  margin: 0;
+  line-height: 1.7;
+  color: #222;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+}
+
+.two-column {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.two-column > div {
+  flex: 1 1 45%;
+}
+
+.column-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* === FORM === */
 .form {
   border: 2px solid #f5d0d0;
   padding: 56px 32px;
+  background-color: #fff;
+  border-radius: 12px;
 }
 
 .form-field {
@@ -13,20 +115,24 @@
 .form-field-horizontal {
   flex-direction: row;
   align-items: center;
+  gap: 10px;
 }
 
 .form-field label {
-  margin-bottom: 18px;
+  margin-bottom: 10px;
   font-size: 18px;
 }
 
 .form-field-horizontal label {
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 
 .form-field input {
   height: 32px;
-  padding: 0;
+  padding: 0 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
 }
 
 .form-conditions {
@@ -34,8 +140,125 @@
   border: 1px solid #000;
   background-color: #fffdfd;
   margin-bottom: 32px;
+  border-radius: 8px;
 }
 
 .form-conditions p {
   margin-bottom: 0;
 }
+
+/* === KNAPPAR === */
+.button-l {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #6d3234;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.button-l:hover {
+  background-color: #8a4042;
+}
+
+/* === MODAL (Popup) === */
+.modal {
+  display: none; /* Dölj från början */
+  position: fixed;
+  z-index: 2000; /* Ovanpå allt annat */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5); /* Mörk bakgrund */
+  backdrop-filter: blur(2px);
+}
+
+/* Wrapper för att centrera innehållet vertikalt */
+.modal-content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Själva popup-rutan */
+.modal-content {
+  background-color: #fff;
+  padding: 2rem 2.5rem;
+  border-radius: 16px;
+  max-width: 480px;
+  width: 90%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative;
+  animation: fadeInUp 0.3s ease;
+}
+
+/* Liten animation för inzoom-effekt */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fyrverkeri-bilden */
+.celebrate {
+  width: 80px;
+  height: auto;
+  margin: 0 auto 1rem auto;
+  display: block;
+}
+
+/* QR-koden */
+.inline-qr {
+  width: 150px;
+  height: auto;
+  margin: 1rem auto;
+  display: block;
+}
+
+.modal-content p {
+  margin-bottom: 1rem;
+  color: #333;
+  font-size: 16px;
+}
+
+.modal-content .button-l {
+  display: inline-block;
+  margin-top: 1.5rem;
+}
+
+/* === RESPONSIV DESIGN === */
+@media (max-width: 900px) {
+  .nav-container {
+    flex-direction: column;
+    height: auto;
+    padding: 12px 24px;
+  }
+
+  .nav-links {
+    justify-content: center;
+    gap: 24px;
+    margin: 8px 0;
+  }
+
+  .two-column {
+    flex-direction: column;
+  }
+
+  .form {
+    padding: 32px 24px;
+  }
+}
+
