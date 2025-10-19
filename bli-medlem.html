@@ -1,138 +1,229 @@
-<!DOCTYPE html>
-<html lang="sv">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kollektivhuset Kombo | Bli medlem</title>
+body {
+  font-family: "Source Sans 3", sans-serif;
+  background-color: #f9f5f3;
+  margin: 0;
+  line-height: 1.7;
+}
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-  </head>
+/* === NAVIGATION === */
+.navigation {
+  width: 100%;
+  background-color: #f9f5f3;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
 
-  <body>
-    <!-- Navigation -->
-    <nav class="navigation">
-      <div class="nav-container">
-        <div class="nav-logo">
-          <a href="/"><img src="media/logo.png" alt="Kollektivhuset Kombo logotyp" /></a>
-        </div>
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 12px 48px;
+  height: 80px;
+  box-sizing: border-box;
+}
 
-        <ul class="nav-links">
-          <li><a href="medlem.html">Medlemskap och bostadskö</a></li>
-          <li><a href="stadgar.html">Stadgar</a></li>
-          <li><a href="kontakt.html">Kontakta oss</a></li>
-        </ul>
+.nav-logo img {
+  height: 50px;
+  width: auto;
+  display: block;
+}
 
-        <div class="nav-button">
-          <a href="https://insidan.kollektivhuskombo.se/" target="_blank" class="insidan-btn">Insidan</a>
-        </div>
-      </div>
-    </nav>
+.nav-links {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-grow: 1;
+  justify-content: center;
+}
 
-    <!-- Innehåll -->
-    <main class="container">
-      <div class="two-column">
-        <!-- Kolumn vänster -->
-        <div>
-          <h1>Bli Medlem</h1>
-          <p>
-            Vad kul att du vill bli medlem i Kombo! När du blir medlem ställs du
-            automatiskt i Kombos bostadskö. Vill du vara medlem men inte bo i huset
-            är du givetvis precis lika välkommen!
-          </p>
-          <p>Medlemskapet kostar 200 kronor per år.</p>
-        </div>
+.nav-links a {
+  text-decoration: none;
+  color: #222;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
 
-        <!-- Kolumn höger -->
-        <div class="column column-image">
-          <img src="media/image-16.png" alt="Kollektivhuset Kombo" />
-        </div>
-      </div>
+.nav-links a:hover {
+  color: #6d3234;
+}
 
-      <!-- Formulär -->
-      <div class="two-column" style="margin-top:2rem;">
-        <form id="registration-form" class="form content-max-width" action="#" method="post">
-          <div class="form-field">
-            <label for="name">För- och efternamn</label>
-            <input type="text" id="name" name="name" required />
-          </div>
-          <div class="form-field">
-            <label for="email">Mailadress</label>
-            <input type="email" id="email" name="email" required />
-          </div>
-          <div class="form-field">
-            <label for="dob">Födelsedatum</label>
-            <input type="date" id="dob" name="dob" required />
-          </div>
-          <div class="form-conditions">
-            <p>
-              Vad kul att du vill bli medlem! Vi på föreningen värdesätter din integritet
-              och vill försäkra dig om att vi tar sparandet av dina personuppgifter på största allvar.
-            </p>
-          </div>
-          <div class="form-field form-field-horizontal">
-            <label for="acceptConditions">Det låter bra! Jag godkänner</label>
-            <input type="checkbox" id="acceptConditions" name="acceptConditions" required />
-          </div>
-          <div>
-            <input type="submit" value="Bli medlem i Kombo" class="button-l" />
-          </div>
-        </form>
-      </div>
-    </main>
+.nav-button .insidan-btn {
+  background-color: #6d3234;
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
 
-    <!-- Modal (popup) -->
-    <div class="modal" id="modal-medlem">
-      <div class="modal-content-wrapper">
-        <div class="modal-content frame-popup">
-          <h2>Grattis!</h2>
-          <p>Ditt medlemskap i Kombo är nu registrerat!</p>
-          <p>Du behöver nu bara betala in medlemsavgiften på 200 kr.</p>
-          <p>Lättast är via Swish till <strong>123-035 10 72</strong> och meddelandet <em>"Medlemsavgift"</em>.</p>
-          <p><img class="inline-qr" src="media/swish-QR-small.png" alt="Swish QR kod"/></p>
-          <p>Det går även via Bankgiro: <strong>5957-6900</strong> (skriv “Medlemsavgift” som meddelande).</p>
-          <a class="button-l" href="/">Tillbaka till startsidan</a>
-        </div>
-      </div>
-    </div>
+.nav-button .insidan-btn:hover {
+  background-color: #8a4042;
+}
 
-    <script>
-      const modal = document.getElementById("modal-medlem");
+/* === LAYOUT === */
+.container {
+  max-width: 1100px;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+}
 
-      document.getElementById("registration-form").addEventListener("submit", function(event) {
-        event.preventDefault();
-        modal.style.display = "block";
+.two-column {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
 
-        const formData = new FormData(this);
-        const url = 'https://script.google.com/macros/s/AKfycbwmZOFyrtgsQpXl6YSromuWv3Bww04iTzx8hxGeSGJnSD20KXhLNP3kGeh7B_VM--Xisw/exec';
+.two-column > div {
+  flex: 1 1 45%;
+}
 
-        const params = new URLSearchParams();
-        params.append('email', document.getElementById("email").value);
-        params.append('name', document.getElementById("name").value);
-        params.append('birth', document.getElementById("dob").value);
-        params.append('gdpr', 'Ja');
+.column-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
 
-        for (const pair of formData.entries()) {
-          params.append(pair[0], pair[1]);
-        }
+.button-l {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #6d3234;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
 
-        fetch(url, {
-          method: 'POST',
-          body: params
-        }).catch(error => {
-          console.error('Error:', error);
-          alert('Något gick fel. Skicka gärna ett mejl till styrelse@kollektivhuskombo.se med din information.');
-        });
-      });
+.button-l:hover {
+  background-color: #8a4042;
+}
 
-      window.onclick = function(event) {
-        if (event.target == modal) {
-          modal.style.display = "none";
-        }
-      };
-    </script>
-  </body>
-</html>
+/* === FORM === */
+.form {
+  border: 2px solid #f5d0d0;
+  padding: 56px 32px;
+  background-color: #fff;
+  border-radius: 12px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  margin-bottom: 32px;
+}
+
+.form-field-horizontal {
+  flex-direction: row;
+  align-items: center;
+}
+
+.form-field label {
+  margin-bottom: 18px;
+  font-size: 18px;
+}
+
+.form-field-horizontal label {
+  margin-bottom: 0;
+  margin-right: 8px;
+}
+
+.form-field input {
+  height: 32px;
+  padding: 0 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-conditions {
+  padding: 18px 32px;
+  border: 1px solid #000;
+  background-color: #fffdfd;
+  margin-bottom: 32px;
+  border-radius: 8px;
+}
+
+/* === MODAL === */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+}
+
+.modal-content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 2rem 3rem;
+  border-radius: 16px;
+  max-width: 500px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  animation: popup 0.3s ease;
+}
+
+.frame-popup {
+  background-image: url("media/Frame 3917.png");
+  background-size: cover;
+  background-position: center;
+  color: #222;
+}
+
+.inline-qr {
+  width: 150px;
+  height: auto;
+  margin-top: 1rem;
+}
+
+/* Popup-animation */
+@keyframes popup {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* === RESPONSIVITET === */
+@media (max-width: 900px) {
+  .nav-container {
+    flex-direction: column;
+    height: auto;
+    padding: 12px 24px;
+  }
+
+  .nav-links {
+    justify-content: center;
+    gap: 24px;
+    margin: 8px 0;
+  }
+
+  .two-column {
+    flex-direction: column;
+  }
+}
+
+
