@@ -11,6 +11,19 @@
     />
 
     <style>
+      /* === GRUNDSTILAR === */
+      body {
+        font-family: "Source Sans 3", sans-serif;
+        background-color: #f9f5f3;
+        color: #2b2b2b;
+        margin: 0;
+        line-height: 1.7;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
       /* === NAVIGATION === */
       .navigation {
         width: 100%;
@@ -18,7 +31,6 @@
         position: sticky;
         top: 0;
         z-index: 100;
-        transition: background-color 0.4s ease, color 0.4s ease;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
       }
 
@@ -28,15 +40,14 @@
         justify-content: space-between;
         max-width: 1440px;
         margin: 0 auto;
-        padding: 12px 48px; /* Mindre padding = lägre höjd */
-        height: 80px; /* Mindre höjd */
+        padding: 12px 48px;
+        height: 80px;
         box-sizing: border-box;
       }
 
       .nav-logo img {
-        height: 50px; /* Justerad för mindre navbar */
+        height: 50px;
         width: auto;
-        display: block;
       }
 
       .nav-links {
@@ -50,7 +61,6 @@
       }
 
       .nav-links a {
-        text-decoration: none;
         color: #222;
         font-size: 16px;
         font-weight: 500;
@@ -58,13 +68,12 @@
       }
 
       .nav-links a:hover {
-        color: #6d3234; /* 🔥 Blir röd vid hover */
+        color: #6d3234;
       }
 
       .nav-button .insidan-btn {
         background-color: #6d3234;
         color: #fff;
-        text-decoration: none;
         padding: 8px 18px;
         border-radius: 20px;
         font-weight: 500;
@@ -72,54 +81,15 @@
       }
 
       .nav-button .insidan-btn:hover {
-        background-color: #8a4042; /* Lite ljusare vid hover */
+        background-color: #8a4042;
       }
 
-      .scrolled {
-        background-color: #f5e3e3;
-      }
-
-      .scrolled .nav-links a {
-        color: #6d3234;
-      }
-
-      main {
-        margin-top: 80px; /* Matchar nya navbar-höjden */
-      }
-
-      @media (max-width: 900px) {
-        .nav-container {
-          flex-direction: column;
-          height: auto;
-          padding: 12px 24px;
-        }
-
-        .nav-links {
-          justify-content: center;
-          gap: 24px;
-          margin: 8px 0;
-        }
-
-        main {
-          margin-top: 120px;
-        }
-      }
-
-      /* === SIDANS STIL === */
-      body {
-        font-family: "Source Sans 3", sans-serif;
-        background-color: #f9f5f3;
-        color: #2b2b2b;
-        margin: 0;
-        line-height: 1.7;
-      }
-
-      /* === HERO MED TONÖVERGÅNG === */
+      /* === HERO === */
       .hero {
         position: relative;
         width: 100%;
-        height: 360px;
-        background: url("media/Frame 3916.png") center/cover no-repeat;
+        height: 380px;
+        background: url("media/Frame 3918.png") center/cover no-repeat;
       }
 
       .hero::after {
@@ -128,7 +98,7 @@
         bottom: 0;
         left: 0;
         width: 100%;
-        height: 120px;
+        height: 100px;
         background: linear-gradient(to bottom, rgba(249, 245, 243, 0) 0%, #f9f5f3 100%);
       }
 
@@ -141,19 +111,49 @@
 
       .intro-layout {
         display: grid;
-        grid-template-columns: 2fr 1fr;
+        grid-template-columns: 1.1fr 0.9fr;
         gap: 2rem;
         align-items: start;
       }
 
-      .intro-text p {
-        margin-bottom: 1.5rem;
+      .intro-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
       }
 
+      .intro-text h1 {
+        font-size: 1.6rem;
+        line-height: 1.4;
+        font-weight: 600;
+        margin-bottom: 1rem;
+      }
+
+      .intro-text p {
+        margin-bottom: 1.5rem;
+        font-size: 1rem;
+      }
+
+      .cta-btn {
+        display: inline-block;
+        background-color: #6d3234;
+        color: #fff;
+        padding: 10px 24px;
+        border-radius: 4px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        transition: all 0.3s ease;
+      }
+
+      .cta-btn:hover {
+        background-color: #8a4042;
+      }
+
+      /* === BILDER === */
       .image-gallery {
-        display: grid;
-        grid-template-rows: auto auto;
-        gap: 0.8rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
       }
 
       .image-gallery img {
@@ -165,25 +165,10 @@
       .bottom-images {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 0.8rem;
+        gap: 1rem;
       }
 
-      .cta-btn {
-        display: inline-block;
-        background-color: #6d3234;
-        color: #fff;
-        padding: 10px 22px;
-        border-radius: 4px;
-        text-decoration: none;
-        font-weight: 600;
-        letter-spacing: 0.5px;
-        transition: all 0.3s ease;
-      }
-
-      .cta-btn:hover {
-        background-color: #8a4042;
-      }
-
+      /* === FOOTER === */
       footer {
         text-align: center;
         padding: 1rem;
@@ -193,6 +178,19 @@
         font-size: 0.9rem;
       }
 
+      /* === FADE-IN ANIMATION === */
+      .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 1s ease-out, transform 1s ease-out;
+      }
+
+      .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* === RESPONSIV DESIGN === */
       @media (max-width: 900px) {
         .intro-layout {
           grid-template-columns: 1fr;
@@ -205,13 +203,17 @@
         .hero {
           height: 250px;
         }
+
+        .intro-text h1 {
+          font-size: 1.4rem;
+        }
       }
     </style>
   </head>
 
   <body>
     <!-- Navigation -->
-    <nav class="navigation">
+    <nav class="navigation fade-in">
       <div class="nav-container">
         <div class="nav-logo">
           <a href="/"><img src="media/logo.png" alt="Kollektivhuset Kombo logotyp" /></a>
@@ -235,56 +237,74 @@
     </nav>
 
     <!-- Hero-bild -->
-    <section class="hero"></section>
+    <section class="hero fade-in"></section>
 
     <!-- Innehåll -->
     <main>
-      <div class="intro-layout">
+      <div class="intro-layout fade-in">
         <div class="intro-text">
-          <p>
-            Vi är en ideell förening och ett levande kollektiv av människor som valt att
-            dela mer än bara en adress. Här hjälps vi åt, umgås och bygger gemenskap
-            genom både vardag och fest. Just nu bor vi ungefär 75 personer i huset – 50
-            vuxna och 25 barn – och tillsammans strävar vi efter att leva på ett sätt
-            som är både hållbart och hjärtligt.
-          </p>
-
-          <p>
-            Två kvällar i veckan dukar vi upp till gemensam middag där vi turas om att
-            laga mat. Det blir ofta en plats för skratt, samtal och nya idéer – lika
-            mycket en måltid som en mötesplats.
-          </p>
-
-          <p>
-            Utöver våra egna, fullt utrustade lägenheter delar vi på omkring 300
-            kvadratmeter gemensamma utrymmen. Här finns lek-, hobby-, gäst- och
-            vardagsrum, en stor matsal med uteplats och två fantastiska takterrasser med
-            utsikt över staden. De här ytorna används flitigt, både för planerade
-            aktiviteter och spontant umgänge. Vi har haft allt från loppisar och fester
-            till luciatåg för barnen och filmkvällar för hela huset.
-          </p>
-
-          <p>
-            Våra beslut fattar vi tillsammans på husmötet – det är där idéer blir
-            verklighet. Familjebostäder är vår förvaltare och en uppskattad
-            samarbetspartner sedan många år tillbaka.
-          </p>
-
-          <a href="medlem.html" class="cta-btn">BLI MEDLEM →</a>
+          <h1>
+            Vi är en ideell förening och ett kollektiv som delar mer än en adress – vi hjälps åt, umgås och bygger gemenskap i vardag och fest.
+          </h1>
+          <a href="medlem.html" class="cta-btn">Bli Medlem →</a>
         </div>
 
         <div class="image-gallery">
           <img src="media/kollektivhuset_tegelvagg.png" alt="Kollektivhuset Kombo" />
+        </div>
+      </div>
+
+      <div class="intro-layout fade-in" style="margin-top: 3rem;">
+        <div class="image-gallery">
           <div class="bottom-images">
-            <img src="media/image-16.png" alt="Kollektivhusets fasad" />
+            <img src="media/image-16.png" alt="Gemensam yta" />
             <img src="media/kollektivhuset_kvällssol.png.jpg" alt="Takterrass" />
           </div>
+          <img src="media/kollektivhuset_fasad.png" alt="Husets fasad" />
+        </div>
+
+        <div class="intro-text">
+          <p>
+            Två kvällar i veckan dukar vi upp till gemensam middag där vi turas om att laga mat. Det blir ofta en plats för skratt, samtal och nya idéer – lika mycket en måltid som en mötesplats.
+          </p>
+
+          <p>
+            Utöver våra egna, fullt utrustade lägenheter delar vi på omkring 300 kvadratmeter gemensamma utrymmen. Här finns lek-, hobby-, gäst- och vardagsrum, en stor matsal med uteplats och två fantastiska takterrasser med utsikt över staden.
+          </p>
+
+          <p>
+            De här ytorna används flitigt, både för planerade aktiviteter och spontant umgänge. Vi har haft allt från loppisar och fester till luciatåg för barnen och filmkvällar för hela huset.
+          </p>
         </div>
       </div>
     </main>
 
-    <footer>
+    <footer class="fade-in">
       © 2025 Kollektivhuset Kombo – Tillsammans bygger vi gemenskap.
     </footer>
+
+    <!-- === SCRIPT FÖR FADE-IN === -->
+    <script>
+      const faders = document.querySelectorAll(".fade-in");
+
+      const appearOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const appearOnScroll = new IntersectionObserver(function (entries, observer) {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        });
+      }, appearOptions);
+
+      faders.forEach((fader) => {
+        appearOnScroll.observe(fader);
+      });
+    </script>
   </body>
 </html>
+
+
