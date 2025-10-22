@@ -1,77 +1,40 @@
-/* globals.css - färger, typsnitt och basstilar */
-:root {
-  --color-background: #f9f6f3; /* huvudbakgrund */
-  --color-surface: #faf7f4;     /* ytor (ej använt överallt men tillgängligt) */
-  --color-text: #2b2b2b;        /* huvudtext */
-  --color-accent: #a13c2f;      /* tegelröd */
-  --color-accent-dark: #802f24; /* mörkare tegelröd */
-  --color-accent-light: #f2e8e5;/* ljus tegelton för hover-yta */
-  --color-border: rgba(0,0,0,0.08);
-  --max-width: 1100px;
+/* === INTRO LAYOUT === */
+.intro-layout {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 1rem; /* Minska avstånd mellan text och bild */
+  align-items: start;
 }
 
-html {
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-  font-size: 16px;
+/* Större bild bredvid text */
+.intro-layout .image-gallery img:first-child {
+  width: 100%; /* fyller kolumnen */
+  border-radius: 4px;
+  object-fit: cover;
 }
 
-*, *::before, *::after { box-sizing: inherit; }
-
-body {
-  margin: 0;
-  font-family: "Source Sans 3", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  color: var(--color-text);
-  background-color: var(--color-background);
-  line-height: 1.7;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Minska whitespace mellan övriga bilder */
+.image-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
-/* Rubriker - serif för mer personligt uttryck */
-h1,h2,h3,h4,h5,h6 {
-  font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
-  color: var(--color-accent);
-  margin: 0 0 0.5rem 0;
-  line-height: 1.25;
+.bottom-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
 }
 
-h1 { font-size: 2rem; }
-h2 { font-size: 1.6rem; }
-h3 { font-size: 1.25rem; }
-
-p { margin: 0 0 1.2rem 0; }
-
-/* Länkar */
-a { color: var(--color-accent); text-decoration: none; transition: color 180ms ease; }
-a:hover { color: var(--color-accent-dark); text-decoration: underline; }
-
-/* Bilder */
-img { max-width: 100%; display: block; }
-
-/* Utility */
-.container { max-width: var(--max-width); margin: 0 auto; padding: 0 24px; }
-@media (min-width: 700px) { .container { padding: 0 48px; } }
-
-/* Rensade HR */
-hr { border: none; border-top: 1px solid var(--color-border); margin: 40px 0; }
-
-/* Knappar (default) */
-button, .button-l {
-  font-family: inherit;
-  background-color: var(--color-accent);
+/* Kortare "Bli Medlem"-knapp */
+.cta-btn {
+  display: inline-block;
+  background-color: #6d3234;
   color: #fff;
-  border: none;
-  padding: 12px 20px;
-  border-radius: 8px;
-  cursor: pointer;
+  padding: 10px 16px; /* justera padding */
+  border-radius: 4px;
   font-weight: 600;
-  transition: transform 180ms ease, background-color 180ms ease;
-}
-button:hover, .button-l:hover { background-color: var(--color-accent-dark); transform: translateY(-2px); }
-
-/* Responsiv textjustering */
-@media (min-width: 1000px) {
-  h1 { font-size: 2.4rem; }
-  h2 { font-size: 1.8rem; }
+  letter-spacing: 0.5px;
+  width: 33%; /* cirka en tredjedel av bredden */
+  text-align: center;
 }
