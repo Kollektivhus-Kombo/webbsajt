@@ -13,8 +13,6 @@
     <style>
       body {
         font-family: "Source Sans 3", sans-serif;
-        background-color: #f9f5f3;
-        color: #2b2b2b;
         margin: 0;
         line-height: 1.7;
       }
@@ -26,7 +24,7 @@
       /* === NAVIGATION === */
       .navigation {
         width: 100%;
-        background-color: #f9f5f3;
+        background-color: rgba(249, 245, 243, 0.8); /* lite transparent över bilden */
         position: sticky;
         top: 0;
         z-index: 100;
@@ -83,26 +81,18 @@
         background-color: #8a4042;
       }
 
-      /* === HERO-OMRÅDE === */
+      /* === HERO-OMRÅDE SOM TAR HELA SIDAN === */
       .hero-section {
         position: relative;
         width: 100%;
-        height: auto;
-        overflow: hidden;
-        text-align: center;
-      }
-
-      .hero-section img {
-        width: 100%;
-        height: auto;
-        display: block;
+        height: 100vh; /* tar hela skärmens höjd */
+        background: url('media/Frame3919.png') no-repeat center center/cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
 
       .hero-button {
-        position: absolute;
-        top: 70%;
-        left: 50%;
-        transform: translate(-50%, -50%);
         background-color: #c92f2f;
         color: #fff;
         padding: 12px 24px;
@@ -151,12 +141,10 @@
       </div>
     </nav>
 
-    <!-- Hero-bild med knapp -->
+    <!-- Hero-bild som täcker hela sidan -->
     <section class="hero-section">
-      <img src="media/Frame 3919.png" alt="Kollektivhuset Kombo hero-bild" />
       <a href="medlem.html" class="hero-button">Bli Medlem</a>
     </section>
   </body>
 </html>
-
 
