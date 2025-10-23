@@ -112,8 +112,8 @@
       .intro-layout {
         display: grid;
         grid-template-columns: 1.1fr 0.9fr;
-        gap: 2rem;
-        align-items: start;
+        gap: 1.5rem;
+        align-items: center;
       }
 
       .intro-text {
@@ -126,7 +126,7 @@
         font-size: 1.6rem;
         line-height: 1.4;
         font-weight: 600;
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem;
       }
 
       .intro-text p {
@@ -138,10 +138,10 @@
         display: inline-block;
         background-color: #6d3234;
         color: #fff;
-        padding: 10px 24px;
+        padding: 8px 16px;
         border-radius: 4px;
         font-weight: 600;
-        letter-spacing: 0.5px;
+        width: fit-content;
         transition: all 0.3s ease;
       }
 
@@ -226,12 +226,7 @@
         </ul>
 
         <div class="nav-button">
-          <a
-            href="https://insidan.kollektivhuskombo.se/"
-            target="_blank"
-            class="insidan-btn"
-            >Insidan</a
-          >
+          <a href="https://insidan.kollektivhuskombo.se/" target="_blank" class="insidan-btn">Insidan</a>
         </div>
       </div>
     </nav>
@@ -286,12 +281,7 @@
     <!-- === SCRIPT FÖR FADE-IN === -->
     <script>
       const faders = document.querySelectorAll(".fade-in");
-
-      const appearOptions = {
-        threshold: 0.1,
-        rootMargin: "0px 0px -50px 0px",
-      };
-
+      const appearOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
       const appearOnScroll = new IntersectionObserver(function (entries, observer) {
         entries.forEach((entry) => {
           if (!entry.isIntersecting) return;
@@ -306,5 +296,4 @@
     </script>
   </body>
 </html>
-
 
