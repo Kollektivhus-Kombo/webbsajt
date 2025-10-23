@@ -1,160 +1,83 @@
 <!DOCTYPE html>
 <html lang="sv">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kollektivhuset Kombo</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kollektivhuset Kombo</title>
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="stylesheets/globals.css" />
+</head>
+<body>
 
-    <link rel="stylesheet" href="stylesheets/styles.css" />
-
-    <style>
-      /* === HERO KNAPP VARIABLER === */
-      :root {
-        --btn-left: 6%;
-        --btn-top: 48%;
-        --btn-width: 18%;
-        --btn-min-width: 110px;
-      }
-
-      .page-image {
-        position: relative;
-        width: 100%;
-        min-height: 380px;
-        background-image: url("media/hsr66880-pano-2-14.png");
-        background-position: top center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        display: flex;
-        align-items: flex-start;
-        justify-content: center;
-        margin-top: 0;
-      }
-
-      .btn-wrapper {
-        position: absolute;
-        left: var(--btn-left);
-        top: var(--btn-top);
-        transform: translateY(-50%);
-        z-index: 5;
-      }
-
-      .cta-btn-hero {
-        display: inline-block;
-        text-decoration: none;
-        background: #6d3234;
-        color: #fff;
-        padding: 10px 24px;
-        border-radius: 8px;
-        font-weight: 600;
-        letter-spacing: 0.4px;
-        width: var(--btn-width);
-        min-width: var(--btn-min-width);
-        box-sizing: border-box;
-        text-align: center;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
-        transition: transform 0.12s ease, background-color 0.12s ease;
-        font-family: "Source Sans 3", sans-serif;
-      }
-
-      .cta-btn-hero:hover {
-        background-color: #8a4042;
-      }
-
-      .cta-btn-hero:active {
-        transform: translateY(1px) scale(0.995);
-      }
-
-      @media (max-width: 900px) {
-        :root {
-          --btn-left: 6%;
-          --btn-top: 58%;
-          --btn-width: 40%;
-        }
-      }
-    </style>
-  </head>
-
-  <body>
-    <!-- Navigation (från gamla versionen) -->
-    <nav class="navigation fade-in">
-      <div class="nav-container">
-        <div class="nav-logo">
-          <a href="/"><img src="media/logo.png" alt="Kollektivhuset Kombo logotyp" /></a>
-        </div>
-
-        <ul class="nav-links">
-          <li><a href="medlem.html">Medlemskap och bostadskö</a></li>
-          <li><a href="stadgar.html">Stadgar</a></li>
-          <li><a href="kontakt.html">Kontakt</a></li>
-        </ul>
-
-        <div class="nav-button">
-          <a
-            href="https://insidan.kollektivhuskombo.se/"
-            target="_blank"
-            class="insidan-btn"
-            >Insidan</a
-          >
-        </div>
+  <!-- Navigation -->
+  <nav class="navigation fade-in">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <a href="/"><img src="media/logo.png" alt="Kollektivhuset Kombo logotyp" /></a>
       </div>
-    </nav>
 
-    <!-- Hero-bild med absolut-positionerad knapp -->
-    <section class="page-image fade-in">
-      <div class="btn-wrapper">
-        <a href="medlem.html" class="cta-btn-hero" aria-label="Bli medlem">Bli Medlem →</a>
+      <ul class="nav-links">
+        <li><a href="medlem.html">Medlemskap och bostadskö</a></li>
+        <li><a href="stadgar.html">Stadgar</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+
+      <div class="nav-button">
+        <a href="https://insidan.kollektivhuskombo.se/" target="_blank" class="insidan-btn">Insidan</a>
       </div>
-    </section>
+    </div>
+  </nav>
 
-    <!-- Huvudinnehåll (Figma-exporten) -->
-    <main>
-      <div class="f-rsta-sidan-kombo-1 fade-in">
-        <p class="text-16"><span class="text-black">Vi är en ideell förening och ett kollektiv som delar mer än en adress – vi hjälps åt, umgås och bygger gemenskap i vardag och fest.</span></p>
-        <img src="media/image-15-17.png" class="image-15-17" alt="image-15" />
-        <p class="text-18"><span class="text-black">Två kvällar i veckan dukar vi upp till gemensam middag där vi turas om att laga mat. Det blir ofta en plats för skratt, samtal och nya idéer – lika mycket en måltid som en mötesplats.</span></p>
-        <div class="frame-3920-19">
-          <img src="media/2-20.png" class="img-2-20" alt="img-2-20" />
-          <img src="media/about-img3-21.png" class="about-img3-21" alt="about-img3" />
-          <img src="media/rectangle-8-22.png" class="rectangle-8-22" alt="rectangle-8" />
-        </div>
-        <p class="text-27"><span class="text-black">Utöver våra egna, fullt utrustade lägenheter delar vi på omkring 300 kvadratmeter gemensamma utrymmen. Här finns lek-, hobby-, gäst- och vardagsrum, en stor matsal med uteplats och två fantastiska takterrasser med utsikt över staden.  
+  <!-- Hero -->
+  <section class="hero fade-in"></section>
 
-        De här ytorna används flitigt, både för planerade aktiviteter och spontant umgänge. Vi har haft allt från loppisar och fester till luciatåg för barnen och filmkvällar för hela huset.
-        </span></p>
-        <img src="media/about-img2-28.png" class="about-img2-28" alt="about-img2" />
+  <!-- Huvudinnehåll -->
+  <main>
+    <div class="intro-layout fade-in">
+      <!-- Text -->
+      <div class="intro-text">
+        <h1>
+          Vi är en ideell förening och ett kollektiv som delar mer än en adress – vi hjälps åt, umgås och bygger gemenskap i vardag och fest.
+        </h1>
+        <a href="medlem.html" class="cta-btn">Bli Medlem →</a>
       </div>
-    </main>
 
-    <!-- Footer -->
-    <footer class="fade-in">
-      © 2025 Kollektivhuset Kombo – Tillsammans bygger vi gemenskap.
-    </footer>
+      <!-- Större bild bredvid text -->
+      <div class="image-gallery">
+        <img src="media/kollektivhuset framsida.png" alt="Kollektivhuset framsida" />
+      </div>
+    </div>
 
-    <!-- Fade-in script -->
-    <script>
-      const faders = document.querySelectorAll(".fade-in");
+    <!-- Tre-bildsklunga -->
+    <div class="image-cluster fade-in">
+      <img src="media/trebilderkombo.png" alt="Tre bilder tillsammans" />
+    </div>
+  </main>
 
-      const appearOptions = {
-        threshold: 0.1,
-        rootMargin: "0px 0px -50px 0px",
-      };
+  <!-- Footer -->
+  <footer class="fade-in">
+    © 2025 Kollektivhuset Kombo – Tillsammans bygger vi gemenskap.
+  </footer>
 
-      const appearOnScroll = new IntersectionObserver(function (entries, observer) {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) return;
-          entry.target.classList.add("visible");
-          observer.unobserve(entry.target);
-        });
-      }, appearOptions);
-
-      faders.forEach((fader) => {
-        appearOnScroll.observe(fader);
+  <!-- Fade-in script -->
+  <script>
+    const faders = document.querySelectorAll(".fade-in");
+    const appearOptions = {
+      threshold: 0.1,
+      rootMargin: "0px 0px -50px 0px",
+    };
+    const appearOnScroll = new IntersectionObserver(function (entries, observer) {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
       });
-    </script>
-  </body>
+    }, appearOptions);
+    faders.forEach(fader => appearOnScroll.observe(fader));
+  </script>
+</body>
 </html>
