@@ -110,11 +110,11 @@ a { text-decoration: none; color: inherit; }
   max-width: 1100px;
   margin: 3rem auto;
   padding: 0 1.5rem;
-  align-items: flex-start;  /* viktig */
+  align-items: flex-start;
 }
 
 .image-text-section .image-left {
-  flex: 1;
+  flex: 0 0 50%; /* tar 50% */
 }
 
 .image-text-section .image-left img {
@@ -125,7 +125,7 @@ a { text-decoration: none; color: inherit; }
 }
 
 .image-text-section .text-right {
-  flex: 1;
+  flex: 0 0 50%; /* tar 50% */
   font-size: 1rem;
   line-height: 1.7;
   color: #2b2b2b;
