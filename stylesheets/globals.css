@@ -105,13 +105,16 @@ a { text-decoration: none; color: inherit; }
 
 /* === TRE-BILD + TEXT KLUSTER === */
 .image-text-cluster {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
   gap: 2rem;
   max-width: 1100px;
   margin: 3rem auto;
   padding: 0 1.5rem;
-  align-items: start;
+  align-items: flex-start;
+}
+
+.image-text-cluster .image-cluster {
+  flex: 1;
 }
 
 .image-text-cluster .image-cluster img {
@@ -121,6 +124,7 @@ a { text-decoration: none; color: inherit; }
 }
 
 .image-text-cluster .cluster-text {
+  flex: 1;
   font-size: 1rem;
   line-height: 1.7;
   color: #2b2b2b;
@@ -155,6 +159,7 @@ footer {
   }
   .nav-links { flex-direction: column; gap: 12px; }
   .intro-layout { grid-template-columns: 1fr; }
-  .image-text-cluster { grid-template-columns: 1fr; }
+  .image-text-cluster { flex-direction: column; gap: 1.5rem; }
   .hero { height: 250px; }
 }
+
