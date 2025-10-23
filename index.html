@@ -1,167 +1,93 @@
-/* === GLOBALA STILAR === */
-body {
-  font-family: "Source Sans 3", sans-serif;
-  background-color: #f9f5f3;
-  color: #2b2b2b;
-  margin: 0;
-  line-height: 1.7;
-}
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kollektivhuset Kombo</title>
 
-a { text-decoration: none; color: inherit; }
+  <link
+    href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="stylesheets/globals.css" />
+</head>
+<body>
 
-/* === NAVIGATION === */
-.navigation {
-  width: 100%;
-  background-color: #f9f5f3;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-}
+  <!-- Navigation -->
+  <nav class="navigation fade-in">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <a href="/"><img src="media/logo.png" alt="Kollektivhuset Kombo logotyp" /></a>
+      </div>
 
-.nav-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 12px 48px;
-  height: 80px;
-  box-sizing: border-box;
-}
+      <ul class="nav-links">
+        <li><a href="medlem.html">Medlemskap och bostadskö</a></li>
+        <li><a href="stadgar.html">Stadgar</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
 
-.nav-logo img { height: 50px; width: auto; }
+      <div class="nav-button">
+        <a href="https://insidan.kollektivhuskombo.se/" target="_blank" class="insidan-btn">Insidan</a>
+      </div>
+    </div>
+  </nav>
 
-.nav-links {
-  display: flex;
-  gap: 40px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  flex-grow: 1;
-  justify-content: center;
-}
+  <!-- Hero -->
+  <section class="hero fade-in"></section>
 
-.nav-links a {
-  color: #222;
-  font-size: 16px;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
+  <!-- Huvudinnehåll -->
+  <main>
+    <!-- Intro layout: text + större bild -->
+    <div class="intro-layout fade-in">
+      <div class="intro-text">
+        <h1>
+          Vi är en ideell förening och ett kollektiv som delar mer än en adress – vi hjälps åt, umgås och bygger gemenskap i vardag och fest.
+        </h1>
+        <a href="medlem.html" class="cta-btn">Bli Medlem →</a>
+      </div>
 
-.nav-links a:hover { color: #6d3234; }
+      <div class="image-gallery">
+        <img src="media/kollektivhuset framsida.png" alt="Kollektivhuset framsida" />
+      </div>
+    </div>
 
-.nav-button .insidan-btn {
-  background-color: #6d3234;
-  color: #fff;
-  padding: 8px 18px;
-  border-radius: 20px;
-  font-weight: 500;
-  transition: background-color 0.3s ease;
-}
+    <!-- Tre-bilder + text -->
+    <section class="image-text-section fade-in">
+      <div class="image-left">
+        <img src="media/trebilderkombo.png" alt="Tre bilder tillsammans" />
+      </div>
+      <div class="text-right">
+        <p>
+          Utöver våra egna, fullt utrustade lägenheter delar vi på omkring 300 kvadratmeter gemensamma utrymmen. Här finns lek-, hobby-, gäst- och vardagsrum, en stor matsal med uteplats och två fantastiska takterrasser med utsikt över staden.
+        </p>
+        <p>
+          De här ytorna används flitigt, både för planerade aktiviteter och spontant umgänge. Vi har haft allt från loppisar och fester till luciatåg för barnen och filmkvällar för hela huset.
+        </p>
+        <p>
+          Två kvällar i veckan dukar vi upp till gemensam middag där vi turas om att laga mat. Det blir ofta en plats för skratt, samtal och nya idéer – lika mycket en måltid som en mötesplats.
+        </p>
+      </div>
+    </section>
+  </main>
 
-.nav-button .insidan-btn:hover { background-color: #8a4042; }
+  <!-- Footer -->
+  <footer class="fade-in">
+    © 2025 Kollektivhuset Kombo – Tillsammans bygger vi gemenskap.
+  </footer>
 
-/* === HERO === */
-.hero {
-  width: 100%;
-  height: 380px;
-  background: url("../media/kombo ny bild.png") center/cover no-repeat;
-  position: relative;
-}
-
-/* === INTRO LAYOUT === */
-.intro-layout {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 2rem;
-  align-items: center;
-  max-width: 1100px;
-  margin: 3rem auto;
-  padding: 0 1.5rem;
-}
-
-.intro-text h1 {
-  font-size: 1.6rem;
-  line-height: 1.4;
-  font-weight: 600;
-  margin-bottom: 1rem;
-}
-
-.cta-btn {
-  display: inline-block;
-  background-color: #6d3234;
-  color: #fff;
-  padding: 10px 24px;
-  border-radius: 4px;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  transition: all 0.3s ease;
-}
-
-.cta-btn:hover { background-color: #8a4042; }
-
-.image-gallery img { width: 100%; border-radius: 4px; object-fit: cover; }
-
-/* === TRE-BILD + TEXT KLUSTER === */
-.image-text-section {
-  display: flex;
-  gap: 2rem;
-  max-width: 1100px;
-  margin: 3rem auto;
-  padding: 0 1.5rem;
-  align-items: flex-start;
-}
-
-.image-text-section .image-left {
-  flex: 0 0 50%; /* tar 50% */
-}
-
-.image-text-section .image-left img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 6px;
-}
-
-.image-text-section .text-right {
-  flex: 0 0 50%; /* tar 50% */
-  font-size: 1rem;
-  line-height: 1.7;
-  color: #2b2b2b;
-}
-
-/* === FOOTER === */
-footer {
-  text-align: center;
-  padding: 1.5rem;
-  background-color: #f9f5f3;
-  border-top: 3px solid #6d3234;
-  color: #555;
-  font-size: 0.9rem;
-}
-
-/* === FADE-IN === */
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 1s ease-out, transform 1s ease-out;
-}
-
-.fade-in.visible { opacity: 1; transform: translateY(0); }
-
-/* === RESPONSIV === */
-@media (max-width: 900px) {
-  .nav-container {
-    flex-direction: column;
-    gap: 1rem;
-    height: auto;
-    padding: 16px;
-  }
-  .nav-links { flex-direction: column; gap: 12px; }
-  .intro-layout { grid-template-columns: 1fr; }
-  .image-text-section { flex-direction: column; gap: 1.5rem; }
-  .hero { height: 250px; }
-}
-
+  <!-- Fade-in script -->
+  <script>
+    const faders = document.querySelectorAll(".fade-in");
+    const appearOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
+    const appearOnScroll = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      });
+    }, appearOptions);
+    faders.forEach(fader => appearOnScroll.observe(fader));
+  </script>
+</body>
+</html>
 
