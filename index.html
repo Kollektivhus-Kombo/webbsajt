@@ -1,162 +1,69 @@
 <!DOCTYPE html>
-<html lang="sv">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kollektivhuset Kombo</title>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exported Figma Design</title>
+  <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet">
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="f-rsta-sidan-kombo-1">
+<div class="header-navigation-2">
+<div class="header-3">
+<img src="images/left-content-4.png" class="left-content-4" alt="left-content" />
+<div class="button-groups-5">
+<div class="buttons-6">
+<p class="text-7"><span class="text-white">Insidan</span></p>
+</div>
+</div>
+<div class="menu-items-8">
+<p class="text-9"><span class="text-rgb-36-36-36">Medlemskap och bostadskö</span></p>
+<p class="text-10"><span class="text-rgb-36-36-36">Stadgar</span></p>
+<p class="text-11"><span class="text-rgb-36-36-36">Kontakt</span></p>
+</div>
+</div>
+</div>
+<div class="frame-3919-12">
+<div class="frame-3918-13">
+<img src="images/1-hsr66880-pano-2-14.png" class="1-hsr66880-pano-2-14" alt="1-hsr66880-pano-2" />
+<p class="text-15"><span class="text-rgb-110-48-49">Välkommen till Kombo kollektivhus
+ Tillsammans bygger vi gemenskap</span></p>
+</div>
+<p class="text-16"><span class="text-black">Vi är en ideell förening och ett kollektiv som delar mer än en adress – vi hjälps åt, umgås och bygger gemenskap i vardag och fest.</span></p>
+<img src="images/image-15-17.png" class="image-15-17" alt="image-15" />
+<p class="text-18"><span class="text-black">Två kvällar i veckan dukar vi upp till gemensam middag där vi turas om att laga mat. Det blir ofta en plats för skratt, samtal och nya idéer – lika mycket en måltid som en mötesplats.</span></p>
+<div class="frame-3920-19">
+<img src="images/2-20.png" class="2-20" alt="2" />
+<img src="images/about-img3-21.png" class="about-img3-21" alt="about-img3" />
+<img src="images/rectangle-8-22.png" class="rectangle-8-22" alt="rectangle-8" />
+</div>
+<div class="btn-23">
+<p class="text-24"><span class="text-white">Bli medlem</span></p>
+<div class="node-25">
+<img src="images/vector-26.svg" class="vector-26" alt="vector" />
+</div>
+</div>
+<p class="text-27"><span class="text-black">utöver våra egna, fullt utrustade lägenheter delar vi på omkring 300 kvadratmeter gemensamma utrymmen. Här finns lek-, hobby-, gäst- och vardagsrum, en stor matsal med uteplats och två fantastiska takterrasser med utsikt över staden. 
 
-    <style>
-      /* === GLOBALT === */
-      body, html {
-        margin: 0;
-        padding: 0;
-        height: 100%;
-        font-family: "Source Sans 3", sans-serif;
-      }
+De här ytorna används flitigt, både för planerade aktiviteter och spontant umgänge. Vi har haft allt från loppisar och fester till luciatåg för barnen och filmkvällar för hela huset.
+</span></p>
+<img src="images/about-img2-28.png" class="about-img2-28" alt="about-img2" />
+</div>
+</div>
 
-      a {
-        text-decoration: none;
-      }
-
-      /* === NAVIGATION === */
-      .navigation {
-        width: 100%;
-        background-color: rgba(249, 245, 243, 0.85); /* transparent över bilden */
-        position: sticky;
-        top: 0;
-        z-index: 100;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-      }
-
-      .nav-container {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        max-width: 1440px;
-        margin: 0 auto;
-        padding: 12px 48px;
-        height: 80px;
-        box-sizing: border-box;
-      }
-
-      .nav-logo img {
-        height: 50px;
-        width: auto;
-      }
-
-      .nav-links {
-        display: flex;
-        gap: 40px;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        flex-grow: 1;
-        justify-content: center;
-      }
-
-      .nav-links a {
-        color: #222;
-        font-size: 16px;
-        font-weight: 500;
-        transition: color 0.3s ease;
-      }
-
-      .nav-links a:hover {
-        color: #6d3234;
-      }
-
-      .nav-button .insidan-btn {
-        background-color: #6d3234;
-        color: #fff;
-        padding: 8px 18px;
-        border-radius: 20px;
-        font-weight: 500;
-        transition: background-color 0.3s ease;
-      }
-
-      .nav-button .insidan-btn:hover {
-        background-color: #8a4042;
-      }
-
-      /* === HERO-SEKTION FULLSKÄRM === */
-      .hero-section {
-        position: relative;
-        width: 100%;
-        height: 100vh; /* tar hela skärmen */
-        background: url('media/Frame%203919.png') no-repeat center center;
-        background-size: cover;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .hero-button {
-        background-color: #c92f2f;
-        color: #fff;
-        padding: 14px 28px;
-        border-radius: 6px;
-        font-weight: 600;
-        font-size: 1rem;
-        letter-spacing: 0.3px;
-        transition: background-color 0.2s ease, transform 0.2s ease;
-      }
-
-      .hero-button:hover {
-        background-color: #a52424;
-        transform: scale(1.05);
-      }
-
-      @media (max-width: 768px) {
-        .nav-container {
-          padding: 12px 24px;
-        }
-
-        .nav-links {
-          gap: 20px;
-        }
-
-        .hero-button {
-          font-size: 0.9rem;
-          padding: 12px 22px;
-        }
-      }
-    </style>
-  </head>
-
-  <body>
-    <!-- Navigation -->
-    <nav class="navigation">
-      <div class="nav-container">
-        <div class="nav-logo">
-          <a href="/"><img src="media/logo.png" alt="Kollektivhuset Kombo logotyp" /></a>
-        </div>
-
-        <ul class="nav-links">
-          <li><a href="medlem.html">Medlemskap och bostadskö</a></li>
-          <li><a href="stadgar.html">Stadgar</a></li>
-          <li><a href="kontakt.html">Kontakt</a></li>
-        </ul>
-
-        <div class="nav-button">
-          <a
-            href="https://insidan.kollektivhuskombo.se/"
-            target="_blank"
-            class="insidan-btn"
-            >Insidan</a
-          >
-        </div>
-      </div>
-    </nav>
-
-    <!-- Hero-bild som täcker hela sidan -->
-    <section class="hero-section">
-      <a href="medlem.html" class="hero-button">Bli Medlem</a>
-    </section>
-  </body>
+</body>
 </html>
+CSS
 
+/* Add font files for Jomolhari */
+@font-face {
+  font-family: 'Jomolhari';
+  src: url('fonts/jomolhari.woff2') format('woff2'),
+       url('fonts/jomolhari.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+:root {
+  --font-family-inter: 'Inter', sans-serif;
