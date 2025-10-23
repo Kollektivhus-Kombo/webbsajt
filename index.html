@@ -11,7 +11,6 @@
     />
 
     <style>
-      /* === GRUNDSTILAR === */
       body {
         font-family: "Source Sans 3", sans-serif;
         background-color: #f9f5f3;
@@ -84,165 +83,44 @@
         background-color: #8a4042;
       }
 
-      /* === HERO === */
-      .hero {
+      /* === HERO-OMRÅDE === */
+      .hero-section {
         position: relative;
         width: 100%;
-        height: 380px;
-        background: url("media/Frame 3918.png") center/cover no-repeat;
+        height: auto;
+        overflow: hidden;
       }
 
-      .hero::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
+      .hero-section img {
         width: 100%;
-        height: 100px;
-        background: linear-gradient(to bottom, rgba(249, 245, 243, 0) 0%, #f9f5f3 100%);
+        height: auto;
+        display: block;
       }
 
-      /* === INNEHÅLL === */
-      main {
-        max-width: 1100px;
-        margin: 1.8rem auto 2.5rem; /* minskad top/bottom */
-        padding: 0 1.5rem;
-      }
-
-      /* generell intro-layout */
-      .intro-layout {
-        display: grid;
-        grid-template-columns: 1.1fr 0.9fr;
-        gap: 0.9rem; /* tajtare mellan text och bild */
-        align-items: center;
-      }
-
-      .intro-text {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-      }
-
-      .intro-text h1 {
-        font-size: 1.6rem;
-        line-height: 1.3;
-        font-weight: 600;
-        margin: 0 0 1rem 0;
-      }
-
-      .intro-text p {
-        margin-bottom: 1rem;
-        font-size: 1rem;
-      }
-
-      /* Kortare "Bli Medlem"-knapp */
-      .cta-btn {
-        display: inline-block;
-        background-color: #6d3234;
+      .hero-button {
+        position: absolute;
+        /* justera dessa värden så knappen hamnar exakt över den röda knappen i bilden */
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #c92f2f;
         color: #fff;
-        padding: 10px 12px;
+        padding: 12px 24px;
         border-radius: 6px;
         font-weight: 600;
         letter-spacing: 0.3px;
-        width: 33%;
-        min-width: 120px;
-        text-align: center;
-        transition: all 0.2s ease;
+        font-size: 1rem;
+        transition: background-color 0.2s ease;
       }
 
-      .cta-btn:hover {
-        background-color: #8a4042;
+      .hero-button:hover {
+        background-color: #a52424;
       }
 
-      /* === BILDER === */
-      .image-gallery {
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-        justify-content: center;
-      }
-
-      /* stora bilden (höger i första sektion) */
-      .intro-layout:first-of-type .image-gallery img {
-        width: 100%;
-        height: 260px; /* större så den matchar textblocket */
-        border-radius: 4px;
-        object-fit: cover;
-        display: block;
-      }
-
-      /* bild till vänster i andra sektion (ersätter tre små bilder) */
-      .second-left-image {
-        width: 100%;
-        height: 340px; /* gör bilden hög för att matcha texthöjd i referensen */
-        border-radius: 4px;
-        object-fit: cover;
-        display: block;
-      }
-
-      /* Mindre whitespace mellan första blocket och nästa: */
-      .intro-layout + .intro-layout {
-        margin-top: 0.4rem; /* mycket mindre än tidigare */
-      }
-
-      /* === FOOTER === */
-      footer {
-        text-align: center;
-        padding: 1rem;
-        background-color: #f9f5f3;
-        border-top: 3px solid #6d3234;
-        color: #555;
-        font-size: 0.9rem;
-      }
-
-      /* === FADE-IN ANIMATION === */
-      .fade-in {
-        opacity: 0;
-        transform: translateY(20px);
-        transition: opacity 1s ease-out, transform 1s ease-out;
-      }
-
-      .fade-in.visible {
-        opacity: 1;
-        transform: translateY(0);
-      }
-
-      /* === RESPONSIV DESIGN === */
-      @media (max-width: 900px) {
-        .intro-layout {
-          grid-template-columns: 1fr;
-          gap: 1rem;
-        }
-
-        .intro-layout:first-of-type .image-gallery img,
-        .second-left-image {
-          height: 220px;
-        }
-
-        .hero {
-          height: 250px;
-        }
-
-        .intro-text h1 {
-          font-size: 1.4rem;
-        }
-
-        .cta-btn {
-          width: 60%;
-          min-width: 0;
-        }
-
-        main {
-          margin: 1.2rem auto 2rem;
-        }
-
-        /* lägg bilden ovanför text på mobil för andra sektionen */
-        .intro-layout.second {
-          grid-template-columns: 1fr;
-        }
-
-        .intro-layout.second .image-gallery {
-          order: -1;
+      @media (max-width: 768px) {
+        .hero-button {
+          font-size: 0.9rem;
+          padding: 10px 18px;
         }
       }
     </style>
@@ -250,7 +128,7 @@
 
   <body>
     <!-- Navigation -->
-    <nav class="navigation fade-in">
+    <nav class="navigation">
       <div class="nav-container">
         <div class="nav-logo">
           <a href="/"><img src="media/logo.png" alt="Kollektivhuset Kombo logotyp" /></a>
@@ -273,74 +151,14 @@
       </div>
     </nav>
 
-    <!-- Hero-bild -->
-    <section class="hero fade-in"></section>
-
-    <!-- Innehåll -->
-    <main>
-      <!-- Första sektion: text till vänster, stor framsidebild till höger -->
-      <div class="intro-layout fade-in">
-        <div class="intro-text">
-          <h1>
-            Vi är en ideell förening och ett kollektiv som delar mer än en adress – vi hjälps åt, umgås och bygger gemenskap i vardag och fest.
-          </h1>
-          <a href="medlem.html" class="cta-btn">Bli Medlem →</a>
-        </div>
-
-        <div class="image-gallery">
-          <img src="media/kollektivhuset framsida.png" alt="Kollektivhuset Kombo - framsida" />
-        </div>
-      </div>
-
-      <!-- Andra sektion: EN bild till vänster (trebilderkombo.png) och text till höger -->
-      <div class="intro-layout fade-in second">
-        <div class="image-gallery">
-          <img src="media/trebilderkombo.png" alt="Tre bilder Kombo" class="second-left-image" />
-        </div>
-
-        <div class="intro-text">
-          <p>
-            Två kvällar i veckan dukar vi upp till gemensam middag där vi turas om att laga mat. Det blir ofta en plats för skratt, samtal och nya idéer – lika mycket en måltid som en mötesplats.
-          </p>
-
-          <p>
-            Utöver våra egna, fullt utrustade lägenheter delar vi på omkring 300 kvadratmeter gemensamma utrymmen. Här finns lek-, hobby-, gäst- och vardagsrum, en stor matsal med uteplats och två fantastiska takterrasser med utsikt över staden.
-          </p>
-
-          <p>
-            De här ytorna används flitigt, både för planerade aktiviteter och spontant umgänge. Vi har haft allt från loppisar och fester till luciatåg för barnen och filmkvällar för hela huset.
-          </p>
-        </div>
-      </div>
-    </main>
-
-    <footer class="fade-in">
-      © 2025 Kollektivhuset Kombo – Tillsammans bygger vi gemenskap.
-    </footer>
-
-    <!-- === SCRIPT FÖR FADE-IN === -->
-    <script>
-      const faders = document.querySelectorAll(".fade-in");
-
-      const appearOptions = {
-        threshold: 0.1,
-        rootMargin: "0px 0px -50px 0px",
-      };
-
-      const appearOnScroll = new IntersectionObserver(function (entries, observer) {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) return;
-          entry.target.classList.add("visible");
-          observer.unobserve(entry.target);
-        });
-      }, appearOptions);
-
-      faders.forEach((fader) => {
-        appearOnScroll.observe(fader);
-      });
-    </script>
+    <!-- Hero-bild med knapp -->
+    <section class="hero-section">
+      <img src="media/hero-bild.png" alt="Kollektivhuset Kombo hero-bild" />
+      <a href="medlem.html" class="hero-button">Bli Medlem</a>
+    </section>
   </body>
 </html>
+
 
 
 
