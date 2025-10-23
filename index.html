@@ -1,166 +1,178 @@
-/* === GLOBALA STILAR === */
-body {
-  font-family: "Source Sans 3", sans-serif;
-  background-color: #f9f5f3;
-  color: #2b2b2b;
-  margin: 0;
-  line-height: 1.7;
-}
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kollektivhuset Kombo</title>
+  <style>
+    /* === BAS === */
+    body {
+      margin: 0;
+      font-family: "Source Sans 3", system-ui, sans-serif;
+      color: #2b2b2b;
+      background-color: #fff;
+      line-height: 1.6;
+    }
 
-a { text-decoration: none; color: inherit; }
+    header {
+      background-color: #6d3234;
+      color: white;
+      padding: 1rem 0;
+    }
 
-/* === NAVIGATION === */
-.navigation {
-  width: 100%;
-  background-color: #f9f5f3;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-}
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+    }
 
-.nav-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 12px 48px;
-  height: 80px;
-  box-sizing: border-box;
-}
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: opacity 0.2s;
+    }
 
-.nav-logo img { height: 50px; width: auto; }
+    nav a:hover {
+      opacity: 0.8;
+    }
 
-.nav-links {
-  display: flex;
-  gap: 40px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  flex-grow: 1;
-  justify-content: center;
-}
+    /* === HERO HEADER === */
+    .hero {
+      width: 100%;
+      height: 60vh;
+      background: url("media/kombo ny bild.png") no-repeat center center;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
 
-.nav-links a {
-  color: #222;
-  font-size: 16px;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
+    /* === SEKTION MED STOR BILD OCH TEXT === */
+    .intro-section {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      max-width: 1100px;
+      margin: 4rem auto;
+      gap: 3rem;
+      padding: 0 1.5rem;
+    }
 
-.nav-links a:hover { color: #6d3234; }
+    .intro-section img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 8px;
+      object-fit: cover;
+    }
 
-.nav-button .insidan-btn {
-  background-color: #6d3234;
-  color: #fff;
-  padding: 8px 18px;
-  border-radius: 20px;
-  font-weight: 500;
-  transition: background-color 0.3s ease;
-}
+    .intro-section .text {
+      flex: 1 1 50%;
+    }
 
-.nav-button .insidan-btn:hover { background-color: #8a4042; }
+    .intro-section p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+    }
 
-/* === HERO === */
-.hero {
-  width: 100%;
-  height: 300px;
-  background: url("../media/kombo ny bild.png") center/cover no-repeat;
-  position: relative;
-  border-bottom: 2px solid #e5ded9;
-}
+    /* === BILD VÄNSTER + TEXT HÖGER === */
+    .image-text-wrapper {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 3rem;
+      max-width: 1100px;
+      margin: 4rem auto;
+      padding: 0 1.5rem;
+    }
 
-/* === INTRO LAYOUT === */
-.intro-layout {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 1.5rem;
-  align-items: center;
-  max-width: 1100px;
-  margin: 3rem auto;
-  padding: 0 1.5rem;
-}
+    .image-text-wrapper .image-side {
+      flex: 1 1 50%;
+      display: flex;
+      justify-content: flex-end;
+    }
 
-.intro-text h1 {
-  font-size: 1.6rem;
-  line-height: 1.4;
-  font-weight: 600;
-  margin-bottom: 1rem;
-}
+    .image-text-wrapper .image-side img {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+      border-radius: 8px;
+      object-fit: cover;
+    }
 
-.cta-btn {
-  display: inline-block;
-  background-color: #6d3234;
-  color: #fff;
-  padding: 10px 24px;
-  border-radius: 4px;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  transition: all 0.3s ease;
-}
+    .image-text-wrapper .text-side {
+      flex: 1 1 50%;
+      font-size: 1rem;
+      line-height: 1.7;
+      color: #2b2b2b;
+    }
 
-.cta-btn:hover { background-color: #8a4042; }
+    /* === RESPONSIV === */
+    @media (max-width: 900px) {
+      .intro-section,
+      .image-text-wrapper {
+        flex-direction: column;
+        gap: 1.5rem;
+      }
 
-.image-gallery img { width: 100%; border-radius: 4px; object-fit: cover; }
+      .intro-section img,
+      .image-text-wrapper .image-side img {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="#">Hem</a>
+      <a href="#">Om Kombo</a>
+      <a href="#">Medlem</a>
+      <a href="#">Kontakt</a>
+    </nav>
+  </header>
 
-/* === TRE-BILD + TEXT === */
-.image-text-section {
-  display: flex;
-  gap: 2rem;
-  max-width: 1100px;
-  margin: 3rem auto;
-  padding: 0 1.5rem;
-  align-items: flex-start;
-}
+  <section class="hero">
+    <h1>Kollektivhuset Kombo</h1>
+  </section>
 
-.image-text-section .image-left {
-  flex: 0 0 48%;
-}
+  <main>
+    <!-- STOR BILD MED TEXT -->
+    <section class="intro-section">
+      <img src="media/kollektivhuset framsida.png" alt="Framsidan av Kollektivhuset Kombo">
+      <div class="text">
+        <p>
+          Kollektivhuset Kombo är ett modernt kollektivhus i centrala Göteborg där gemenskap, hållbarhet och delande är i fokus. Här bor människor i olika åldrar och livssituationer som vill ha både privatliv och social samvaro.
+        </p>
+      </div>
+    </section>
 
-.image-text-section .image-left img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 6px;
-}
+    <!-- TRE BILDER TILL VÄNSTER + TEXT TILL HÖGER -->
+    <section class="image-text-wrapper">
+      <div class="image-side">
+        <img src="media/trebilderkombo.png" alt="Tre bilder från Kollektivhuset Kombo" />
+      </div>
 
-.image-text-section .text-right {
-  flex: 0 0 52%;
-  font-size: 1rem;
-  line-height: 1.7;
-  color: #2b2b2b;
-}
-
-/* === FOOTER === */
-footer {
-  text-align: center;
-  padding: 1.5rem;
-  background-color: #f9f5f3;
-  border-top: 3px solid #6d3234;
-  color: #555;
-  font-size: 0.9rem;
-}
-
-/* === FADE-IN === */
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 1s ease-out, transform 1s ease-out;
-}
-
-.fade-in.visible { opacity: 1; transform: translateY(0); }
-
-/* === RESPONSIV DESIGN === */
-@media (max-width: 900px) {
-  .nav-container {
-    flex-direction: column;
-    gap: 1rem;
-    height: auto;
-    padding: 16px;
-  }
-  .nav-links { flex-direction: column; gap: 12px; }
-  .intro-layout { grid-template-columns: 1fr; }
-  .image-text-section { flex-direction: column; gap: 1.5rem; }
-  .hero { height: 200px; }
-}
+      <div class="text-side">
+        <p>
+          Utöver våra egna, fullt utrustade lägenheter delar vi på omkring 300 kvadratmeter gemensamma utrymmen. Här finns lek-, hobby-, gäst- och vardagsrum, en stor matsal med uteplats och två fantastiska takterrasser med utsikt över staden.
+        </p>
+        <p>
+          De här ytorna används flitigt, både för planerade aktiviteter och spontant umgänge. Vi har haft allt från loppisar och fester till luciatåg för barnen och filmkvällar för hela huset.
+        </p>
+        <p>
+          Två kvällar i veckan dukar vi upp till gemensam middag där vi turas om att laga mat. Det blir ofta en plats för skratt, samtal och nya idéer – lika mycket en måltid som en mötesplats.
+        </p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
