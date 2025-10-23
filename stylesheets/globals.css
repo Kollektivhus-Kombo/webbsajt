@@ -1,63 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Exported Figma Design</title>
-  <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-<div class="f-rsta-sidan-kombo-1">
-<div class="header-navigation-2">
-<div class="header-3">
-<img src="images/left-content-4.png" class="left-content-4" alt="left-content" />
-<div class="button-groups-5">
-<div class="buttons-6">
-<p class="text-7"><span class="text-white">Insidan</span></p>
-</div>
-</div>
-<div class="menu-items-8">
-<p class="text-9"><span class="text-rgb-36-36-36">Medlemskap och bostadskö</span></p>
-<p class="text-10"><span class="text-rgb-36-36-36">Stadgar</span></p>
-<p class="text-11"><span class="text-rgb-36-36-36">Kontakt</span></p>
-</div>
-</div>
-</div>
-<div class="frame-3919-12">
-<div class="frame-3918-13">
-<img src="images/1-hsr66880-pano-2-14.png" class="1-hsr66880-pano-2-14" alt="1-hsr66880-pano-2" />
-<p class="text-15"><span class="text-rgb-110-48-49">Välkommen till Kombo kollektivhus
- Tillsammans bygger vi gemenskap</span></p>
-</div>
-<p class="text-16"><span class="text-black">Vi är en ideell förening och ett kollektiv som delar mer än en adress – vi hjälps åt, umgås och bygger gemenskap i vardag och fest.</span></p>
-<img src="images/image-15-17.png" class="image-15-17" alt="image-15" />
-<p class="text-18"><span class="text-black">Två kvällar i veckan dukar vi upp till gemensam middag där vi turas om att laga mat. Det blir ofta en plats för skratt, samtal och nya idéer – lika mycket en måltid som en mötesplats.</span></p>
-<div class="frame-3920-19">
-<img src="images/2-20.png" class="2-20" alt="2" />
-<img src="images/about-img3-21.png" class="about-img3-21" alt="about-img3" />
-<img src="images/rectangle-8-22.png" class="rectangle-8-22" alt="rectangle-8" />
-</div>
-<div class="btn-23">
-<p class="text-24"><span class="text-white">Bli medlem</span></p>
-<div class="node-25">
-<img src="images/vector-26.svg" class="vector-26" alt="vector" />
-</div>
-</div>
-<p class="text-27"><span class="text-black">utöver våra egna, fullt utrustade lägenheter delar vi på omkring 300 kvadratmeter gemensamma utrymmen. Här finns lek-, hobby-, gäst- och vardagsrum, en stor matsal med uteplats och två fantastiska takterrasser med utsikt över staden. 
-
-De här ytorna används flitigt, både för planerade aktiviteter och spontant umgänge. Vi har haft allt från loppisar och fester till luciatåg för barnen och filmkvällar för hela huset.
-</span></p>
-<img src="images/about-img2-28.png" class="about-img2-28" alt="about-img2" />
-</div>
-</div>
-
-</body>
-</html>
-CSS
-
-/* Add font files for Jomolhari */
+dd font files for Jomolhari */
 @font-face {
   font-family: 'Jomolhari';
   src: url('fonts/jomolhari.woff2') format('woff2'),
@@ -67,3 +8,349 @@ CSS
 }
 :root {
   --font-family-inter: 'Inter', sans-serif;
+  --font-family-jomolhari: 'Jomolhari', sans-serif;
+  --text-white: rgba(255, 255, 255, 1);
+  --text-rgb-36-36-36: rgba(36, 36, 36, 1);
+  --text-rgb-110-48-49: rgba(110, 48, 49, 1);
+  --text-black: rgba(0, 0, 0, 1);
+}
+
+.text-white {
+  color: var(--text-white);
+}
+
+.text-rgb-36-36-36 {
+  color: var(--text-rgb-36-36-36);
+}
+
+.text-rgb-110-48-49 {
+  color: var(--text-rgb-110-48-49);
+}
+
+.text-black {
+  color: var(--text-black);
+}
+
+
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.left-content-4 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  width: 10.981468771448181%;
+  width: 100%;
+  height: auto;
+}
+
+.text-7 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  font-family: var(--font-family-inter);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  text-decoration: none;
+  text-transform: none;
+  color: var(--text-white);
+}
+
+.buttons-6 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  padding: 10px;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  background-color: rgba(109, 50, 52, 1);
+  border-radius: 6px;
+}
+
+.button-groups-5 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 0px;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+}
+
+.text-9 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  font-family: var(--font-family-inter);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  text-decoration: none;
+  text-transform: none;
+  color: var(--text-rgb-36-36-36);
+}
+
+.text-10 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  font-family: var(--font-family-inter);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  text-decoration: none;
+  text-transform: none;
+  color: var(--text-rgb-36-36-36);
+}
+
+.text-11 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  font-family: var(--font-family-inter);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  text-decoration: none;
+  text-transform: none;
+  color: var(--text-rgb-36-36-36);
+}
+
+.menu-items-8 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 48px;
+  padding: 0px;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+}
+
+.header-3 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  width: 100%;
+}
+
+.header-navigation-2 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  width: 100%;
+}
+
+.1-hsr66880-pano-2-14 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  filter: blur(4px);
+  width: 100%;
+  height: auto;
+}
+
+.text-15 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  font-family: var(--font-family-jomolhari);
+  font-weight: normal;
+  font-size: 55px;
+  line-height: 60px;
+  text-decoration: none;
+  text-transform: none;
+  color: var(--text-rgb-110-48-49);
+  font-family: var(--font-family-jomolhari);
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 60px;
+  text-decoration: none;
+  text-transform: none;
+  color: var(--text-rgb-110-48-49);
+}
+
+.frame-3918-13 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+}
+
+.text-16 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  font-family: var(--font-family-inter);
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 60px;
+  text-decoration: none;
+  text-transform: none;
+  color: var(--text-black);
+}
+
+.image-15-17 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  width: 100%;
+  height: auto;
+}
+
+.text-18 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  font-family: var(--font-family-inter);
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 30px;
+  text-decoration: none;
+  text-transform: lowercase;
+  color: var(--text-black);
+}
+
+.2-20 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 40px;
+  flex-grow: 0;
+  flex-shrink: 1;
+  width: 48.13084112149533%;
+  width: 100%;
+  height: auto;
+}
+
+.about-img3-21 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  width: 100%;
+  height: auto;
+}
+
+.rectangle-8-22 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  width: 100%;
+  height: auto;
+}
+
+.frame-3920-19 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+}
+
+.text-24 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  font-family: var(--font-family-inter);
+  font-weight: normal;
+  font-size: 16px;
+  letter-spacing: 4%;
+  text-decoration: none;
+  text-transform: capitalize;
+  color: var(--text-white);
+}
+
+.vector-26 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  fill: rgba(255, 255, 255, 1);
+  border: none;
+  outline: none;
+}
+
+.node-25 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+}
+
+.btn-23 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+  padding: 18px 42px 18px 42px;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  background-color: rgba(113, 51, 52, 1);
+  border-radius: 9px;
+}
+
+.text-27 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  font-family: var(--font-family-inter);
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 30px;
+  text-decoration: none;
+  text-transform: none;
+  color: var(--text-black);
+}
+
+.about-img2-28 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  width: 100%;
+  height: auto;
+}
+
+.frame-3919-12 {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  background-color: rgba(255, 246, 243, 1);
+}
+
+.f-rsta-sidan-kombo-1 {
+@media (max-width: 1440px) {
+  .f-rsta-sidan-kombo-1 {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .f-rsta-sidan-kombo-1 {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  background-color: rgba(255, 235, 228, 0.41);
+}
