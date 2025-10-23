@@ -6,31 +6,117 @@
   <title>Kombo Kollektivhus</title>
   <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="stylesheets/styles.css">
+  <style>
+    /* Navigeringsbar från tidigare version */
+    .nav-bar{
+      display:flex;
+      justify-content: space-between;
+      align-items:center;
+      padding: 1rem 2rem;
+      background: rgba(255,255,255,0.9);
+      position: fixed;
+      width:100%;
+      top:0;
+      z-index:10;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+    }
+
+    .nav-bar .menu a{
+      margin-left: 2rem;
+      text-decoration:none;
+      color:#242424;
+      font-weight:600;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .nav-bar .logo{
+      height:40px;
+    }
+
+    /* Hero-knapp */
+    :root{
+      --btn-left: 6%;
+      --btn-top: 48%;
+      --btn-width: 18%;
+      --btn-min-width: 110px;
+    }
+
+    .page-image {
+      position:relative;
+      width:100%;
+      min-height:100vh;
+      background-image: url("media/hsr66880-pano-2-14.png");
+      background-position: top center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display:flex;
+      align-items:flex-start;
+      justify-content:center;
+      box-sizing:border-box;
+      margin-top:80px; /* utrymme för nav-bar */
+    }
+
+    .btn-wrapper{
+      position:absolute;
+      left: var(--btn-left);
+      top: var(--btn-top);
+      transform: translateY(-50%);
+      z-index: 5;
+    }
+
+    .cta-btn {
+      display:inline-block;
+      text-decoration:none;
+      background:#6d3234;
+      color:#fff;
+      padding:10px 14px;
+      border-radius:8px;
+      font-weight:600;
+      letter-spacing:0.4px;
+      width: var(--btn-width);
+      min-width: var(--btn-min-width);
+      box-sizing:border-box;
+      text-align:center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+      transition: transform .12s ease, background-color .12s ease;
+      font-family: "Inter", sans-serif;
+    }
+
+    .cta-btn:active{ transform: translateY(1px) scale(.995); }
+    .cta-btn:hover{ background:#8a4042; }
+
+    @media (max-width:900px){
+      :root{
+        --btn-left: 6%;
+        --btn-top: 58%;
+        --btn-width: 40%;
+      }
+    }
+  </style>
 </head>
 <body>
-  <div class="f-rsta-sidan-kombo-1">
-    <div class="header-navigation-2">
-      <div class="header-3">
-        <img src="media/left-content-4.png" class="left-content-4" alt="left-content" />
-        <div class="button-groups-5">
-          <div class="buttons-6">
-            <p class="text-7"><span class="text-white">Insidan</span></p>
-          </div>
-        </div>
-        <div class="menu-items-8">
-          <p class="text-9"><span class="text-rgb-36-36-36">Medlemskap och bostadskö</span></p>
-          <p class="text-10"><span class="text-rgb-36-36-36">Stadgar</span></p>
-          <p class="text-11"><span class="text-rgb-36-36-36">Kontakt</span></p>
-        </div>
-      </div>
-    </div>
 
+  <!-- Navigeringsbar -->
+  <header class="nav-bar">
+    <img src="media/left-content-4.png" alt="Logo" class="logo">
+    <nav class="menu">
+      <a href="bli-medlem.html">Bli medlem</a>
+      <a href="medlem.html">Medlemskap</a>
+      <a href="stadgar.html">Stadgar</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+  </header>
+
+  <!-- Hero-bild med knapp -->
+  <div class="page-image" role="img" aria-label="Hela webbsidan som bild">
+    <div class="btn-wrapper">
+      <a href="medlem.html" class="cta-btn" aria-label="Bli medlem — gå till medlemsidan">Bli Medlem →</a>
+    </div>
+  </div>
+
+  <!-- Resten av Figma-innehållet -->
+  <div class="f-rsta-sidan-kombo-1">
     <div class="frame-3919-12">
-      <div class="frame-3918-13">
-        <img src="media/hsr66880-pano-2-14.png" class="hsr66880-pano-2-14" alt="hsr66880-pano" />
-        <p class="text-15"><span class="text-rgb-110-48-49">Välkommen till Kombo kollektivhus
-        Tillsammans bygger vi gemenskap</span></p>
-      </div>
       <p class="text-16"><span class="text-black">Vi är en ideell förening och ett kollektiv som delar mer än en adress – vi hjälps åt, umgås och bygger gemenskap i vardag och fest.</span></p>
       <img src="media/image-15-17.png" class="image-15-17" alt="image-15" />
       <p class="text-18"><span class="text-black">Två kvällar i veckan dukar vi upp till gemensam middag där vi turas om att laga mat. Det blir ofta en plats för skratt, samtal och nya idéer – lika mycket en måltid som en mötesplats.</span></p>
@@ -39,12 +125,6 @@
         <img src="media/about-img3-21.png" class="about-img3-21" alt="about-img3" />
         <img src="media/rectangle-8-22.png" class="rectangle-8-22" alt="rectangle-8" />
       </div>
-      <div class="btn-23">
-        <p class="text-24"><span class="text-white">Bli medlem</span></p>
-        <div class="node-25">
-          <img src="media/vector-26.svg" class="vector-26" alt="vector" />
-        </div>
-      </div>
       <p class="text-27"><span class="text-black">Utöver våra egna, fullt utrustade lägenheter delar vi på omkring 300 kvadratmeter gemensamma utrymmen. Här finns lek-, hobby-, gäst- och vardagsrum, en stor matsal med uteplats och två fantastiska takterrasser med utsikt över staden.  
 
       De här ytorna används flitigt, både för planerade aktiviteter och spontant umgänge. Vi har haft allt från loppisar och fester till luciatåg för barnen och filmkvällar för hela huset.
@@ -52,5 +132,7 @@
       <img src="media/about-img2-28.png" class="about-img2-28" alt="about-img2" />
     </div>
   </div>
+
 </body>
 </html>
+
