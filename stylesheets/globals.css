@@ -65,16 +65,17 @@ a { text-decoration: none; color: inherit; }
 /* === HERO === */
 .hero {
   width: 100%;
-  height: 380px;
+  height: 300px;
   background: url("../media/kombo ny bild.png") center/cover no-repeat;
   position: relative;
+  border-bottom: 2px solid #e5ded9;
 }
 
 /* === INTRO LAYOUT === */
 .intro-layout {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
-  gap: 2rem;
+  gap: 1.5rem;
   align-items: center;
   max-width: 1100px;
   margin: 3rem auto;
@@ -103,7 +104,7 @@ a { text-decoration: none; color: inherit; }
 
 .image-gallery img { width: 100%; border-radius: 4px; object-fit: cover; }
 
-/* === TRE-BILD + TEXT KLUSTER === */
+/* === TRE-BILD + TEXT === */
 .image-text-section {
   display: flex;
   gap: 2rem;
@@ -114,7 +115,7 @@ a { text-decoration: none; color: inherit; }
 }
 
 .image-text-section .image-left {
-  flex: 0 0 50%; /* tar 50% */
+  flex: 0 0 48%;
 }
 
 .image-text-section .image-left img {
@@ -125,7 +126,7 @@ a { text-decoration: none; color: inherit; }
 }
 
 .image-text-section .text-right {
-  flex: 0 0 50%; /* tar 50% */
+  flex: 0 0 52%;
   font-size: 1rem;
   line-height: 1.7;
   color: #2b2b2b;
@@ -150,7 +151,7 @@ footer {
 
 .fade-in.visible { opacity: 1; transform: translateY(0); }
 
-/* === RESPONSIV === */
+/* === RESPONSIV DESIGN === */
 @media (max-width: 900px) {
   .nav-container {
     flex-direction: column;
@@ -161,6 +162,6 @@ footer {
   .nav-links { flex-direction: column; gap: 12px; }
   .intro-layout { grid-template-columns: 1fr; }
   .image-text-section { flex-direction: column; gap: 1.5rem; }
-  .hero { height: 250px; }
+  .hero { height: 200px; }
 }
 
