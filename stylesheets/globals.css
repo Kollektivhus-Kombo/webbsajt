@@ -1,109 +1,162 @@
-/* === INNEHÅLL === */
-main {
-  max-width: 1100px;
-  margin: 2rem auto 3rem; /* mindre whitespace ovanför och under */
-  padding: 0 1.5rem;
-}
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kollektivhuset Kombo</title>
 
-.intro-layout {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 1rem; /* tajtare mellanrum mellan text och bild */
-  align-items: center;
-}
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
 
-.intro-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
+    <style>
+      /* === GLOBALT === */
+      body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        font-family: "Source Sans 3", sans-serif;
+      }
 
-.intro-text h1 {
-  font-size: 1.6rem;
-  line-height: 1.3;
-  font-weight: 600;
-  margin: 0 0 1rem 0;
-}
+      a {
+        text-decoration: none;
+      }
 
-.cta-btn {
-  display: inline-block;
-  background-color: #6d3234;
-  color: #fff;
-  padding: 10px 12px;
-  border-radius: 6px;
-  font-weight: 600;
-  letter-spacing: 0.3px;
-  width: 33%;
-  min-width: 120px;
-  text-align: center;
-  transition: all 0.2s ease;
-}
+      /* === NAVIGATION === */
+      .navigation {
+        width: 100%;
+        background-color: rgba(249, 245, 243, 0.85); /* lite transparent över bilden */
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      }
 
-.cta-btn:hover {
-  background-color: #8a4042;
-}
+      .nav-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 12px 48px;
+        height: 80px;
+        box-sizing: border-box;
+      }
 
-/* === BILDER === */
-.image-gallery {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem; /* tajtare mellanrum mellan bilder */
-  justify-content: center;
-}
+      .nav-logo img {
+        height: 50px;
+        width: auto;
+      }
 
-.intro-layout .image-gallery img:first-child {
-  width: 100%;
-  height: 280px; /* större höjd så den matchar textens höjd bättre */
-  border-radius: 4px;
-  object-fit: cover;
-  display: block;
-}
+      .nav-links {
+        display: flex;
+        gap: 40px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        flex-grow: 1;
+        justify-content: center;
+      }
 
-.bottom-images {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.5rem; /* mindre mellanrum mellan småbilder */
-}
+      .nav-links a {
+        color: #222;
+        font-size: 16px;
+        font-weight: 500;
+        transition: color 0.3s ease;
+      }
 
-.image-gallery img {
-  border-radius: 4px;
-  object-fit: cover;
-}
+      .nav-links a:hover {
+        color: #6d3234;
+      }
 
-/* Mindre whitespace mellan första blocket och nästa sektion */
-.intro-layout + .intro-layout {
-  margin-top: 0.8rem;
-}
+      .nav-button .insidan-btn {
+        background-color: #6d3234;
+        color: #fff;
+        padding: 8px 18px;
+        border-radius: 20px;
+        font-weight: 500;
+        transition: background-color 0.3s ease;
+      }
 
-/* === RESPONSIV DESIGN === */
-@media (max-width: 900px) {
-  .intro-layout {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
+      .nav-button .insidan-btn:hover {
+        background-color: #8a4042;
+      }
 
-  .intro-layout .image-gallery img:first-child {
-    height: 220px;
-  }
+      /* === HERO-SEKTION === */
+      .hero-section {
+        position: relative;
+        width: 100%;
+        height: 100vh; /* tar hela viewport-höjden */
+        background: url('media/Frame3919.png') no-repeat center center;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
 
-  .bottom-images {
-    grid-template-columns: 1fr;
-  }
+      .hero-button {
+        background-color: #c92f2f;
+        color: #fff;
+        padding: 14px 28px;
+        border-radius: 6px;
+        font-weight: 600;
+        font-size: 1rem;
+        letter-spacing: 0.3px;
+        transition: background-color 0.2s ease, transform 0.2s ease;
+      }
 
-  .hero {
-    height: 250px;
-  }
+      .hero-button:hover {
+        background-color: #a52424;
+        transform: scale(1.05);
+      }
 
-  .intro-text h1 {
-    font-size: 1.4rem;
-  }
+      @media (max-width: 768px) {
+        .nav-container {
+          padding: 12px 24px;
+        }
 
-  .cta-btn {
-    width: 60%;
-  }
+        .nav-links {
+          gap: 20px;
+        }
 
-  main {
-    margin: 1.5rem auto 2.5rem;
-  }
-}
+        .hero-button {
+          font-size: 0.9rem;
+          padding: 12px 22px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav class="navigation">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <a href="/"><img src="media/logo.png" alt="Kollektivhuset Kombo logotyp" /></a>
+        </div>
+
+        <ul class="nav-links">
+          <li><a href="medlem.html">Medlemskap och bostadskö</a></li>
+          <li><a href="stadgar.html">Stadgar</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+
+        <div class="nav-button">
+          <a
+            href="https://insidan.kollektivhuskombo.se/"
+            target="_blank"
+            class="insidan-btn"
+            >Insidan</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero-bild som täcker hela sidan -->
+    <section class="hero-section">
+      <a href="medlem.html" class="hero-button">Bli Medlem</a>
+    </section>
+  </body>
+</html>
 
