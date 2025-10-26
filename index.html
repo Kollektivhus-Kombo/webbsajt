@@ -1,21 +1,282 @@
-<nav class="site-nav" aria-label="Huvudnavigering">
-  <div class="nav-inner">
-    <!-- LOGO (vänster) -->
-    <a class="nav-logo" href="/">
-      <img src="media/logo.png" alt="Kollektivhuset Kombo logotyp" />
-    </a>
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kollektivhuset Kombo</title>
 
-    <!-- CENTRERADE LÄNKAR -->
-    <ul class="nav-links" role="menubar" aria-label="Huvudmeny">
-      <li role="none"><a role="menuitem" href="medlem.html">Medlemskap och bostadskö</a></li>
-      <li role="none"><a role="menuitem" href="stadgar.html">Stadgar</a></li>
-      <li role="none"><a role="menuitem" href="kontakt.html">Kontakt</a></li>
-    </ul>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
 
-    <!-- CTA (höger) -->
-    <div class="nav-cta">
-      <a class="insidan-btn" href="https://insidan.kollektivhuskombo.se/" target="_blank" rel="noopener">Insidan</a>
-    </div>
-  </div>
-</nav>
+    <style>
+      /* === GRUNDSTILAR === */
+      :root {
+        --main-bg: #fbf0ef;
+        --dark-red: #6d3234;
+        --dark-red-hover: #8a4042;
+      }
 
+      body {
+        font-family: "Source Sans 3", sans-serif;
+        background-color: #fff;
+        color: #2b2b2b;
+        margin: 0;
+        line-height: 1.7;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      img {
+        max-width: 100%;
+        display: block;
+      }
+
+      /* === NAVIGATION === */
+      .site-nav {
+        position: sticky;
+        top: 0;
+        width: 100%;
+        background: var(--main-bg);
+        z-index: 1000;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+      }
+
+      .site-nav .nav-inner {
+        max-width: 1440px;
+        margin: 0 auto;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 14px 48px;
+        box-sizing: border-box;
+        min-height: 72px;
+      }
+
+      .nav-logo img {
+        height: 48px;
+      }
+
+      .nav-links {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 40px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        align-items: center;
+      }
+
+      .nav-links a {
+        color: #222;
+        font-weight: 500;
+        font-size: 16px;
+        text-decoration: none;
+        transition: color 0.2s ease;
+      }
+
+      .nav-links a:hover,
+      .nav-links a:focus {
+        color: var(--dark-red);
+      }
+
+      .nav-cta .insidan-btn {
+        display: inline-block;
+        background: var(--dark-red);
+        color: #fff;
+        padding: 8px 14px;
+        border-radius: 8px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: background-color 0.2s ease, transform 0.15s ease;
+      }
+
+      .nav-cta .insidan-btn:hover,
+      .nav-cta .insidan-btn:focus {
+        background: var(--dark-red-hover);
+        transform: translateY(-1px);
+      }
+
+      /* === HERO === */
+      .hero {
+        background: var(--main-bg);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem 0 3rem;
+      }
+
+      .hero img {
+        width: 100%;
+        max-width: 1440px;
+        border-radius: 8px;
+        object-fit: cover;
+      }
+
+      /* === SECTIONS === */
+      .section {
+        max-width: 1440px;
+        margin: 4rem auto;
+        padding: 0 48px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 3rem;
+        box-sizing: border-box;
+      }
+
+      .section.reverse {
+        flex-direction: row-reverse;
+      }
+
+      .section img {
+        width: 50%;
+        border-radius: 8px;
+        object-fit: cover;
+      }
+
+      .section .text {
+        width: 50%;
+      }
+
+      .section .text h1 {
+        font-size: 1.6rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        line-height: 1.4;
+      }
+
+      .section .text p {
+        margin-bottom: 1.5rem;
+      }
+
+      .cta-btn {
+        display: inline-block;
+        background-color: var(--dark-red);
+        color: #fff;
+        padding: 10px 24px;
+        border-radius: 6px;
+        font-weight: 600;
+        transition: background-color 0.2s ease;
+      }
+
+      .cta-btn:hover {
+        background-color: var(--dark-red-hover);
+      }
+
+      /* === FOOTER === */
+      footer {
+        text-align: center;
+        padding: 1.5rem;
+        background-color: var(--main-bg);
+        border-top: 3px solid var(--dark-red);
+        color: #555;
+        font-size: 0.9rem;
+      }
+
+      /* === RESPONSIV DESIGN === */
+      @media (max-width: 900px) {
+        .site-nav .nav-inner {
+          flex-direction: column;
+          gap: 8px;
+          padding: 12px 20px;
+        }
+
+        .nav-links {
+          position: static;
+          transform: none;
+          flex-direction: column;
+          gap: 8px;
+        }
+
+        .section {
+          flex-direction: column;
+          padding: 0 24px;
+        }
+
+        .section.reverse {
+          flex-direction: column;
+        }
+
+        .section img,
+        .section .text {
+          width: 100%;
+        }
+
+        .hero {
+          padding: 1rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- === NAVIGATION === -->
+    <nav class="site-nav">
+      <div class="nav-inner">
+        <a class="nav-logo" href="/">
+          <img src="media/logo.png" alt="Kollektivhuset Kombo logotyp" />
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="medlem.html">Medlemskap och bostadskö</a></li>
+          <li><a href="stadgar.html">Stadgar</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+
+        <div class="nav-cta">
+          <a
+            href="https://insidan.kollektivhuskombo.se/"
+            target="_blank"
+            class="insidan-btn"
+            >Insidan</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- === HERO === -->
+    <section class="hero">
+      <img src="media/kombo ny bild.png" alt="Kollektivhuset Kombo – hero" />
+    </section>
+
+    <!-- === INTRO SEKTION === -->
+    <section class="section">
+      <div class="text">
+        <h1>
+          Vi är en ideell förening och ett kollektiv som delar mer än en adress – vi hjälps åt, umgås och bygger gemenskap i vardag och fest.
+        </h1>
+        <a href="medlem.html" class="cta-btn">Bli Medlem →</a>
+      </div>
+      <img src="media/kollektivhuset framsida.png" alt="Kollektivhuset framsida" />
+    </section>
+
+    <!-- === ANDRA SEKTIONEN === -->
+    <section class="section reverse">
+      <img src="media/trebilderkombo.png" alt="Gemensamma ytor i Kollektivhuset Kombo" />
+      <div class="text">
+        <p>
+          Utöver våra egna, fullt utrustade lägenheter delar vi på omkring 300 kvadratmeter gemensamma utrymmen. Här finns lek-, hobby-, gäst- och vardagsrum, en stor matsal med uteplats och två fantastiska takterrasser med utsikt över staden.
+        </p>
+        <p>
+          De här ytorna används flitigt, både för planerade aktiviteter och spontant umgänge. Vi har haft allt från loppisar och fester till luciatåg för barnen och filmkvällar för hela huset.
+        </p>
+        <p>
+          Två kvällar i veckan dukar vi upp till gemensam middag där vi turas om att laga mat. Det blir ofta en plats för skratt, samtal och nya idéer – lika mycket en måltid som en mötesplats.
+        </p>
+      </div>
+    </section>
+
+    <!-- === FOOTER === -->
+    <footer>
+      © 2025 Kollektivhuset Kombo – Tillsammans bygger vi gemenskap.
+    </footer>
+  </body>
+</html>
