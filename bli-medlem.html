@@ -11,12 +11,12 @@
     />
 
     <style>
-      /* === GLOBALT === */
       body {
         font-family: "Source Sans 3", sans-serif;
         margin: 0;
         background-color: #f9f5f3;
         color: #222;
+        line-height: 1.6;
       }
 
       a {
@@ -26,7 +26,7 @@
       /* === HEADER === */
       .navigation {
         width: 100%;
-        background-color: rgba(249, 245, 243, 0.9);
+        background-color: rgba(249, 245, 243, 0.95);
         position: sticky;
         top: 0;
         z-index: 100;
@@ -81,7 +81,7 @@
         background-color: #8a4042;
       }
 
-      /* === HUVUDINNEHÅLL === */
+      /* === MAIN === */
       main {
         max-width: 600px;
         margin: 4rem auto;
@@ -89,46 +89,78 @@
         border-radius: 16px;
         padding: 3rem 2rem;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-        text-align: center;
       }
 
       h1 {
-        margin-bottom: 1rem;
+        text-align: center;
         color: #6d3234;
+      }
+
+      p.intro {
+        text-align: center;
+        margin-bottom: 2rem;
       }
 
       form {
         display: flex;
         flex-direction: column;
         gap: 1rem;
-        margin-top: 1.5rem;
       }
 
-      input,
-      textarea {
-        padding: 0.75rem;
-        border: 1px solid #ccc;
+      label {
+        font-weight: 600;
+        text-align: left;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="date"] {
+        padding: 0.7rem;
         border-radius: 8px;
-        font-size: 1rem;
+        border: 1px solid #ccc;
         font-family: inherit;
       }
 
-      button {
-        background-color: #6d3234;
-        color: #fff;
-        border: none;
-        padding: 0.75rem;
+      textarea {
+        width: 100%;
+        padding: 0.7rem;
         border-radius: 8px;
+        border: 1px solid #ccc;
+        font-family: inherit;
+        resize: none;
+      }
+
+      .consent-box {
+        border: 1px solid #ccc;
+        padding: 1rem;
+        border-radius: 8px;
+        font-size: 0.9rem;
+        background-color: #fafafa;
+      }
+
+      .checkbox-row {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      button {
+        background-color: #9eb89e;
+        color: #222;
+        border: none;
+        padding: 0.9rem;
+        border-radius: 8px;
+        font-weight: 600;
         font-size: 1rem;
         cursor: pointer;
-        transition: background-color 0.3s ease;
+        margin-top: 1rem;
       }
 
       button:hover {
-        background-color: #8a4042;
+        background-color: #88a788;
       }
 
-      /* === MODAL === */
+      /* === POPUP === */
       .modal {
         display: none;
         position: fixed;
@@ -137,40 +169,28 @@
         top: 0;
         width: 100%;
         height: 100%;
-        overflow: auto;
         background-color: rgba(0, 0, 0, 0.5);
-      }
-
-      .modal-content-wrapper {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
       }
 
       .modal-content {
         background-color: #fff;
         border-radius: 16px;
-        padding: 3rem 2rem;
+        padding: 2rem;
         text-align: center;
-        max-width: 500px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+        width: 90%;
+        max-width: 400px;
+        margin: 10% auto;
+        position: relative;
         animation: popup 0.3s ease;
       }
 
-      .frame-popup {
-        width: 100%;
-        background-image: url("media/Frame%203917.png");
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-      }
-
-      .inline-qr {
-        width: 150px;
-        height: auto;
-        margin-top: 1rem;
-        aspect-ratio: 1 / 1;
+      .close-btn {
+        position: absolute;
+        top: 12px;
+        right: 16px;
+        font-size: 1.5rem;
+        color: #666;
+        cursor: pointer;
       }
 
       @keyframes popup {
@@ -211,55 +231,72 @@
       </div>
     </nav>
 
-    <!-- Huvudinnehåll -->
+    <!-- Main content -->
     <main>
-      <h1>Bli Medlem</h1>
-      <p>Fyll i dina uppgifter nedan för att ansöka om medlemskap i Kollektivhuset Kombo.</p>
+      <h1>Bli medlem</h1>
+      <p class="intro">
+        Vad kul att du vill bli medlem i Kombo! När du blir medlem ställs du automatiskt i Kombos
+        bostadskö. Vill du vara medlem men inte bo i huset är du givetvis precis lika välkommen!
+        <br /><br />
+        Medlemskapet kostar 200 kronor per år.
+      </p>
 
-      <form id="registration-form">
-        <input type="text" name="namn" placeholder="Namn" required />
-        <input type="email" name="email" placeholder="E-postadress" required />
-        <input type="tel" name="telefon" placeholder="Telefonnummer" />
-        <textarea name="meddelande" placeholder="Berätta kort varför du vill bli medlem"></textarea>
-        <button type="submit">Skicka ansökan</button>
+      <form id="medlem-form">
+        <label for="namn">För- och efternamn</label>
+        <input type="text" id="namn" name="namn" required />
+
+        <label for="mail">Mailadress</label>
+        <input type="email" id="mail" name="mail" required />
+
+        <label for="fodelsedatum">Födelsedatum</label>
+        <input type="date" id="fodelsedatum" name="fodelsedatum" required />
+
+        <div class="consent-box">
+          Vad kul att du vill bli medlem! Vi på föreningen värdesätter din integritet och vill
+          försäkra dig om att vi tar sparandet av dina personuppgifter på största allvar. De
+          uppgifter du lämnar till oss används endast inom ramen för föreningens verksamhet och
+          kommer inte att delas med eller spridas till någon annan part. Vi använder endast dessa
+          uppgifter för vår bostadskö och för att få en överblick av antalet medlemmar i Kombo.
+        </div>
+
+        <div class="checkbox-row">
+          <input type="checkbox" id="godkanner" required />
+          <label for="godkanner">Det låter bra! Jag godkänner</label>
+        </div>
+
+        <button type="submit">Bli medlem i Kombo</button>
       </form>
     </main>
 
-    <!-- Modal -->
-    <div class="modal" id="modal-medlem">
-      <div class="modal-content-wrapper">
-        <div class="modal-content">
-          <p>Du behöver nu bara betala in medlemsavgiften på 200 kr.</p>
-          <p>
-            Lättast är via Swish till <strong>123-035 10 72</strong> och meddelandet
-            <em>"Medlemsavgift"</em>.
-          </p>
-          <p>
-            <img class="inline-qr" src="media/swish-QR-small.png" alt="Swish QR kod" />
-          </p>
-          <p>
-            Det går även via Bankgiro: <strong>5957-6900</strong> (skriv “Medlemsavgift” som
-            meddelande).
-          </p>
-          <a class="button-l" href="/">Tillbaka till startsidan</a>
-        </div>
+    <!-- Popup -->
+    <div id="popup" class="modal">
+      <div class="modal-content">
+        <span class="close-btn" id="close-popup">&times;</span>
+        <h2>Grattis!</h2>
+        <p>Du är nu medlem i Kombo 🎉</p>
       </div>
     </div>
 
     <script>
-      const form = document.getElementById("registration-form");
-      const modal = document.getElementById("modal-medlem");
+      const form = document.getElementById("medlem-form");
+      const popup = document.getElementById("popup");
+      const closePopup = document.getElementById("close-popup");
 
       form.addEventListener("submit", function (e) {
         e.preventDefault();
-        modal.style.display = "block";
+        popup.style.display = "block";
+        form.reset();
       });
 
-      window.onclick = function (event) {
-        if (event.target === modal) {
-          modal.style.display = "none";
+      closePopup.addEventListener("click", function () {
+        popup.style.display = "none";
+      });
+
+      window.addEventListener("click", function (event) {
+        if (event.target === popup) {
+          popup.style.display = "none";
         }
-      };
+      });
     </script>
   </body>
 </html>
