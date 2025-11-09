@@ -1,85 +1,85 @@
-<!DOCTYPE html>
-<html lang="sv">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kollektivhuset Kombo</title>
+      }
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&display=swap"
-    rel="stylesheet"
-  />
-  <link rel="stylesheet" href="stylesheets/globals.css" />
-</head>
-<body>
+      .modal-content {
+        background-color: #fff;
+        border-radius: 16px;
+        background-color: transparent;
+        border: none;
+        box-shadow: none;
+        max-width: 500px;
+        text-align: center;
+        padding: 3rem 2rem;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+        animation: popup 0.3s ease;
+      }
 
-  <!-- Navigation -->
-  <nav class="navigation fade-in">
-    <div class="nav-container">
-      <div class="nav-logo">
-        <a href="/"><img src="media/logo.png" alt="Kollektivhuset Kombo logotyp" /></a>
+      /* Popup med bakgrundsbild */
+      .frame-popup {
+        width: 100%;
+        background-image: url("media/Frame 3917.png");
+        background-size: cover;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        color: #222;
+      }
+
+      .inline-qr {
+        width: 150px;
+        height: auto;
+        margin-top: 1rem;
+        aspect-ratio: 1 / 1;
+      }
+
+      @keyframes popup {
+@@ -336,21 +329,11 @@ <h1>Bli Medlem</h1>
       </div>
+    </main>
 
-      <ul class="nav-links">
-        <li><a href="medlem.html">Medlemskap och bostadskö</a></li>
-        <li><a href="stadgar.html">Stadgar</a></li>
-        <li><a href="kontakt.html">Kontakt</a></li>
-      </ul>
-
-      <div class="nav-button">
-        <a href="https://insidan.kollektivhuskombo.se/" target="_blank" class="insidan-btn">Insidan</a>
+    <!-- Modal -->
+    <!-- Modal (endast bild, ingen text) -->
+    <div class="modal" id="modal-medlem">
+      <div class="modal-content-wrapper">
+        <div class="modal-content frame-popup">
+          <p>Du behöver nu bara betala in medlemsavgiften på 200 kr.</p>
+          <p>
+            Lättast är via Swish till <strong>123-035 10 72</strong> och meddelandet
+            <em>"Medlemsavgift"</em>.
+          </p>
+          <p><img class="inline-qr" src="media/swish-QR-small.png" alt="Swish QR kod" /></p>
+          <p>
+            Det går även via Bankgiro: <strong>5957-6900</strong> (skriv “Medlemsavgift” som
+            meddelande).
+          </p>
+          <a class="button-l" href="/">Tillbaka till startsidan</a>
+        <div class="modal-content">
+          <div class="frame-popup"></div>
+        </div>
       </div>
     </div>
-  </nav>
+@@ -359,7 +342,6 @@ <h1>Bli Medlem</h1>
 
-  <!-- Hero -->
-  <section class="hero fade-in"></section>
+    <script>
+      const modal = document.getElementById("modal-medlem");
+      const modalContent = document.querySelector(".modal-content");
 
-  <!-- Huvudinnehåll -->
-  <main>
-    <div class="intro-layout fade-in">
-      <!-- Text -->
-      <div class="intro-text">
-        <h1>
-          Vi är en ideell förening och ett kollektiv som delar mer än en adress – vi hjälps åt, umgås och bygger gemenskap i vardag och fest.
-        </h1>
-        <a href="medlem.html" class="cta-btn">Bli Medlem →</a>
-      </div>
+      document
+        .getElementById("registration-form")
+@@ -392,13 +374,14 @@ <h1>Bli Medlem</h1>
+          });
+        });
 
-      <!-- Bild bredvid text -->
-      <div class="image-gallery">
-        <img src="media/image-15-17.png" alt="Kollektivhusets interiör" />
-      </div>
-    </div>
-
-    <!-- Tre-bildsklunga till vänster -->
-    <div class="image-cluster fade-in">
-      <img src="media/1-hsr66880-pano-2-14.png" alt="Panoramavy" />
-      <img src="media/about-img3-21.png" alt="Gemensam yta" />
-      <img src="media/image-17.png" alt="Kök och matplats" />
-    </div>
-  </main>
-
-  <!-- Footer -->
-  <footer class="fade-in">
-    © 2025 Kollektivhuset Kombo – Tillsammans bygger vi gemenskap.
-  </footer>
-
-  <!-- Fade-in script -->
-  <script>
-    const faders = document.querySelectorAll(".fade-in");
-    const appearOptions = {
-      threshold: 0.1,
-      rootMargin: "0px 0px -50px 0px",
-    };
-    const appearOnScroll = new IntersectionObserver(function (entries, observer) {
-      entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add("visible");
-        observer.unobserve(entry.target);
+      // Klick utanför stänger popupen
+      window.addEventListener("click", function (event) {
+      // Stänger popup när man klickar utanför bilden
+      window.onclick = function (event) {
+        if (event.target === modal) {
+          modal.style.display = "none";
+        }
       });
-    }, appearOptions);
-    faders.forEach(fader => appearOnScroll.observe(fader));
-  </script>
-</body>
+      };
+    </script>
+  </body>
 </html>
+
+
