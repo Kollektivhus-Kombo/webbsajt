@@ -267,8 +267,16 @@
           <label for="godkanner">Det låter bra! Jag godkänner</label>
         </div>
 
+        <div class="checkbox-row">
+          <input type="checkbox" id="betalt" name="betalt" value="Ja" required />
+          <label for="betalt">Jag har betalat in medlemsavgiften till <a href="https://app.swish.nu/1/p/sw/?sw=1230351072&amt=200.00&cur=SEK&msg=Medlemsavgift&src=qr">123-035 10 72</a></label>
+        </div>
+        
         <button type="submit">Bli medlem i Kombo</button>
       </form>
+      <p class="intro">
+        Vid eventuella frågor kan du kontakta Kombo via styrelse@kollektivhuskombo.se
+      </p>
     </main>
 
     <!-- Popup -->
@@ -276,9 +284,7 @@
       <div class="modal-content">
         <span class="close-btn" id="close-popup">&times;</span>
         <h2>Grattis! 🎉</h2>
-        <p>Allt du nu behöver göra för att bli medlem är att betala in medlemsavgiften via
-          Swish till <a href="https://app.swish.nu/1/p/sw/?sw=1230351072&amt=200.00&cur=SEK&msg=Medlemsavgift&src=qr">123-035 10 72</a>
-          och meddelandet "Medlemsavgift".</p>
+        <p>Du är från detta datumet medlem i Kombo.</p>
       </div>
     </div>
 
@@ -327,3 +333,4 @@
     </script>
   </body>
 </html>
+
