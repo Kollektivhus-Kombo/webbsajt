@@ -21,7 +21,7 @@
     <!-- === NAVIGATION === -->
     <nav class="site-nav">
       <div class="nav-inner">
-        <a class="nav-logo" href="/">
+        <a class="nav-logo" href="index.html">
           <img src="media/logo.png" alt="Kollektivhuset Kombo logotyp" />
         </a>
 
@@ -43,40 +43,51 @@
     </nav>
 
     <!-- === HERO === -->
-    <section class="hero">
-      <img src="media/kombo ny bild.png" alt="Kollektivhuset Kombo – hero" />
-    </section>
-
-    <!-- === INTRO SEKTION === -->
-    <section class="section">
-      <div class="text">
-        <h1>
-          Vi är en ideell förening och ett kollektiv som delar mer än en adress – vi hjälps åt, umgås och bygger gemenskap i vardag och fest.
-        </h1>
-        <a href="medlem.html" class="cta-btn">Bli Medlem →</a>
+    <section class="container" style="max-width: 1440px; margin-top: 2rem;">
+      <div class="intro-header" style="display: flex; gap: 40px; align-items: center; margin-bottom: 3rem; padding: 0 48px;">
+        <div style="width: 1px; height: 180px; background-color: var(--primary-color);"></div>
+        <div>
+          <h1 style="margin-bottom: 0.5rem;">Välkommen till kombo kollektivhus</h1>
+          <p style="font-size: 22px; color: #555;">Tillsammans bygger vi gemenskap</p>
+        </div>
       </div>
-      <img src="media/kollektivhuset framsida.png" alt="Kollektivhuset framsida" />
+      
+      <div class="hero-image" style="width: 100%; height: 600px; overflow: hidden; border-radius: 0; margin-bottom: 4rem;">
+        <img src="media/kollektivhuset_kvällssol.png" alt="Kollektivhuset Kombo" style="width: 100%; height: 100%; object-fit: cover;" />
+      </div>
     </section>
 
-    <!-- === ANDRA SEKTIONEN === -->
-    <section class="section reverse">
-      <img src="media/trebilderkombo.png" alt="Gemensamma ytor i Kollektivhuset Kombo" />
-      <div class="text">
-        <p>
-          Utöver våra egna, fullt utrustade lägenheter delar vi på omkring 300 kvadratmeter gemensamma utrymmen. Här finns lek-, hobby-, gäst- och vardagsrum, en stor matsal med uteplats och två fantastiska takterrasser med utsikt över staden.
-        </p>
-        <p>
-          De här ytorna används flitigt, både för planerade aktiviteter och spontant umgänge. Vi har haft allt från loppisar och fester till luciatåg för barnen och filmkvällar för hela huset.
-        </p>
-        <p>
-          Två kvällar i veckan dukar vi upp till gemensam middag där vi turas om att laga mat. Det blir ofta en plats för skratt, samtal och nya idéer – lika mycket en måltid som en mötesplats.
-        </p>
+    <!-- === SECTION 2 === -->
+    <section class="section" style="max-width: 1440px; padding: 4rem 48px;">
+      <div style="display: flex; gap: 60px; align-items: center;">
+        <div style="width: 340px;">
+          <h1 style="font-size: 42px; line-height: 1.2;">Hemma på hägerstensåsen</h1>
+        </div>
+        
+        <div style="width: 1px; height: 300px; background-color: var(--primary-color);"></div>
+        
+        <div class="text" style="width: 769px;">
+          <h2 style="font-size: 36px; margin-bottom: 1.5rem;">Ett hem större än din lägenhet</h2>
+          <p style="font-size: 28px; line-height: 1.3; margin-bottom: 2rem;">
+            Vi är en ideell förening och ett kollektiv som delar mer än en adress – vi hjälps åt, umgås och bygger gemenskap i vardag och fest.
+          </p>
+          <a href="medlem.html" class="cta-btn">Bli medlem</a>
+        </div>
       </div>
     </section>
 
     <!-- === FOOTER === -->
-    <footer>
-      © 2025 Kollektivhuset Kombo – Tillsammans bygger vi gemenskap.
+    <footer style="background-color: #ddd5d2; padding: 4rem 92px; border-top: none; text-align: left;">
+      <div style="max-width: 1440px; margin: 0 auto;">
+        <h3 style="margin-bottom: 1.5rem;">Kontakt</h3>
+        <p style="font-size: 20px; margin-bottom: 0.5rem;">
+          <a href="mailto:styrelse@kollektivhuskombo.se" style="text-decoration: underline;">styrelse@kollektivhuskombo.se</a>
+        </p>
+        <p style="font-size: 20px; color: #1f1f1f;">
+          Inteckningsvägen 100<br />
+          129 31 Hägersten
+        </p>
+      </div>
     </footer>
   </body>
 </html>
