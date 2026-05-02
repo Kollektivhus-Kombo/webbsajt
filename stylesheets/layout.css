@@ -6,13 +6,13 @@
 }
 
 .section-wrapper {
-  padding: var(--space-lg) 0;
+  padding: var(--space-md) 0; /* Reduced from lg to md */
 }
 
 .flex-row {
   display: flex;
   gap: var(--space-lg);
-  align-items: center;
+  align-items: flex-start; /* Changed from center to flex-start to move headings up */
 }
 
 .vertical-line {
