@@ -38,6 +38,9 @@ Sidan `bli-medlem.html` innehåller ett formulär som är kopplat till ett Googl
 - **Success-feedback:** Popup-logiken (`id="popup"`) måste fungera så att användaren får bekräftelse efter inskickat formulär.
 - **Validering:** Innan du committar ändringar på denna sida, verifiera att JavaScript-koden inte har några syntaxfel som hindrar `submit`-eventet.
 
+### Obligatoriska verifieringar vid ändringar på stadgar.html:
+- **Legal text:** Texterna i stadgarna är juridiskt bindande. Vid designuppdateringar får INGA ord eller formuleringar i själva stadgetexten (§ 1 till § 11) ändras, läggas till eller tas bort. Verifiera alltid mot tidigare version (t.ex. via `git diff`) att endast HTML-taggar och CSS-klasser har ändrats, inte innehållet i paragraferna.
+
 ## Projektstruktur
 - `index.html`, `medlem.html`, etc. – Sidornas HTML-innehåll.
 - `stylesheets/` – Externa CSS-filer (t.ex. `navigation.css`, `globals.css`).
