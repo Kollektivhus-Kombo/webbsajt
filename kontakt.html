@@ -10,135 +10,33 @@
       rel="stylesheet"
     />
 
-    <style>
-      /* === NAVIGATION === */
-      .navigation {
-        width: 100%;
-        background-color: #f9f5f3;
-        position: sticky;
-        top: 0;
-        z-index: 100;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-      }
-
-      .nav-container {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        max-width: 1440px;
-        margin: 0 auto;
-        padding: 12px 48px;
-        height: 80px;
-        box-sizing: border-box;
-      }
-
-      .nav-logo img {
-        height: 50px;
-        width: auto;
-        display: block;
-      }
-
-      .nav-links {
-        display: flex;
-        gap: 40px;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        flex-grow: 1;
-        justify-content: center;
-      }
-
-      .nav-links a {
-        text-decoration: none;
-        color: #222;
-        font-size: 16px;
-        font-weight: 500;
-        transition: color 0.3s ease;
-      }
-
-      .nav-links a:hover {
-        color: #6d3234;
-      }
-
-      .nav-button .insidan-btn {
-        background-color: #6d3234;
-        color: #fff;
-        text-decoration: none;
-        padding: 8px 18px;
-        border-radius: 20px;
-        font-weight: 500;
-        transition: background-color 0.3s ease;
-      }
-
-      .nav-button .insidan-btn:hover {
-        background-color: #8a4042;
-      }
-
-      body {
-        font-family: "Source Sans 3", sans-serif;
-        background-color: #f9f5f3;
-        margin: 0;
-        line-height: 1.7;
-      }
-
-      .container {
-        max-width: 1100px;
-        margin: 3rem auto;
-        padding: 0 1.5rem;
-      }
-
-      .two-column {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 2rem;
-      }
-
-      .two-column > div {
-        flex: 1 1 45%;
-      }
-
-      .column-image img {
-        width: 100%;
-        height: auto;
-        border-radius: 12px;
-      }
-
-      @media (max-width: 900px) {
-        .nav-container {
-          flex-direction: column;
-          height: auto;
-          padding: 12px 24px;
-        }
-
-        .nav-links {
-          justify-content: center;
-          gap: 24px;
-          margin: 8px 0;
-        }
-
-        .two-column {
-          flex-direction: column;
-        }
-      }
-    </style>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="stylesheets/globals.css" />
+    <link rel="stylesheet" href="stylesheets/navigation.css" />
+    <link rel="stylesheet" href="stylesheets/layout.css" />
   </head>
 
   <body>
-    <!-- Navigation -->
-    <nav class="navigation">
-      <div class="nav-container">
-        <div class="nav-logo">
-          <a href="/"><img src="media/logo.png" alt="Kollektivhuset Kombo logotyp" /></a>
-        </div>
+    <!-- === NAVIGATION === -->
+    <nav class="site-nav">
+      <div class="nav-inner">
+        <a class="nav-logo" href="index.html">
+          <img src="media/logo.png" alt="Kollektivhuset Kombo logotyp" />
+        </a>
 
         <ul class="nav-links">
           <li><a href="medlem.html">Medlemskap och bostadskö</a></li>
           <li><a href="stadgar.html">Stadgar</a></li>
-          <li><a href="kontakt.html">Kontakta oss</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
         </ul>
 
-        <div class="nav-button">
-          <a href="https://insidan.kollektivhuskombo.se/" target="_blank" class="insidan-btn">Insidan</a>
+        <div class="nav-cta">
+          <a
+            href="https://insidan.kollektivhuskombo.se/"
+            target="_blank"
+            class="insidan-btn"
+            >Insidan</a
+          >
         </div>
       </div>
     </nav>
@@ -178,6 +76,11 @@
         </div>
       </div>
     </main>
+
+    <!-- === FOOTER === -->
+    <footer>
+      © 2025 Kollektivhuset Kombo – Tillsammans bygger vi gemenskap.
+    </footer>
   </body>
 </html>
 

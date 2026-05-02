@@ -1,94 +1,72 @@
-/* NAVIGATION CSS — lägg i stylesheets/globals.css eller i <style> */
-.site-nav {
-  position: sticky;
-  top: 0;
-  width: 100%;
-  background: #f9f5f3; /* ljus bakgrund som i din design */
-  z-index: 1000;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+:root {
+  /* Colors from Figma */
+  --main-bg: #fbf0ef;
+  --primary-color: #7E4644;
+  --primary-hover: #6B4C4A;
+  --primary-pressed: #520C09;
+  --text-primary: #2b2b2b;
+  --text-secondary: #555;
+  --success-color: #2A753F;
+  --warning-color: #F4E96B;
+  --white: #ffffff;
+  --gray-light: #ccc;
+  --gray-border: rgba(0, 0, 0, 0.05);
+
+  /* Typography */
+  --font-main: "Source Sans 3", sans-serif;
+  
+  /* Heading sizes (Figma) */
+  --h1-size: 52px;
+  --h2-size: 44px;
+  --h3-size: 34px;
+  --h4-size: 30px;
+  --h5-size: 24px;
+  --h6-size: 22px;
 }
 
-.site-nav .nav-inner {
-  max-width: 1440px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 12px 48px;
+* {
   box-sizing: border-box;
 }
 
-/* Logo */
-.nav-logo img {
-  height: 50px;
-  width: auto;
+body {
+  font-family: var(--font-main);
+  background-color: var(--white);
+  color: var(--text-primary);
+  margin: 0;
+  line-height: 1.7;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+img {
+  max-width: 100%;
   display: block;
 }
 
-/* Länkar */
-.nav-links {
-  display: flex;
-  gap: 40px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  align-items: center;
-  justify-content: center;
-  flex: 1; /* centrerar länkarna mellan logo och CTA */
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  color: var(--text-primary);
+  line-height: 1.2;
 }
 
-.nav-links a {
-  color: #222;               /* standardfärg */
-  font-weight: 500;
-  font-size: 16px;
-  text-decoration: none;
-  transition: color .18s ease, transform .12s ease;
-  padding: 6px 0;
-}
+h1 { font-size: var(--h1-size); }
+h2 { font-size: var(--h2-size); }
+h3 { font-size: var(--h3-size); }
+h4 { font-size: var(--h4-size); }
+h5 { font-size: var(--h5-size); }
+h6 { font-size: var(--h6-size); }
 
-/* Hover: gör länkarna mörkröda */
-.nav-links a:hover,
-.nav-links a:focus {
-  color: #6d3234; /* mörkröd */
-  outline: none;
-}
-
-/* CTA-knapp (Insidan) */
-.nav-cta .insidan-btn {
-  display: inline-block;
-  background: #6d3234;
-  color: #fff;
-  padding: 8px 14px;
-  border-radius: 8px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: background-color .18s ease, transform .12s ease;
-}
-
-.nav-cta .insidan-btn:hover,
-.nav-cta .insidan-btn:focus {
-  background: #8a4042;
-  transform: translateY(-1px);
-}
-
-/* Responsiv — stapla nav på små skärmar */
 @media (max-width: 900px) {
-  .site-nav .nav-inner {
-    flex-direction: column;
-    gap: 8px;
-    padding: 12px 20px;
-    height: auto;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
-  }
-
-  .nav-cta {
-    align-self: flex-end;
+  :root {
+    --h1-size: 42px;
+    --h2-size: 36px;
+    --h3-size: 28px;
+    --h4-size: 24px;
+    --h5-size: 20px;
+    --h6-size: 18px;
   }
 }
-
-
