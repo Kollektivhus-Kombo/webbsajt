@@ -2,6 +2,13 @@
 
 Detta projekt är en statisk webbplats för Kollektivhuset Kombo, byggd med HTML och Vanilla CSS.
 
+## Systemkrav och Miljö
+För att arbeta effektivt med detta projekt krävs följande verktyg:
+- **Git:** Måste vara installerat på datorn.
+- **GitHub CLI (gh):** Måste vara installerat och inloggat (`gh auth login`).
+- **Figma MCP:** Måste vara ansluten och konfigurerad för att kunna läsa designkontext.
+- **Homebrew:** Om något verktyg saknas, använd `brew` för att installera det (t.ex. `brew install gh git`).
+
 ## Designreferens (Figma)
 All ny design och uppdateringar ska utgå från följande Figma-fil:
 - **URL:** [https://www.figma.com/design/3xRtXbb4Ih6muH6Lba3PUK/KOMBO](https://www.figma.com/design/3xRtXbb4Ih6muH6Lba3PUK/KOMBO)
