@@ -45,60 +45,62 @@
     </nav>
 
     <!-- Main content -->
-    <main class="form-container">
-      <h1>Bli medlem</h1>
-      <div class="form-intro">
-        <p>
-          Vad kul att du vill bli medlem i Kombo! När du blir medlem ställs du automatiskt i Kombos
-          bostadskö. Vill du vara medlem men inte bo i huset är du givetvis precis lika välkommen!
-        </p>
-        <p>
-          Medlemskapet kostar 200 kronor per år och du betalar in den via Swish till
-          <a href="https://app.swish.nu/1/p/sw/?sw=1230351072&amt=200.00&cur=SEK&msg=Medlemsavgift&src=qr">123-035 10 72</a>
-          och meddelandet "Medlemsavgift".
-        </p>
-      </div>
-
-      <form id="medlem-form">
-        <div class="form-group">
-          <label for="namn">För- och efternamn</label>
-          <input type="text" id="namn" name="namn" required />
+    <main class="container" style="max-width: 1440px; margin-top: 4rem; padding: 0 48px; min-height: 70vh;">
+      <div style="max-width: 800px; margin: 0 auto; background-color: var(--white); border-radius: 16px; padding: 4rem 3rem; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);">
+        <h1 style="text-align: center; margin-bottom: 2rem;">Bli medlem</h1>
+        <div class="form-intro" style="margin-bottom: 3rem;">
+          <p style="font-size: 20px; line-height: 1.6;">
+            Vad kul att du vill bli medlem i Kombo! När du blir medlem ställs du automatiskt i Kombos
+            bostadskö. Vill du vara medlem men inte bo i huset är du givetvis precis lika välkommen!
+          </p>
+          <p style="font-size: 20px; line-height: 1.6;">
+            Medlemskapet kostar 200 kronor per år och du betalar in den via Swish till
+            <a href="https://app.swish.nu/1/p/sw/?sw=1230351072&amt=200.00&cur=SEK&msg=Medlemsavgift&src=qr" style="text-decoration: underline;">123-035 10 72</a>
+            och meddelandet "Medlemsavgift".
+          </p>
         </div>
 
-        <div class="form-group">
-          <label for="mail">Mailadress</label>
-          <input type="email" id="mail" name="mail" required />
-        </div>
+        <form id="medlem-form">
+          <div class="form-group">
+            <label for="namn">För- och efternamn</label>
+            <input type="text" id="namn" name="namn" required />
+          </div>
 
-        <div class="form-group">
-          <label for="fodelsedatum">Födelsedatum</label>
-          <input type="date" id="fodelsedatum" name="fodelsedatum" required />
-        </div>
+          <div class="form-group">
+            <label for="mail">Mailadress</label>
+            <input type="email" id="mail" name="mail" required />
+          </div>
 
-        <div class="consent-box">
-          Vad kul att du vill bli medlem! Vi på föreningen värdesätter din integritet och vill
-          försäkra dig om att vi tar sparandet av dina personuppgifter på största allvar. De
-          uppgifter du lämnar till oss används endast inom ramen för föreningens verksamhet och
-          kommer inte att delas med eller spridas till någon annan part. Vi använder endast dessa
-          uppgifter för vår bostadskö och för att få en överblick av antalet medlemmar i Kombo.
-        </div>
+          <div class="form-group">
+            <label for="fodelsedatum">Födelsedatum</label>
+            <input type="date" id="fodelsedatum" name="fodelsedatum" required />
+          </div>
 
-        <div class="checkbox-row">
-          <input type="checkbox" id="godkanner" name="gdpr" value="Ja" required />
-          <label for="godkanner">Det låter bra! Jag godkänner</label>
-        </div>
+          <div class="consent-box" style="margin: 2rem 0;">
+            Vad kul att du vill bli medlem! Vi på föreningen värdesätter din integritet och vill
+            försäkra dig om att vi tar sparandet av dina personuppgifter på största allvar. De
+            uppgifter du lämnar till oss används endast inom ramen för föreningens verksamhet och
+            kommer inte att delas med eller spridas till någon annan part. Vi använder endast dessa
+            uppgifter för vår bostadskö och för att få en överblick av antalet medlemmar i Kombo.
+          </div>
 
-        <div class="checkbox-row">
-          <input type="checkbox" id="betalt" name="betalt" value="Ja" required />
-          <label for="betalt">Jag har betalat in medlemsavgiften med Swish till <a href="https://app.swish.nu/1/p/sw/?sw=1230351072&amt=200.00&cur=SEK&msg=Medlemsavgift&src=qr">123-035 10 72</a></label>
+          <div class="checkbox-row">
+            <input type="checkbox" id="godkanner" name="gdpr" value="Ja" required />
+            <label for="godkanner">Det låter bra! Jag godkänner</label>
+          </div>
+
+          <div class="checkbox-row">
+            <input type="checkbox" id="betalt" name="betalt" value="Ja" required />
+            <label for="betalt">Jag har betalat in medlemsavgiften med Swish till <a href="https://app.swish.nu/1/p/sw/?sw=1230351072&amt=200.00&cur=SEK&msg=Medlemsavgift&src=qr" style="text-decoration: underline;">123-035 10 72</a></label>
+          </div>
+          
+          <button type="submit" class="cta-btn" style="width: 100%; padding: 1.2rem; font-size: 1.1rem; margin-top: 2rem; border: none; cursor: pointer;">Bli medlem i Kombo</button>
+        </form>
+        <div class="form-intro" style="margin-top: 3rem; text-align: center;">
+          <p style="font-size: 18px; color: #555;">
+            Vid eventuella frågor kan du kontakta Kombo via <a href="mailto:styrelse@kollektivhuskombo.se" style="text-decoration: underline;">styrelse@kollektivhuskombo.se</a>
+          </p>
         </div>
-        
-        <button type="submit">Bli medlem i Kombo</button>
-      </form>
-      <div class="form-intro" style="margin-top: 2rem;">
-        <p>
-          Vid eventuella frågor kan du kontakta Kombo via styrelse@kollektivhuskombo.se
-        </p>
       </div>
     </main>
 
@@ -106,16 +108,25 @@
     <div id="popup" class="modal">
       <div class="modal-content">
         <span class="close-btn" id="close-popup">&times;</span>
-        <h2>Grattis! 🎉</h2>
-        <p>Allt du behöver göra för att bli medlem är att ha betalat in medlemsavgiften via
-          Swish till <a href="https://app.swish.nu/1/p/sw/?sw=1230351072&amt=200.00&cur=SEK&msg=Medlemsavgift&src=qr">123-035 10 72</a>
+        <h2 style="margin-bottom: 1.5rem;">Grattis! 🎉</h2>
+        <p style="font-size: 18px; line-height: 1.6;">Allt du behöver göra för att bli medlem är att ha betalat in medlemsavgiften via
+          Swish till <a href="https://app.swish.nu/1/p/sw/?sw=1230351072&amt=200.00&cur=SEK&msg=Medlemsavgift&src=qr" style="text-decoration: underline;">123-035 10 72</a>
           och meddelandet "Medlemsavgift".</p>
       </div>
     </div>
 
     <!-- === FOOTER === -->
-    <footer>
-      © 2025 Kollektivhuset Kombo – Tillsammans bygger vi gemenskap.
+    <footer style="background-color: #ddd5d2; padding: 4rem 92px; border-top: none; text-align: left; margin-top: 4rem;">
+      <div style="max-width: 1440px; margin: 0 auto;">
+        <h3 style="margin-bottom: 1.5rem;">Kontakt</h3>
+        <p style="font-size: 20px; margin-bottom: 0.5rem;">
+          <a href="mailto:styrelse@kollektivhuskombo.se" style="text-decoration: underline;">styrelse@kollektivhuskombo.se</a>
+        </p>
+        <p style="font-size: 20px; color: #1f1f1f;">
+          Inteckningsvägen 100<br />
+          129 31 Hägersten
+        </p>
+      </div>
     </footer>
 
     <script>
