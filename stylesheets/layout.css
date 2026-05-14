@@ -116,8 +116,7 @@ footer .footer-inner {
   }
   
   .flex-row {
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
     align-items: flex-start;
     gap: var(--space-sm);
   }
@@ -126,37 +125,8 @@ footer .footer-inner {
     width: 100%;
   }
 
-  /* Vertical lines should never take full width and should stay next to their neighbor */
-  .flex-row > .vertical-line {
-    width: 1px !important;
-    flex: 0 0 auto;
-    display: block !important;
-    height: auto !important;
-    min-height: 40px;
-    align-self: stretch;
-    margin: 0;
-  }
-
-  /* The element next to a vertical line should not take 100% width to allow side-by-side */
-  .flex-row > .vertical-line + div,
-  .flex-row > div:has(+ .vertical-line) {
-    width: auto;
-    flex: 1;
-    min-width: 250px;
-  }
-
-  .flex-row > div:first-child:not(.vertical-line):not(:has(+ .vertical-line)) {
-    margin-bottom: 0;
-  }
-
   .vertical-line {
-    display: block !important;
-    width: 1px !important;
-    height: auto !important;
-    min-height: 40px;
-    align-self: stretch;
-    margin: 0;
-    flex-shrink: 0;
+    display: none !important;
   }
 
   .section {

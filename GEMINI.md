@@ -21,7 +21,7 @@ När du implementerar ändringar baserat på Figma-designen, följ dessa steg:
 1.  **Läs designkontexten:** Använd `get_design_context` med relevant `nodeId` och `fileKey` (`3xRtXbb4Ih6muH6Lba3PUK`) för att få ut CSS-egenskaper, färger och struktur.
 2.  **Färg- och designtokens:** Följ de CSS-variabler som definierats i Figma (t.ex. `--main-bg`, `--dark-red`). Om de saknas i koden, lägg till dem i `:root`-blocket i de berörda HTML-filerna eller i en global CSS-fil.
 3.  **Responsiv design:** Designen i Figma är den primära källan. Sidorna ska alltid vara optimerade för både desktop och mobil, med fokus på att bibehålla sajtens unika karaktär på båda:
-    - **Dekorativa linjer:** De vertikala linjerna (`.vertical-line`) ska bevaras även på mobil och placeras intill rubriker.
+    - **Dekorativa linjer:** De vertikala linjerna (`.vertical-line`) ska tas bort på mobil för att skapa en renare layout.
     - **Kompakt layout:** Mobilvyn ska vara kompakt. Undvik onödiga tomrum genom att använda snäva marginaler, särskilt när rubriker följer på varandra eller när stycken staplas under rubriker.
     - **Separata anpassningar:** Vid behov, använd specifika media queries för att optimera layouten för respektive plattform så att de känns skräddarsydda.
 4.  **Media och bilder:** Nya bilder från Figma ska exporteras och placeras i mappen `media/`. Referera till dem med relativa sökvägar (t.ex. `media/bildnamn.png`).
