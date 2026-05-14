@@ -124,10 +124,11 @@ footer .footer-inner {
   .flex-row > div:first-child {
     flex: 0 0 auto;
     width: 100%;
+    margin-bottom: 0;
   }
 
   .vertical-line {
-    display: none;
+    display: none !important;
   }
 
   .section {
@@ -157,6 +158,10 @@ footer .footer-inner {
   /* Reduce gaps after headers on mobile */
   .section-wrapper h1, 
   .section-wrapper h2 {
-    margin-bottom: var(--space-xs);
+    margin-bottom: 4px; /* Tighten significantly */
+  }
+  
+  .flex-row {
+    gap: 0; /* Remove gap between heading container and content container */
   }
 }
