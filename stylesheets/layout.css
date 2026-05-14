@@ -118,11 +118,16 @@ footer .footer-inner {
   .flex-row {
     flex-direction: column;
     align-items: flex-start;
-    gap: var(--space-xs); /* Very small gap for mobile headers */
+    gap: var(--space-xs);
+  }
+
+  .flex-row > div:first-child {
+    flex: 0 0 auto;
+    width: 100%;
   }
 
   .vertical-line {
-    display: none; /* Removed the 'blob' / line on mobile as requested */
+    display: none;
   }
 
   .section {
