@@ -112,23 +112,51 @@ footer .footer-inner {
 
 @media (max-width: 900px) {
   .container {
-    padding: 0 20px;
+    padding: 0 16px; /* Slightly more space on mobile */
   }
   
   .flex-row {
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     align-items: flex-start;
-    gap: var(--space-xs);
+    gap: var(--space-sm);
   }
 
-  .flex-row > div:first-child {
-    flex: 0 0 auto;
+  .flex-row > div {
     width: 100%;
+  }
+
+  /* Vertical lines should never take full width and should stay next to their neighbor */
+  .flex-row > .vertical-line {
+    width: 1px !important;
+    flex: 0 0 auto;
+    display: block !important;
+    height: auto !important;
+    min-height: 40px;
+    align-self: stretch;
+    margin: 0;
+  }
+
+  /* The element next to a vertical line should not take 100% width to allow side-by-side */
+  .flex-row > .vertical-line + div,
+  .flex-row > div:has(+ .vertical-line) {
+    width: auto;
+    flex: 1;
+    min-width: 250px;
+  }
+
+  .flex-row > div:first-child:not(.vertical-line):not(:has(+ .vertical-line)) {
     margin-bottom: 0;
   }
 
   .vertical-line {
-    display: none !important;
+    display: block !important;
+    width: 1px !important;
+    height: auto !important;
+    min-height: 40px;
+    align-self: stretch;
+    margin: 0;
+    flex-shrink: 0;
   }
 
   .section {
