@@ -2,7 +2,7 @@
 
 :root {
   /* Colors from Figma */
-  --main-bg: #F4EEDB;
+  --main-bg: #F4F3EE;
   --primary-color: #7E4644;
   --primary-hover: #6B4C4A;
   --primary-pressed: #520C09;
@@ -40,11 +40,12 @@
 
 html {
   scroll-behavior: smooth;
+  background-color: var(--main-bg);
 }
 
 body {
   font-family: var(--font-main);
-  background-color: #fffffa; 
+  background-color: var(--main-bg); 
   color: var(--text-primary);
   margin: 0;
   line-height: 1.6; /* Slightly tighter line height */
