@@ -2,9 +2,9 @@
   position: sticky;
   top: 0;
   width: 100%;
-  background: var(--main-bg);
+  background: #214F2A; /* Byt färg på hela baren */
   z-index: 1000;
-  box-shadow: 0 2px 6px var(--gray-border);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
 .site-nav .nav-inner {
@@ -37,22 +37,22 @@
 }
 
 .nav-links a {
-  color: var(--text-primary);
+  color: #E1DDDD; /* Byt färg på texten */
   font-weight: 500;
   font-size: 16px;
-  transition: color 0.2s ease;
+  transition: opacity 0.2s ease;
 }
 
 .nav-links a:hover,
 .nav-links a:focus {
-  color: var(--primary-color);
+  opacity: 0.8;
 }
 
 /* CTA-knapp (Insidan) */
 .nav-cta .insidan-btn {
   display: inline-block;
-  background: var(--primary-color);
-  color: var(--white);
+  background: #F5F5F5; /* Byt färg på knappen */
+  color: #214F2A; /* Textfärg på knappen för god kontrast */
   padding: 8px 14px;
   border-radius: 8px;
   font-weight: 600;
@@ -61,7 +61,7 @@
 
 .nav-cta .insidan-btn:hover,
 .nav-cta .insidan-btn:focus {
-  background: var(--primary-hover);
+  background: #e0e0e0;
   transform: translateY(-1px);
 }
 
