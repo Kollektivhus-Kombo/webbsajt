@@ -2,7 +2,7 @@
   position: sticky;
   top: 0;
   width: 100%;
-  background: #214F2A; /* Byt färg på hela baren */
+  background: #214F2A;
   z-index: 1000;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
@@ -15,12 +15,15 @@
   justify-content: space-between;
   padding: 14px 48px;
   min-height: 72px;
+  box-sizing: border-box; /* Säkerställer att padding inte gör baren bredare än 100% */
 }
 
-/* Logo */
-vit kombo.jpeg {
+/* Logo - Uppdaterad selektor */
+.site-nav img {
   height: 48px;
+  max-height: 100%;
   width: auto;
+  display: block;
 }
 
 /* Länkar */
@@ -37,9 +40,10 @@ vit kombo.jpeg {
 }
 
 .nav-links a {
-  color: #E1DDDD; /* Byt färg på texten */
+  color: #E1DDDD;
   font-weight: 500;
   font-size: 16px;
+  text-decoration: none;
   transition: opacity 0.2s ease;
 }
 
@@ -51,11 +55,12 @@ vit kombo.jpeg {
 /* CTA-knapp (Insidan) */
 .nav-cta .insidan-btn {
   display: inline-block;
-  background: #F5F5F5; /* Byt färg på knappen */
-  color: #214F2A; /* Textfärg på knappen för god kontrast */
+  background: #F5F5F5;
+  color: #214F2A;
   padding: 8px 14px;
   border-radius: 8px;
   font-weight: 600;
+  text-decoration: none;
   transition: background-color 0.2s ease, transform 0.15s ease;
 }
 
