@@ -16,6 +16,16 @@
     <link rel="stylesheet" href="stylesheets/layout.css" />
     <link rel="stylesheet" href="stylesheets/form.css" />
     <link rel="stylesheet" href="stylesheets/modal.css" />
+
+    <style>
+      /* === FOOTER STYLES (Samma som på index.html) === */
+      footer, 
+      footer h3, 
+      footer p, 
+      footer a {
+        color: #E1DDDD !important;
+      }
+    </style>
   </head>
 
   <body>
@@ -23,7 +33,7 @@
     <nav class="site-nav">
       <div class="nav-inner">
         <a class="nav-logo" href="index.html">
-          <img src="media/kombo-logga2026-vit.png" alt="Kollektivhuset Kombo logotyp" />
+          <img src="media/logo.png" alt="Kollektivhuset Kombo logotyp" />
         </a>
 
         <ul class="nav-links">
@@ -121,7 +131,7 @@
       <div class="footer-inner">
         <h3>Kontakt</h3>
         <p style="font-size: 18px; margin-bottom: var(--space-xs);">
-          <a href="mailto:styrelse@kollektivhuskombo.se" style="text-decoration: underline;">styrelse@kollektivhuskombo.se</a>
+          <a href="mailto:bostad@kollektivhuskombo.se" style="text-decoration: underline;">bostad@kollektivhuskombo.se</a>
         </p>
         <p style="font-size: 18px; margin: 0;">
           Inteckningsvägen 100<br />
@@ -129,7 +139,6 @@
         </p>
       </div>
     </footer>
-  
 
     <script>
       const form = document.getElementById("medlem-form");
@@ -158,7 +167,10 @@
           }
           popup.style.display = "block";
           form.reset();
-        })
+        }).catch(error => {
+          console.error('Error:', error);
+          alert('Form submission error.');
+        });
       });
 
       closePopup.addEventListener("click", function () {
