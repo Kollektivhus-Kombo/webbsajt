@@ -78,15 +78,40 @@
         color: #B72E58 !important;
       }
 
-      /* Övrig layout */
+      /* === HERO STYLES === */
+      .hero-section {
+        background-image: url('media/Frame 1261156578 (1).png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 100px 48px 80px 48px;
+        display: flex;
+        align-items: center;
+      }
+
+      .hero-container {
+        max-width: 1200px;
+        width: 100%;
+        margin: 0 auto;
+      }
+
       .hero-title {
         font-family: 'DM Sans', sans-serif;
         font-weight: 1000;
-        font-size: 100px;
         color: #B72E58;
-        line-height: 1.05;
+        line-height: 0.95;
         margin-bottom: 0;
-        text-align: center;
+        text-align: left;
+      }
+
+      .hero-title-small {
+        font-size: 100px;
+        display: block;
+      }
+
+      .hero-title-large {
+        font-size: 140px;
+        display: block;
       }
 
       .cta-btn {
@@ -135,9 +160,27 @@
         border-radius: 8px;
       }
 
+      @media (max-width: 992px) {
+        .hero-title-small {
+          font-size: 60px;
+        }
+
+        .hero-title-large {
+          font-size: 90px;
+        }
+      }
+
       @media (max-width: 768px) {
-        .hero-title {
-          font-size: 50px;
+        .hero-title-small {
+          font-size: 40px;
+        }
+
+        .hero-title-large {
+          font-size: 60px;
+        }
+
+        .hero-section {
+          padding: 60px 24px;
         }
 
         .site-nav .nav-inner {
@@ -184,9 +227,12 @@
     </nav>
 
     <!-- === HERO === -->
-    <section class="container" style="padding-top: 150px;">
-      <div>
-        <h1 class="hero-title">VÄLKOMMEN TILL<br />KOMBO!</h1>
+    <section class="hero-section">
+      <div class="hero-container">
+        <h1 class="hero-title">
+          <span class="hero-title-small">VÄLKOMMEN TILL</span>
+          <span class="hero-title-large">KOMBO!</span>
+        </h1>
       </div>
     </section>
 
