@@ -100,7 +100,7 @@
         margin-top: 20px;
       }
 
-      /* Tvåkolumns-layout för sektionen (50/50) */
+      /* Tvåkolumns-layout för sektionen (55/45) */
       .two-column-section {
         display: flex;
         gap: 40px;
@@ -110,14 +110,14 @@
       }
 
       .text-column {
-        flex: 0 0 calc(50% - 20px);
+        flex: 0 0 calc(55% - 20px);
         box-sizing: border-box;
       }
 
       .image-column {
-        flex: 0 0 calc(50% - 20px);
+        flex: 0 0 calc(45% - 20px);
         box-sizing: border-box;
-        text-align: center;
+        text-align: left;
       }
 
       .image-column img {
@@ -185,7 +185,7 @@
     <!-- === SECTION 2: OM HUSET === -->
     <section class="container" style="padding: 50px 0;">
       <div class="two-column-section">
-        <!-- Vänster sida: Text (50%) -->
+        <!-- Vänster sida: Text (55%) -->
         <div class="text-column">
           <div style="font-size: 1.35rem; margin-bottom: var(--space-md); text-align: left; line-height: 1.6;">
             <p style="margin-bottom: 1.5rem;">
@@ -203,7 +203,7 @@
           </div>
         </div>
 
-        <!-- Höger sida: Bild & Knapp (50%) -->
+        <!-- Höger sida: Bild & Knapp (45%) -->
         <div class="image-column">
           <img src="media/vill du bo här.png" alt="Vill du bo här" />
           <a href="medlem.html" class="cta-btn">BLI MEDLEM</a>
