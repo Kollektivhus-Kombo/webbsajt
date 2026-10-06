@@ -19,9 +19,9 @@
     <link rel="stylesheet" href="stylesheets/layout.css" />
 
     <style>
-      /* Tvinga den exakta färgen från Figma (#EFCFD0) på hela sidan */
+      /* Tvinga den exakta färgen från Figma (#E9E0D7) på hela sidan */
       html, body, section, main, .container {
-        background-color: E9E0D7 !important;
+        background-color: #E9E0D7 !important;
       }
 
       /* === NAVIGATION STYLES === */
@@ -83,7 +83,7 @@
         font-family: 'DM Sans', sans-serif;
         font-weight: 1000;
         font-size: 100px;
-        color: #214F2B;
+        color: #B72E58;
         line-height: 1.05;
         margin-bottom: 0;
         text-align: center;
@@ -99,6 +99,32 @@
         font-weight: 600;
       }
 
+      /* Tvákolumns-layout för sektionen */
+      .two-column-section {
+        display: flex;
+        gap: 40px;
+        align-items: flex-start;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .text-column {
+        flex: 0 0 65%;
+        box-sizing: border-box;
+      }
+
+      .image-column {
+        flex: 0 0 35%;
+        box-sizing: border-box;
+      }
+
+      .image-column img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 8px;
+      }
+
       @media (max-width: 768px) {
         .hero-title {
           font-size: 50px;
@@ -106,6 +132,16 @@
 
         .site-nav .nav-inner {
           height: auto;
+        }
+
+        .two-column-section {
+          flex-direction: column;
+        }
+
+        .text-column,
+        .image-column {
+          flex: 1 1 100%;
+          width: 100%;
         }
       }
     </style>
@@ -140,31 +176,38 @@
     <!-- === HERO === -->
     <section class="container" style="padding-top: 150px;">
       <div>
-        <h1 class="hero-title">VÄLKOMMEN TILL KOMBO!</h1>
+        <h1 class="hero-title">VÄLKOMMEN TILL<br />KOMBO!</h1>
       </div>
     </section>
 
     <!-- === SECTION 2: OM HUSET === -->
     <section class="container" style="padding: 50px 0;">
-      <div style="max-width: 1000px; margin: 0 auto; text-align: center;">
-        <div style="font-size: 1.35rem; margin-bottom: var(--space-md); text-align: left; line-height: 1.6;">
-          <p style="margin-bottom: 1.5rem;">
-            Vi som bor i KOMBO drivs av en tro på att kollektivhus är det bästa alternativet för ett hållbart boende ur ett både mänskligt och miljömässigt perspektiv.
-          </p>
-          <p style="margin-bottom: 1.5rem;">
-            Här hjälps vi åt med matlagning, städning och annat för att få vardagen att fungera så smidigt som möjligt. Utöver våra privata lägenheter har vi även tillgång till ca 300 - 400 kvm gemensamma utrymmen som storkök, matsal (med uteplats, lekplats och trädgård), allrum, aktivitetsrum, två gästrum, snickeri samt två stora takterrasser, inklusive ett terrassrum med pentry och toalett. Från terrasserna har vi en fantastisk utsikt i alla väderstreck från vårt hus på Hägerstensåsen. Vi har dessutom bara några steg till närmsta tunnelbana med vilken du är inne i stan på bara 10 minuter.
-          </p>
-          <p style="margin-bottom: 1.5rem;">
-            För att ta hand om det gemensamma är vi indelade i ett antal städ- och matlag som kräver deltagande högst ett par-tre gånger per termin så det är inte särskilt betungande. Utöver det finns arbets- och intressegrupper för allt från skötsel av våra uteplatser och trädgård till snickeri och körsång. Om du vill kan du gå med i någon av dessa, eller varför inte starta en ny med något som du är intresserad av?
-          </p>
-          <p style="margin-bottom: 1.5rem;">
-            Deltagande i städ- och matlag är obligatoriskt för alla som bor här men att gå med i en arbets- eller intressegrupp är frivilligt och mycket uppskattat!
-          </p>
+      <div class="two-column-section">
+        <!-- Vänster sida: Text (65%) -->
+        <div class="text-column">
+          <div style="font-size: 1.35rem; margin-bottom: var(--space-md); text-align: left; line-height: 1.6;">
+            <p style="margin-bottom: 1.5rem;">
+              Vi som bor i KOMBO drivs av en tro på att kollektivhus är det bästa alternativet för ett hållbart boende ur ett både mänskligt och miljömässigt perspektiv.
+            </p>
+            <p style="margin-bottom: 1.5rem;">
+              Här hjälps vi åt med matlagning, städning och annat för att få vardagen att fungera så smidigt som möjligt. Utöver våra privata lägenheter har vi även tillgång till ca 300 - 400 kvm gemensamma utrymmen som storkök, matsal (med uteplats, lekplats och trädgård), allrum, aktivitetsrum, två gästrum, snickeri samt två stora takterrasser, inklusive ett terrassrum med pentry och toalett. Från terrasserna har vi en fantastisk utsikt i alla väderstreck från vårt hus på Hägerstensåsen. Vi har dessutom bara några steg till närmsta tunnelbana med vilken du är inne i stan på bara 10 minuter.
+            </p>
+            <p style="margin-bottom: 1.5rem;">
+              För att ta hand om det gemensamma är vi indelade i ett antal städ- och matlag som kräver deltagande högst ett par-tre gånger per termin så det är inte särskilt betungande. Utöver det finns arbets- och intressegrupper för allt från skötsel av våra uteplatser och trädgård till snickeri och körsång. Om du vill kan du gå med i någon av dessa, eller varför inte starta en ny med något som du är intresserad av?
+            </p>
+            <p style="margin-bottom: 1.5rem;">
+              Deltagande i städ- och matlag är obligatoriskt för alla som bor här men att gå med i en arbets- eller intressegrupp är frivilligt och mycket uppskattat!
+            </p>
+          </div>
+          <a href="medlem.html" class="cta-btn">Bli medlem</a>
         </div>
-        <a href="medlem.html" class="cta-btn">Bli medlem</a>
+
+        <!-- Höger sida: Bild -->
+        <div class="image-column">
+          <img src="media/vill du bo här.png" alt="Vill du bo här" />
+        </div>
       </div>
     </section>
-
 
     <!-- === FOOTER === -->
     <footer>
