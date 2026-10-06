@@ -2,7 +2,7 @@
 .container {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 48px;
+  padding: 0 144px; /* Tredubblad padding (48px * 3) */
 }
 
 .section-wrapper {
@@ -112,7 +112,7 @@ footer .footer-inner {
 
 @media (max-width: 900px) {
   .container {
-    padding: 0 16px; /* Slightly more space on mobile */
+    padding: 0 48px; /* Tredubblad padding på mobil/mindre skärmar också (16px * 3) */
   }
   
   .flex-row {
