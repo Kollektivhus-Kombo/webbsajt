@@ -24,14 +24,6 @@
         background-color: #E9E0D7 !important;
       }
 
-      /* Tvinga alla container-element att tillåta full skärmbredd */
-      .container {
-        max-width: 100% !important;
-        width: 100% !important;
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-      }
-
       /* === NAVIGATION STYLES === */
       .site-nav {
         background-color: #214F2A !important;
@@ -43,13 +35,13 @@
       }
 
       .site-nav .nav-inner {
-        width: 100% !important;
-        max-width: 100% !important;
+        width: 100%;
+        max-width: 1440px;
         margin: 0 auto;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 14px 40px !important;
+        padding: 14px 144px; /* Tredubblad padding */
         height: 72px;
         box-sizing: border-box;
       }
@@ -93,16 +85,16 @@
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        padding: 100px 40px 80px 40px !important;
+        padding: 100px 144px 80px 144px; /* Tredubblad padding */
         display: flex;
         align-items: center;
-        width: 100% !important;
+        width: 100%;
         box-sizing: border-box;
       }
 
       .hero-container {
-        width: 100% !important;
-        max-width: 100% !important;
+        width: 100%;
+        max-width: 1440px;
         margin: 0 auto;
       }
 
@@ -136,15 +128,15 @@
         margin-top: 20px;
       }
 
-      /* Tvåkolumns-layout för sektionen (55/45) - Tvingas till full skärmbredd */
+      /* Tvåkolumns-layout för sektionen (55/45) */
       .two-column-section {
         display: flex;
         gap: 50px;
         align-items: flex-start;
-        width: 100% !important;
-        max-width: 100% !important;
+        width: 100%;
+        max-width: 1440px;
         margin: 0 auto;
-        padding: 0 40px !important;
+        padding: 0 144px; /* Tredubblad padding */
         box-sizing: border-box;
       }
 
@@ -176,17 +168,16 @@
 
       /* === FEATURED PRODUCT SECTION === */
       .featured-section {
-        width: 100% !important;
-        max-width: 100% !important;
+        width: 100%;
+        max-width: 1440px;
         margin: 0 auto;
-        padding: 40px 40px 60px 40px !important;
+        padding: 40px 144px 60px 144px; /* Tredubblad padding */
         box-sizing: border-box;
         text-align: center;
       }
 
       .featured-section img {
         width: 100%;
-        max-width: 100%;
         height: auto;
         display: block;
         margin: 0 auto;
@@ -213,17 +204,17 @@
         }
 
         .hero-section {
-          padding: 60px 20px !important;
+          padding: 60px 48px;
         }
 
         .site-nav .nav-inner {
           height: auto;
-          padding: 14px 20px !important;
+          padding: 14px 48px;
         }
 
         .two-column-section,
         .featured-section {
-          padding: 0 20px !important;
+          padding: 0 48px;
         }
 
         .two-column-section {
@@ -276,7 +267,7 @@
     </section>
 
     <!-- === SECTION 2: OM HUSET === -->
-    <section class="container" style="padding: 50px 0 20px 0;">
+    <section class="container" style="padding-top: 50px; padding-bottom: 20px;">
       <div class="two-column-section">
         <!-- Vänster sida: Text (55%) -->
         <div class="text-column">
