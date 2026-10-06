@@ -90,7 +90,7 @@
       }
 
       .hero-container {
-        max-width: 1200px;
+        max-width: 1440px;
         width: 100%;
         margin: 0 auto;
       }
@@ -125,17 +125,19 @@
         margin-top: 20px;
       }
 
-      /* Tvåkolumns-layout för sektionen (55/45) */
+      /* Tvåkolumns-layout för sektionen (55/45) med bredare ram (1440px) */
       .two-column-section {
         display: flex;
-        gap: 40px;
+        gap: 50px;
         align-items: flex-start;
-        max-width: 1200px;
+        max-width: 1440px;
         margin: 0 auto;
+        padding: 0 48px;
+        box-sizing: border-box;
       }
 
       .text-column {
-        flex: 0 0 calc(55% - 20px);
+        flex: 0 0 calc(55% - 25px);
         box-sizing: border-box;
       }
 
@@ -148,7 +150,7 @@
       }
 
       .image-column {
-        flex: 0 0 calc(45% - 20px);
+        flex: 0 0 calc(45% - 25px);
         box-sizing: border-box;
         text-align: left;
       }
@@ -162,9 +164,10 @@
 
       /* === FEATURED PRODUCT SECTION === */
       .featured-section {
-        max-width: 1200px;
+        max-width: 1440px;
         margin: 0 auto;
-        padding: 40px 0 60px 0;
+        padding: 40px 48px 60px 48px;
+        box-sizing: border-box;
         text-align: center;
       }
 
@@ -201,6 +204,11 @@
 
         .site-nav .nav-inner {
           height: auto;
+        }
+
+        .two-column-section,
+        .featured-section {
+          padding: 0 24px;
         }
 
         .two-column-section {
