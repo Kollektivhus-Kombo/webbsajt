@@ -49,7 +49,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 14px 40px !important;
+        padding: 14px 80px !important; /* 80px padding från Figma */
         height: 72px;
         box-sizing: border-box;
       }
@@ -93,7 +93,7 @@
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        padding: 100px 40px 80px 40px !important; /* Matcha padding med sektionen under */
+        padding: 100px 80px 80px 80px !important; /* 80px padding från Figma */
         display: flex;
         align-items: center;
         width: 100%;
@@ -136,7 +136,7 @@
         margin-top: 20px;
       }
 
-      /* Tvåkolumns-layout för sektionen (55/45) - Bredare format som täcker hela skärmen */
+      /* Tvåkolumns-layout för sektionen (55/45) - Exakt 80px sidopadding från Figma */
       .two-column-section {
         display: flex;
         gap: 60px;
@@ -144,12 +144,12 @@
         width: 100% !important;
         max-width: 100% !important;
         margin: 0 auto;
-        padding: 0 40px !important; /* Samma vänstermarginal som rubriken */
+        padding: 0 80px !important; /* 80px padding till höger och vänster */
         box-sizing: border-box;
       }
 
       .text-column {
-        flex: 1 1 55%; /* Tar 55% av den breda ytan */
+        flex: 1 1 55%;
         box-sizing: border-box;
       }
 
@@ -162,7 +162,7 @@
       }
 
       .image-column {
-        flex: 1 1 45%; /* Tar 45% av den breda ytan */
+        flex: 1 1 45%;
         box-sizing: border-box;
         text-align: left;
       }
@@ -179,7 +179,7 @@
         width: 100% !important;
         max-width: 100% !important;
         margin: 0 auto;
-        padding: 40px 40px 60px 40px !important;
+        padding: 40px 80px 60px 80px !important; /* 80px padding till höger och vänster */
         box-sizing: border-box;
         text-align: center;
       }
