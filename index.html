@@ -153,16 +153,19 @@
         box-sizing: border-box;
       }
 
+      /* Exakta typografivärden från Figma för brödtexten */
       .text-column p {
         font-family: 'PT Sans Narrow', sans-serif;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 25px;
+        letter-spacing: 0.01em; /* 1% */
         color: #121212;
-        font-size: 1.4rem;
-        line-height: 1.6;
         margin-bottom: 1.5rem;
       }
 
       .image-column {
-        flex: 1 1 35%;
+        flex: 1 1 45%;
         box-sizing: border-box;
         text-align: left;
       }
@@ -277,7 +280,7 @@
     <!-- === SECTION 2: OM HUSET === -->
     <section class="container" style="padding-top: 50px; padding-bottom: 20px;">
       <div class="two-column-section">
-        <!-- Vänster sida: Text (65%) -->
+        <!-- Vänster sida: Text (55%) -->
         <div class="text-column">
           <div style="margin-bottom: var(--space-md); text-align: left;">
             <p>
@@ -295,9 +298,9 @@
           </div>
         </div>
 
-        <!-- Höger sida: Bild & Knapp (35%) -->
+        <!-- Höger sida: Bild & Knapp (45%) -->
         <div class="image-column">
-          <img src="media/vill du bo här (1).png" alt="Vill du bo här" />
+          <img src="media/vill du bo här.png" alt="Vill du bo här" />
           <a href="medlem.html" class="cta-btn">BLI MEDLEM</a>
         </div>
       </div>
