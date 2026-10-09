@@ -86,15 +86,15 @@ html, body, section, main, .container {
 }
 
 /* ==========================================================================
-   HERO SECTION (Höjd 500px, 100px/120px & 120px/120px Rubriker)
+   HERO SECTION (Anpassad höjd så hela bilden syns utan beskärning)
    ========================================================================== */
 .hero-section {
   background-image: url('../media/BILDTILLHEADER (1).png') !important;
-  background-size: cover !important;
-  background-position: center !important;
+  background-size: 100% auto !important; /* Gör att hela bildens bredd och höjd anpassas */
+  background-position: center center !important;
   background-repeat: no-repeat !important;
-  height: 500px !important; /* Exakt 500px höjd från Figma */
-  min-height: 500px !important;
+  height: 650px !important; /* Ökad höjd för att rymma hela bilden */
+  min-height: 650px !important;
   padding-top: 0 !important;
   padding-bottom: 0 !important;
   padding-left: 140px !important; /* 140px vänster */
@@ -263,6 +263,11 @@ footer .footer-inner {
    RESPONSIVITET (MEDIA QUERIES)
    ========================================================================== */
 @media (max-width: 992px) {
+  .hero-section {
+    height: 450px !important;
+    min-height: 450px !important;
+  }
+
   .hero-title .hero-title-small {
     font-size: 60px !important;
     line-height: 70px !important;
@@ -288,6 +293,7 @@ footer .footer-inner {
     height: auto !important;
     min-height: auto !important;
     padding: 60px 20px !important;
+    background-size: cover !important;
   }
 
   .hero-title .hero-title-small {
