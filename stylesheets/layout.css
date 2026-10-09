@@ -144,7 +144,7 @@ html, body, section, main, .container {
   margin: 0 auto !important;
   padding-top: 0 !important;
   padding-bottom: 0 !important;
-  padding-left: 140px !important; /* 140px vänster */
+  padding-left: 300px !important; /* 140px vänster */
   padding-right: 100px !important; /* 100px höger */
   box-sizing: border-box !important;
 }
@@ -157,25 +157,14 @@ html, body, section, main, .container {
 .text-column p {
   font-family: 'PT Sans Narrow', sans-serif !important;
   font-weight: 400 !important;
-  font-size: 30px !important;
-  line-height: 35px !important;
+  font-size: 50px !important;
+  line-height: 55px !important;
   letter-spacing: 0.01em !important; /* 1% */
   color: #121212 !important;
   margin-bottom: 1.5rem !important;
 }
 
-.image-column {
-  flex: 1 1 45% !important;
-  box-sizing: border-box !important;
-  text-align: left !important;
-}
 
-.image-column img {
-  width: 100% !important;
-  height: auto !important;
-  display: block !important;
-  border-radius: 8px !important;
-}
 
 /* Generisk tvåkolumns-fallback */
 .two-column {
