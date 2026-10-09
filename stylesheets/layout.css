@@ -199,12 +199,7 @@ html, body, section, main, .container {
   text-align: center !important;
 }
 
-.featured-section img {
-  width: 100% !important;
-  height: auto !important;
-  display: block !important;
-  margin: 0 auto !important;
-  border-radius: 8px !important;
+
 }
 
 /* ==========================================================================
