@@ -132,21 +132,28 @@ html, body, section, main, .container {
   display: block !important;
 }
 
-/* Nya knappstilen från bilden (text, pil, underlinje) */
+/* Nya knappstilen från bilden (30px från Figma) */
 .hero-cta-btn {
   display: inline-flex !important;
   align-items: center !important;
-  gap: 50px !important;
+  gap: 12px !important; /* Minskat från 50px till 12px för ett lagom avstånd till pilen */
   font-family: 'PT Sans Narrow', 'DM Sans', sans-serif !important;
-  font-size: 45px !important;
+  font-size: 30px !important; /* Exakt 30px som i Figma */
   font-weight: 700 !important;
-  color: #994006 !important; /* Rostbrun färg från bilden */
+  color: #994006 !important; /* Rostbrun färg */
   text-decoration: none !important;
-  border-bottom: 5px solid #994006 !important; /* Underlinjen */
-  padding-bottom: 20px !important;
+  border-bottom: 3px solid #994006 !important; /* Tunnare, snyggare underlinje */
+  padding-bottom: 4px !important; /* Minskat från 20px till 4px */
   margin-top: 25px !important;
   background: transparent !important;
   transition: transform 0.2s ease, opacity 0.2s ease !important;
+}
+
+.hero-cta-btn .arrow {
+  font-size: 30px !important; /* Pilen matchar textens storlek */
+  font-weight: 700 !important;
+  line-height: 1 !important;
+}
 }
 
 .hero-cta-btn .arrow {
