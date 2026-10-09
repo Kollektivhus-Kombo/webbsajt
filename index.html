@@ -49,7 +49,10 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 14px 120px !important; /* 120px padding vänster/höger */
+        padding-top: 14px !important;
+        padding-bottom: 14px !important;
+        padding-left: 140px !important; /* 140px vänster */
+        padding-right: 100px !important; /* 100px höger */
         height: 72px;
         box-sizing: border-box;
       }
@@ -93,7 +96,12 @@
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        padding: 100px 120px 80px 120px !important; /* 120px padding vänster/höger */
+        height: 500px !important; /* Exakt 500px höjd baserat på Figma */
+        min-height: 500px !important;
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        padding-left: 140px !important; /* 140px vänster */
+        padding-right: 100px !important; /* 100px höger */
         display: flex;
         align-items: center;
         width: 100%;
@@ -110,18 +118,21 @@
         font-family: 'DM Sans', sans-serif;
         font-weight: 1000;
         color: #B72E58;
-        line-height: 0.95;
         margin-bottom: 0;
         text-align: left;
       }
 
+      /* "VÄLKOMMEN TILL" - 100px storlek, 120px radavstånd */
       .hero-title-small {
-        font-size: 100px;
+        font-size: 100px !important;
+        line-height: 120px !important;
         display: block;
       }
 
+      /* "KOMBO!" - 120px storlek, 120px radavstånd */
       .hero-title-large {
-        font-size: 140px;
+        font-size: 120px !important;
+        line-height: 120px !important;
         display: block;
       }
 
@@ -136,7 +147,7 @@
         margin-top: 20px;
       }
 
-      /* Tvåkolumns-layout för sektionen (55/45) - 120px sidopadding */
+      /* Tvåkolumns-layout för sektionen (55/45) - 140px vänster / 100px höger */
       .two-column-section {
         display: flex;
         gap: 60px;
@@ -144,7 +155,10 @@
         width: 100% !important;
         max-width: 100% !important;
         margin: 0 auto;
-        padding: 0 120px !important; /* 120px padding till höger och vänster */
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        padding-left: 140px !important; /* 140px vänster */
+        padding-right: 100px !important; /* 100px höger */
         box-sizing: border-box;
       }
 
@@ -153,13 +167,13 @@
         box-sizing: border-box;
       }
 
-      /* Uppdaterad typografi för brödtexten */
+      /* Typografi för brödtexten (30px / 35px / 1%) */
       .text-column p {
         font-family: 'PT Sans Narrow', sans-serif;
         font-weight: 400;
-        font-size: 30px; /* Fontstorlek 30px */
-        line-height: 35px; /* Line height 35px */
-        letter-spacing: 0.01em; /* Teckenavstånd 1% */
+        font-size: 30px;
+        line-height: 35px;
+        letter-spacing: 0.01em;
         color: #121212;
         margin-bottom: 1.5rem;
       }
@@ -182,7 +196,10 @@
         width: 100% !important;
         max-width: 100% !important;
         margin: 0 auto;
-        padding: 40px 120px 60px 120px !important; /* 120px padding till höger och vänster */
+        padding-top: 40px !important;
+        padding-bottom: 60px !important;
+        padding-left: 140px !important; /* 140px vänster */
+        padding-right: 100px !important; /* 100px höger */
         box-sizing: border-box;
         text-align: center;
       }
@@ -197,25 +214,31 @@
 
       @media (max-width: 992px) {
         .hero-title-small {
-          font-size: 60px;
+          font-size: 60px !important;
+          line-height: 70px !important;
         }
 
         .hero-title-large {
-          font-size: 90px;
+          font-size: 80px !important;
+          line-height: 90px !important;
         }
       }
 
       @media (max-width: 768px) {
+        .hero-section {
+          height: auto !important;
+          min-height: auto !important;
+          padding: 60px 20px !important;
+        }
+
         .hero-title-small {
-          font-size: 40px;
+          font-size: 40px !important;
+          line-height: 48px !important;
         }
 
         .hero-title-large {
-          font-size: 60px;
-        }
-
-        .hero-section {
-          padding: 60px 20px !important;
+          font-size: 60px !important;
+          line-height: 68px !important;
         }
 
         .site-nav .nav-inner {
@@ -225,7 +248,8 @@
 
         .two-column-section,
         .featured-section {
-          padding: 0 20px !important;
+          padding-left: 20px !important;
+          padding-right: 20px !important;
         }
 
         .two-column-section {
