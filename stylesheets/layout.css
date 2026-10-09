@@ -11,7 +11,7 @@ html, body, section, main, .container {
 .container {
   max-width: 100% !important;
   width: 100% !important;
-  padding-left: 200 !important;
+  padding-left: 0 !important;
   padding-right: 0 !important;
   margin: 0 auto;
 }
@@ -55,8 +55,8 @@ html, body, section, main, .container {
   justify-content: space-between !important;
   padding-top: 14px !important;
   padding-bottom: 14px !important;
-  padding-left: 140px !important; /* 140px vänster */
-  padding-right: 100px !important; /* 100px höger */
+  padding-left: 140px !important;
+  padding-right: 100px !important;
   height: 72px !important;
   box-sizing: border-box !important;
 }
@@ -86,7 +86,7 @@ html, body, section, main, .container {
 }
 
 /* ==========================================================================
-   HERO SECTION & BLI MEDLEM-KNAPP
+   HERO SECTION & BLI MEDLEM-KNAPP (300px Vänster / 200px Höger)
    ========================================================================== */
 .hero-section {
   background-image: url('../media/BILDTILLHEADER (1).png') !important;
@@ -108,7 +108,7 @@ html, body, section, main, .container {
   max-width: 100% !important;
   margin: 0 !important;
   box-sizing: border-box !important;
-  padding-left: 300px !important; /* Text startar 250px in */
+  padding-left: 300px !important; /* Matchar brödtexten */
   padding-right: 200px !important;
 }
 
@@ -132,32 +132,24 @@ html, body, section, main, .container {
   display: block !important;
 }
 
-/* Nya knappstilen från bilden (30px från Figma) */
 .hero-cta-btn {
   display: inline-flex !important;
   align-items: center !important;
-  gap: 12px !important; /* Minskat från 50px till 12px för ett lagom avstånd till pilen */
+  gap: 12px !important;
   font-family: 'PT Sans Narrow', 'DM Sans', sans-serif !important;
-  font-size: 45px !important; /* Exakt 30px som i Figma */
+  font-size: 30px !important;
   font-weight: 700 !important;
-  color: #994006 !important; /* Rostbrun färg */
+  color: #994006 !important;
   text-decoration: none !important;
-  border-bottom: 3px solid #994006 !important; /* Tunnare, snyggare underlinje */
-  padding-bottom: 4px !important; /* Minskat från 20px till 4px */
+  border-bottom: 3px solid #994006 !important;
+  padding-bottom: 4px !important;
   margin-top: 25px !important;
   background: transparent !important;
   transition: transform 0.2s ease, opacity 0.2s ease !important;
 }
 
 .hero-cta-btn .arrow {
-  font-size: 30px !important; /* Pilen matchar textens storlek */
-  font-weight: 700 !important;
-  line-height: 1 !important;
-}
-}
-
-.hero-cta-btn .arrow {
-  font-size: 48px !important;
+  font-size: 30px !important;
   font-weight: 700 !important;
   line-height: 1 !important;
 }
@@ -168,7 +160,7 @@ html, body, section, main, .container {
 }
 
 /* ==========================================================================
-   SEKTION 2: TVÅKOLUMN-LAYOUT & BRÖDTEXT
+   SEKTION 2: TVÅKOLUMN-LAYOUT & BRÖDTEXT (300px Vänster / 200px Höger)
    ========================================================================== */
 .two-column-section {
   display: flex !important;
@@ -179,8 +171,8 @@ html, body, section, main, .container {
   margin: 0 auto !important;
   padding-top: 50px !important;
   padding-bottom: 0 !important;
-  padding-left: 140px !important;
-  padding-right: 100px !important;
+  padding-left: 300px !important; /* Nu 300px vänster */
+  padding-right: 200px !important; /* Nu 200px höger */
   box-sizing: border-box !important;
 }
 
@@ -254,7 +246,7 @@ footer .footer-inner {
 }
 
 /* ==========================================================================
-   RESPONSIVITET
+   RESPONSIVITET (MEDIA QUERIES)
    ========================================================================== */
 @media (max-width: 992px) {
   .hero-section {
@@ -262,8 +254,11 @@ footer .footer-inner {
     min-height: 450px !important;
   }
 
-  .hero-container {
+  .hero-container,
+  .two-column-section,
+  .featured-section {
     padding-left: 140px !important;
+    padding-right: 100px !important;
   }
 
   .hero-title .hero-title-small {
@@ -277,7 +272,7 @@ footer .footer-inner {
   }
 
   .hero-cta-btn {
-    font-size: 36px !important;
+    font-size: 26px !important;
   }
 }
 
@@ -314,12 +309,12 @@ footer .footer-inner {
   }
 
   .hero-cta-btn {
-    font-size: 28px !important;
+    font-size: 24px !important;
   }
 
   .two-column-section,
   .featured-section {
-    padding-left: 300px !important;
+    padding-left: 20px !important;
     padding-right: 20px !important;
   }
 
