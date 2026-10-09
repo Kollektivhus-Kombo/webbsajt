@@ -138,7 +138,7 @@ html, body, section, main, .container {
   align-items: center !important;
   gap: 12px !important; /* Minskat från 50px till 12px för ett lagom avstånd till pilen */
   font-family: 'PT Sans Narrow', 'DM Sans', sans-serif !important;
-  font-size: 30px !important; /* Exakt 30px som i Figma */
+  font-size: 45px !important; /* Exakt 30px som i Figma */
   font-weight: 700 !important;
   color: #994006 !important; /* Rostbrun färg */
   text-decoration: none !important;
