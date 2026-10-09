@@ -108,7 +108,7 @@ html, body, section, main, .container {
   max-width: 100% !important;
   margin: 0 !important;
   box-sizing: border-box !important;
-  padding-left: 250px !important; /* HÄR styr du hur långt in texten ska ligga */
+  padding-left: 300px !important; /* HÄR styr du hur långt in texten ska ligga */
   padding-right: 100px !important;
 }
 
@@ -121,14 +121,14 @@ html, body, section, main, .container {
 }
 
 .hero-title .hero-title-small {
-  font-size: 100px !important;
-  line-height: 120px !important;
+  font-size: 130px !important;
+  line-height: 140px !important;
   display: block !important;
 }
 
 .hero-title .hero-title-large {
-  font-size: 120px !important;
-  line-height: 120px !important;
+  font-size: 150px !important;
+  line-height: 150px !important;
   display: block !important;
 }
 
