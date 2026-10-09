@@ -94,7 +94,7 @@ html, body, section, main, .container {
   background-position: center center !important;
   background-repeat: no-repeat !important;
   height: 650px !important;
-  min-height: 650px !important;
+  min-height: 750px !important;
   display: flex !important;
   align-items: center !important;
   width: 100% !important;
@@ -108,8 +108,8 @@ html, body, section, main, .container {
   max-width: 100% !important;
   margin: 0 !important;
   box-sizing: border-box !important;
-  padding-left: 250px !important; /* Text startar 250px in */
-  padding-right: 100px !important;
+  padding-left: 300px !important; /* Text startar 250px in */
+  padding-right: 200px !important;
 }
 
 .hero-title {
@@ -121,14 +121,14 @@ html, body, section, main, .container {
 }
 
 .hero-title .hero-title-small {
-  font-size: 100px !important;
+  font-size: 150px !important;
   line-height: 120px !important;
   display: block !important;
 }
 
 .hero-title .hero-title-large {
-  font-size: 120px !important;
-  line-height: 120px !important;
+  font-size: 170px !important;
+  line-height: 180px !important;
   display: block !important;
 }
 
@@ -136,13 +136,13 @@ html, body, section, main, .container {
 .hero-cta-btn {
   display: inline-flex !important;
   align-items: center !important;
-  gap: 15px !important;
+  gap: 50px !important;
   font-family: 'PT Sans Narrow', 'DM Sans', sans-serif !important;
-  font-size: 50px !important;
+  font-size: 100px !important;
   font-weight: 700 !important;
-  color: #A34208 !important; /* Rostbrun färg från bilden */
+  color: #994006 !important; /* Rostbrun färg från bilden */
   text-decoration: none !important;
-  border-bottom: 3px solid #A34208 !important; /* Underlinjen */
+  border-bottom: 5px solid #994006 !important; /* Underlinjen */
   padding-bottom: 6px !important;
   margin-top: 25px !important;
   background: transparent !important;
