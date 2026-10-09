@@ -89,7 +89,7 @@ html, body, section, main, .container {
    HERO SECTION (Höjd 500px, 100px/120px & 120px/120px Rubriker)
    ========================================================================== */
 .hero-section {
-  background-image: url('../media/Frame 1261156578 (1).png') !important;
+  background-image: url('../media/BILDTILLHEADER (1).png') !important;
   background-size: cover !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
@@ -274,7 +274,6 @@ footer .footer-inner {
   }
 }
 
-/* Ändrat från 768px till 576px för att inte slå om för tidigt i mindre fönster */
 @media (max-width: 576px) {
   .container {
     padding: 0 20px !important;
