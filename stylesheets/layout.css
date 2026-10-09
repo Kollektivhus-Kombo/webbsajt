@@ -86,7 +86,7 @@ html, body, section, main, .container {
 }
 
 /* ==========================================================================
-   HERO SECTION (Anpassad höjd & 250px vänsterpadding på container)
+   HERO SECTION & BLI MEDLEM-KNAPP
    ========================================================================== */
 .hero-section {
   background-image: url('../media/BILDTILLHEADER (1).png') !important;
@@ -108,7 +108,7 @@ html, body, section, main, .container {
   max-width: 100% !important;
   margin: 0 !important;
   box-sizing: border-box !important;
-  padding-left: 300px !important; /* HÄR styr du hur långt in texten ska ligga */
+  padding-left: 250px !important; /* Text startar 250px in */
   padding-right: 100px !important;
 }
 
@@ -121,19 +121,47 @@ html, body, section, main, .container {
 }
 
 .hero-title .hero-title-small {
-  font-size: 130px !important;
-  line-height: 140px !important;
+  font-size: 100px !important;
+  line-height: 120px !important;
   display: block !important;
 }
 
 .hero-title .hero-title-large {
-  font-size: 150px !important;
-  line-height: 150px !important;
+  font-size: 120px !important;
+  line-height: 120px !important;
   display: block !important;
 }
 
+/* Nya knappstilen från bilden (text, pil, underlinje) */
+.hero-cta-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 15px !important;
+  font-family: 'PT Sans Narrow', 'DM Sans', sans-serif !important;
+  font-size: 50px !important;
+  font-weight: 700 !important;
+  color: #A34208 !important; /* Rostbrun färg från bilden */
+  text-decoration: none !important;
+  border-bottom: 3px solid #A34208 !important; /* Underlinjen */
+  padding-bottom: 6px !important;
+  margin-top: 25px !important;
+  background: transparent !important;
+  transition: transform 0.2s ease, opacity 0.2s ease !important;
+}
+
+.hero-cta-btn .arrow {
+  font-size: 48px !important;
+  font-weight: 700 !important;
+  line-height: 1 !important;
+}
+
+.hero-cta-btn:hover {
+  opacity: 0.85 !important;
+  transform: translateY(-2px) !important;
+}
+
 /* ==========================================================================
-   SEKTION 2: TVÅKOLUMN-LAYOUT & BRÖDTEXT (30px / 35px / 1%)
+   SEKTION 2: TVÅKOLUMN-LAYOUT & BRÖDTEXT
    ========================================================================== */
 .two-column-section {
   display: flex !important;
@@ -142,10 +170,10 @@ html, body, section, main, .container {
   width: 100% !important;
   max-width: 100% !important;
   margin: 0 auto !important;
-  padding-top: 0 !important;
+  padding-top: 50px !important;
   padding-bottom: 0 !important;
-  padding-left: 300px !important; /* 140px vänster */
-  padding-right: 100px !important; /* 100px höger */
+  padding-left: 140px !important;
+  padding-right: 100px !important;
   box-sizing: border-box !important;
 }
 
@@ -157,31 +185,24 @@ html, body, section, main, .container {
 .text-column p {
   font-family: 'PT Sans Narrow', sans-serif !important;
   font-weight: 400 !important;
-  font-size: 50px !important;
-  line-height: 55px !important;
-  letter-spacing: 0.01em !important; /* 1% */
+  font-size: 30px !important;
+  line-height: 35px !important;
+  letter-spacing: 0.01em !important;
   color: #121212 !important;
   margin-bottom: 1.5rem !important;
 }
 
-
-
-/* Generisk tvåkolumns-fallback */
-.two-column {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-md);
+.image-column {
+  flex: 1 1 45% !important;
+  box-sizing: border-box !important;
+  text-align: left !important;
 }
 
-.two-column > div {
-  flex: 1 1 45%;
-  min-width: 300px;
-}
-
-.column-image img {
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
+.image-column img {
+  width: 100% !important;
+  height: auto !important;
+  display: block !important;
+  border-radius: 8px !important;
 }
 
 /* ==========================================================================
@@ -193,37 +214,18 @@ html, body, section, main, .container {
   margin: 0 auto !important;
   padding-top: 40px !important;
   padding-bottom: 60px !important;
-  padding-left: 140px !important; /* 140px vänster */
-  padding-right: 100px !important; /* 100px höger */
+  padding-left: 140px !important;
+  padding-right: 100px !important;
   box-sizing: border-box !important;
   text-align: center !important;
 }
 
-
-}
-
-/* ==========================================================================
-   BUTTONS
-   ========================================================================== */
-.cta-btn, .button-l, .btn-primary {
-  display: inline-block !important;
-  background-color: #994006 !important;
-  color: #EEEBCD !important;
-  padding: 12px 24px !important;
-  border-radius: 6px !important;
-  font-weight: 600 !important;
-  transition: all 0.2s ease;
-  border: none !important;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none !important;
-  margin-top: 20px !important;
-}
-
-.cta-btn:hover, .button-l:hover, .btn-primary:hover {
-  background-color: var(--primary-hover);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 10px rgba(110, 50, 52, 0.15);
+.featured-section img {
+  width: 100% !important;
+  height: auto !important;
+  display: block !important;
+  margin: 0 auto !important;
+  border-radius: 8px !important;
 }
 
 /* ==========================================================================
@@ -245,7 +247,7 @@ footer .footer-inner {
 }
 
 /* ==========================================================================
-   RESPONSIVITET (MEDIA QUERIES)
+   RESPONSIVITET
    ========================================================================== */
 @media (max-width: 992px) {
   .hero-section {
@@ -265,6 +267,10 @@ footer .footer-inner {
   .hero-title .hero-title-large {
     font-size: 80px !important;
     line-height: 90px !important;
+  }
+
+  .hero-cta-btn {
+    font-size: 36px !important;
   }
 }
 
@@ -300,6 +306,10 @@ footer .footer-inner {
     line-height: 68px !important;
   }
 
+  .hero-cta-btn {
+    font-size: 28px !important;
+  }
+
   .two-column-section,
   .featured-section {
     padding-left: 20px !important;
@@ -314,20 +324,6 @@ footer .footer-inner {
   .image-column {
     flex: 1 1 100% !important;
     width: 100% !important;
-  }
-
-  .flex-row {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0;
-  }
-
-  .flex-row > div {
-    width: 100%;
-  }
-
-  .vertical-line {
-    display: none !important;
   }
 
   footer {
