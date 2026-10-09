@@ -55,7 +55,7 @@ html, body, section, main, .container {
   justify-content: space-between !important;
   padding-top: 14px !important;
   padding-bottom: 14px !important;
-  padding-left: 250x !important; /* 140px vänster */
+  padding-left: 140px !important; /* 140px vänster */
   padding-right: 100px !important; /* 100px höger */
   height: 72px !important;
   box-sizing: border-box !important;
@@ -86,29 +86,30 @@ html, body, section, main, .container {
 }
 
 /* ==========================================================================
-   HERO SECTION (Anpassad höjd så hela bilden syns utan beskärning)
+   HERO SECTION (Anpassad höjd & 250px vänsterpadding på container)
    ========================================================================== */
 .hero-section {
   background-image: url('../media/BILDTILLHEADER (1).png') !important;
-  background-size: 100% auto !important; /* Gör att hela bildens bredd och höjd anpassas */
+  background-size: 100% auto !important;
   background-position: center center !important;
   background-repeat: no-repeat !important;
-  height: 650px !important; /* Ökad höjd för att rymma hela bilden */
+  height: 650px !important;
   min-height: 650px !important;
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
-  padding-left: 140px !important; /* 140px vänster */
-  padding-right: 100px !important; /* 100px höger */
   display: flex !important;
   align-items: center !important;
   width: 100% !important;
   box-sizing: border-box !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 
 .hero-container {
   width: 100% !important;
   max-width: 100% !important;
-  margin: 0 auto !important;
+  margin: 0 !important;
+  box-sizing: border-box !important;
+  padding-left: 250px !important; /* HÄR styr du hur långt in texten ska ligga */
+  padding-right: 100px !important;
 }
 
 .hero-title {
@@ -268,6 +269,10 @@ footer .footer-inner {
     min-height: 450px !important;
   }
 
+  .hero-container {
+    padding-left: 140px !important;
+  }
+
   .hero-title .hero-title-small {
     font-size: 60px !important;
     line-height: 70px !important;
@@ -294,6 +299,11 @@ footer .footer-inner {
     min-height: auto !important;
     padding: 60px 20px !important;
     background-size: cover !important;
+  }
+
+  .hero-container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
 
   .hero-title .hero-title-small {
