@@ -175,7 +175,7 @@ html, body, section, main, .container {
 
 .single-column-section .text-column {
   max-width: 
-     900px !important; /* Låser radlängden till exakt 720px som i Figma */
+     850px !important; /* Låser radlängden till exakt 720px som i Figma */
   width: 100% !important;
   box-sizing: border-box !important;
 }
