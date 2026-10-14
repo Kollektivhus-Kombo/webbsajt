@@ -1,100 +1,309 @@
-<!DOCTYPE html>
-<html lang="sv">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kollektivhuset Kombo</title>
+/* ==========================================================================
+   GLOBAL LAYOUT & CONTAINER OVERRIDES (Figma High-Fidelity Specs)
+   ========================================================================== */
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,800;1,9..40,800&family=PT+Sans+Narrow:wght@400;700&family=Source+Sans+3:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
+/* Bakgrundsfärg på hela sidan (#E9E0D7) */
+html, body, section, main, .container {
+  background-color: #E9E0D7 !important;
+}
 
-    <!-- Stylesheets med cache-buster (rad 17) -->
-    <link rel="stylesheet" href="stylesheets/globals.css?v=10007" />
-    <link rel="stylesheet" href="stylesheets/navigation.css?v=10007" />
-    <link rel="stylesheet" href="stylesheets/layout.css?v=10007" />
-  </head>
+/* Nollställ container för full bredd */
+.container {
+  max-width: 100% !important;
+  width: 100% !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin: 0 auto;
+}
 
-  <body>
-    <!-- === NAVIGATION === -->
-    <nav class="site-nav">
-      <div class="nav-inner">
-        <a class="nav-logo" href="index.html">
-          <img src="media/kombo-logga2026-vit.png" alt="Kollektivhuset Kombo logotyp" />
-        </a>
+.section-wrapper {
+  padding: var(--space-md) 0;
+}
 
-        <ul class="nav-links">
-          <li><a href="medlem.html">Medlemskap</a></li>
-          <li><a href="lagenheter.html">Lediga lägenheter</a></li>
-          <li><a href="stadgar.html">Stadgar</a></li>
-          <li><a href="kontakt.html">Kontakt</a></li>
-        </ul>
+.flex-row {
+  display: flex;
+  gap: var(--space-lg);
+  align-items: flex-start;
+}
 
-        <div class="nav-cta">
-          <a
-            href="https://insidan.kollektivhuskombo.se/"
-            target="_blank"
-            class="insidan-btn"
-            >Insidan</a
-          >
-        </div>
-      </div>
-    </nav>
+.vertical-line {
+  width: 1px;
+  align-self: stretch;
+  background-color: var(--primary-color);
+  flex-shrink: 0;
+  display: block;
+}
 
-    <!-- === HERO === -->
-    <section class="hero-section">
-      <div class="hero-container">
-        <h1 class="hero-title">
-          <span class="hero-title-small">VÄLKOMMEN TILL</span>
-          <span class="hero-title-large">KOMBO!</span>
-        </h1>
-        <a href="medlem.html" class="hero-cta-btn">
-          BLI MEDLEM <span class="arrow">↗</span>
-        </a>
-      </div>
-    </section>
+/* ==========================================================================
+   NAVIGATION
+   ========================================================================== */
+.site-nav {
+  background-color: #214F2A !important;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
 
-    <!-- === SECTION 2: OM HUSET (ENKEL SPALT - 720PX BREDA RADER) === -->
-    <section class="container">
-      <div class="single-column-section">
-        <div class="text-column">
-          <p>
-            Vi som bor i KOMBO drivs av en tro på att kollektivhus är det bästa alternativet för ett hållbart boende ur ett både mänskligt och miljömässigt perspektiv.
-          </p>
-          <p>
-            Här hjälps vi åt med matlagning, städning och annat för att få vardagen att fungera så smidigt som möjligt. Utöver våra privata lägenheter har vi även tillgång till ca 300 - 400 kvm gemensamma utrymmen som storkök, matsal (med uteplats, lekplats och trädgård), allrum, aktivitetsrum, två gästrum, snickeri samt två stora takterrasser, inklusive ett terrassrum med pentry och toalett. Från terrasserna har vi en fantastisk utsikt i alla väderstreck från vårt hus på Hägerstensåsen. Vi har dessutom bara några steg till närmsta tunnelbana med vilken du är inne i stan på bara 10 minuter.
-          </p>
-          <p>
-            För att ta hand om det gemensamma är vi indelade i ett antal städ- och matlag som kräver deltagande högst ett par-tre gånger per termin så det är inte särskilt betungande. Utöver det finns arbets- och intressegrupper för allt från skötsel av våra uteplatser och trädgård till snickeri och körsång. Om du vill kan du gå med i någon av dessa, eller varför inte starta en ny med något som du är intresserad av?
-          </p>
-          <p>
-            Deltagande i städ- och matlag är obligatoriskt för alla som bor här men att gå med i en arbets- eller intressegrupp är frivilligt och mycket uppskattat!
-          </p>
-        </div>
-      </div>
-    </section>
+.site-nav .nav-inner {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 auto !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding-top: 14px !important;
+  padding-bottom: 14px !important;
+  padding-left: 140px !important;
+  padding-right: 100px !important;
+  height: 72px !important;
+  box-sizing: border-box !important;
+}
 
-    <!-- === SECTION 3: FEATURED PRODUCT === -->
-    <section class="container featured-section">
-      <img src="media/Featured product.png" alt="Utvald produkt" />
-    </section>
+.site-nav .nav-logo {
+  display: flex !important;
+  align-items: center !important;
+  height: 48px !important;
+  max-height: 48px !important;
+}
 
-    <!-- === FOOTER === -->
-    <footer>
-      <div class="footer-inner">
-        <h3>Kontakt</h3>
-        <p>
-          <a href="mailto:styrelse@kollektivhuskombo.se">styrelse@kollektivhuskombo.se</a>
-        </p>
-        <p>
-          Inteckningsvägen 100<br />
-          129 31 Hägersten
-        </p>
-      </div>
-    </footer>
-  </body>
-</html>
+.site-nav .nav-logo img {
+  height: 48px !important;
+  max-height: 48px !important;
+  width: auto !important;
+  object-fit: contain !important;
+  display: block !important;
+}
+
+.nav-links a {
+  color: #E1DDDD !important;
+}
+
+.nav-cta .insidan-btn {
+  background-color: #F5F5F5 !important;
+  color: #214F2A !important;
+}
+
+/* ==========================================================================
+   HERO SECTION & BLI MEDLEM-KNAPP
+   ========================================================================== */
+.hero-section {
+  background-image: url('../media/BILDTILLHEADER (1).png') !important;
+  background-size: 100% auto !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  height: 650px !important;
+  min-height: 750px !important;
+  display: flex !important;
+  align-items: center !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.hero-container {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  box-sizing: border-box !important;
+  padding-left: 300px !important;
+  padding-right: 200px !important;
+}
+
+.hero-title {
+  font-family: 'DM Sans', sans-serif !important;
+  font-weight: 1000 !important;
+  color: #B72E58 !important;
+  margin: 0 !important;
+  text-align: left !important;
+}
+
+.hero-title .hero-title-small {
+  font-size: 150px !important;
+  line-height: 120px !important;
+  display: block !important;
+}
+
+.hero-title .hero-title-large {
+  font-size: 170px !important;
+  line-height: 180px !important;
+  display: block !important;
+}
+
+.hero-cta-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  font-family: 'PT Sans Narrow', 'DM Sans', sans-serif !important;
+  font-size: 30px !important;
+  font-weight: 700 !important;
+  color: #994006 !important;
+  text-decoration: none !important;
+  border-bottom: 3px solid #994006 !important;
+  padding-bottom: 4px !important;
+  margin-top: 25px !important;
+  background: transparent !important;
+  transition: transform 0.2s ease, opacity 0.2s ease !important;
+}
+
+.hero-cta-btn .arrow {
+  font-size: 30px !important;
+  font-weight: 700 !important;
+  line-height: 1 !important;
+}
+
+.hero-cta-btn:hover {
+  opacity: 0.85 !important;
+  transform: translateY(-2px) !important;
+}
+
+/* ==========================================================================
+   SEKTION 2: ENKEL SPALT MED EXAKT 720PX RADLÄNGD
+   ========================================================================== */
+.single-column-section {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 auto !important;
+  padding-top: 50px !important;
+  padding-bottom: 0 !important;
+  padding-left: 300px !important; /* Linjerar med headern */
+  padding-right: 200px !important;
+  box-sizing: border-box !important;
+}
+
+.single-column-section .text-column {
+  max-width: 720px !important; /* Låser radlängden till exakt 720px som i Figma */
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.text-column p {
+  font-family: 'PT Sans Narrow', sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 30px !important;
+  line-height: 35px !important;
+  letter-spacing: 0.01em !important;
+  color: #121212 !important;
+  margin-bottom: 1.5rem !important;
+}
+
+/* ==========================================================================
+   FEATURED PRODUCT SECTION
+   ========================================================================== */
+.featured-section {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 auto !important;
+  padding-top: 40px !important;
+  padding-bottom: 60px !important;
+  padding-left: 300px !important;
+  padding-right: 200px !important;
+  box-sizing: border-box !important;
+  text-align: center !important;
+}
+
+.featured-section img {
+  width: 100% !important;
+  height: auto !important;
+  display: block !important;
+  margin: 0 auto !important;
+  border-radius: 8px !important;
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+footer {
+  background-color: #214F2A;
+  padding: var(--space-lg) 100px !important;
+  text-align: left;
+}
+
+footer, footer h3, footer p, footer a {
+  color: #B72E58 !important;
+}
+
+footer .footer-inner {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* ==========================================================================
+   RESPONSIVITET (MEDIA QUERIES)
+   ========================================================================== */
+@media (max-width: 992px) {
+  .hero-section {
+    height: 450px !important;
+    min-height: 450px !important;
+  }
+
+  .hero-container,
+  .single-column-section,
+  .featured-section {
+    padding-left: 140px !important;
+    padding-right: 100px !important;
+  }
+
+  .hero-title .hero-title-small {
+    font-size: 60px !important;
+    line-height: 70px !important;
+  }
+
+  .hero-title .hero-title-large {
+    font-size: 80px !important;
+    line-height: 90px !important;
+  }
+
+  .hero-cta-btn {
+    font-size: 26px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 0 20px !important;
+  }
+
+  .site-nav .nav-inner {
+    height: auto !important;
+    padding: 14px 20px !important;
+  }
+
+  .hero-section {
+    height: auto !important;
+    min-height: auto !important;
+    padding: 60px 20px !important;
+    background-size: cover !important;
+  }
+
+  .hero-container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .hero-title .hero-title-small {
+    font-size: 40px !important;
+    line-height: 48px !important;
+  }
+
+  .hero-title .hero-title-large {
+    font-size: 60px !important;
+    line-height: 68px !important;
+  }
+
+  .hero-cta-btn {
+    font-size: 24px !important;
+  }
+
+  .single-column-section,
+  .featured-section {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  footer {
+    padding: var(--space-md) 20px !important;
+  }
+}
