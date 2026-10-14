@@ -55,7 +55,7 @@ html, body, section, main, .container {
   justify-content: space-between !important;
   padding-top: 14px !important;
   padding-bottom: 14px !important;
-  padding-left: 200px !important;
+  padding-left: 140px !important;
   padding-right: 100px !important;
   height: 72px !important;
   box-sizing: border-box !important;
@@ -108,8 +108,8 @@ html, body, section, main, .container {
   max-width: 100% !important;
   margin: 0 !important;
   box-sizing: border-box !important;
-  padding-left: 300px !important;
-  padding-right: 200px !important;
+  padding-left: 200px !important;
+  padding-right: 100px !important;
 }
 
 .hero-title {
@@ -160,22 +160,21 @@ html, body, section, main, .container {
 }
 
 /* ==========================================================================
-   SEKTION 2: ENKEL SPALT MED EXAKT RADLÄNGD
+   SEKTION 2: BRÖDTEXT (ENKEL SPALT)
    ========================================================================== */
 .single-column-section {
   width: 100% !important;
   max-width: 100% !important;
-  margin: 0 auto !important;
+  margin: 0 !important;
   padding-top: 50px !important;
   padding-bottom: 0 !important;
-  padding-left: 300px !important; /* Linjerar med headern */
-  padding-right: 200px !important;
+  padding-left: 200px !important; /* Linjerar med headern */
+  padding-right: 60px !important;
   box-sizing: border-box !important;
 }
 
 .single-column-section .text-column {
-  max-width: 
-     850px !important; /* Låser radlängden till exakt 720px som i Figma */
+  max-width: 1000px !important; /* Bredare radlängd så det inte blir tomrum till höger */
   width: 100% !important;
   box-sizing: border-box !important;
 }
@@ -199,8 +198,8 @@ html, body, section, main, .container {
   margin: 0 auto !important;
   padding-top: 40px !important;
   padding-bottom: 60px !important;
-  padding-left: 300px !important;
-  padding-right: 200px !important;
+  padding-left: 200px !important;
+  padding-right: 100px !important;
   box-sizing: border-box !important;
   text-align: center !important;
 }
@@ -243,8 +242,8 @@ footer .footer-inner {
   .hero-container,
   .single-column-section,
   .featured-section {
-    padding-left: 140px !important;
-    padding-right: 100px !important;
+    padding-left: 100px !important;
+    padding-right: 40px !important;
   }
 
   .hero-title .hero-title-small {
