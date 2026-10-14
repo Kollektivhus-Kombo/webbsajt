@@ -160,7 +160,7 @@ html, body, section, main, .container {
 }
 
 /* ==========================================================================
-   SEKTION 2: ENKEL SPALT MED EXAKT 720PX RADLÄNGD
+   SEKTION 2: ENKEL SPALT MED EXAKT RADLÄNGD
    ========================================================================== */
 .single-column-section {
   width: 100% !important;
@@ -174,7 +174,8 @@ html, body, section, main, .container {
 }
 
 .single-column-section .text-column {
-  max-width: 720px !important; /* Låser radlängden till exakt 720px som i Figma */
+  max-width: 
+     900px !important; /* Låser radlängden till exakt 720px som i Figma */
   width: 100% !important;
   box-sizing: border-box !important;
 }
