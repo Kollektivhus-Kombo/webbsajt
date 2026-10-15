@@ -163,12 +163,12 @@ html, body, section, main, .container {
    SEKTION 2: BRÖDTEXT (ENKEL SPALT - FULL BREDD)
    ========================================================================== */
 .single-column-section {
-  width: 100% !important;
+  width: 90% !important;
   max-width: 100% !important;
   margin: 0 !important;
   padding-top: 50px !important;
   padding-bottom: 0 !important;
-  padding-left: 200px !important; /* Startar i linje med headern */
+  padding-left: 300px !important; /* Startar i linje med headern */
   padding-right: 100px !important; /* Avstånd till högerkanten */
   box-sizing: border-box !important;
 }
