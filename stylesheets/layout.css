@@ -164,19 +164,15 @@ html, body, section, main, .container {
    ========================================================================== */
 .single-column-section {
   width: 90% !important;
-  max-width: 100% !important;
+  max-width: 90% !important;
   margin: 0 !important;
   padding-top: 50px !important;
   padding-bottom: 0 !important;
-  padding-left: 300px !important; /* Startar i linje med headern */
+  padding-left: 400px !important; /* Startar i linje med headern */
   padding-right: 100px !important; /* Avstånd till högerkanten */
   box-sizing: border-box !important;
 }
 
-.single-column-section .text-column {
-  max-width: none !important; /* Tar bort begränsningen helt! */
-  width: 100% !important;
-  box-sizing: border-box !important;
 }
 
 .text-column p {
