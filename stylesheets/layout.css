@@ -1,197 +1,5 @@
 /* ==========================================================================
-   GLOBAL LAYOUT & CONTAINER OVERRIDES (Figma High-Fidelity Specs)
-   ========================================================================== */
-
-/* Bakgrundsfärg på hela sidan (#E9E0D7) */
-html, body, section, main, .container {
-  background-color: #E9E0D7 !important;
-}
-
-/* Nollställ container för full bredd */
-.container {
-  max-width: 100% !important;
-  width: 100% !important;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-  margin: 0 auto;
-}
-
-.section-wrapper {
-  padding: var(--space-md) 0;
-}
-
-.flex-row {
-  display: flex;
-  gap: var(--space-lg);
-  align-items: flex-start;
-}
-
-.vertical-line {
-  width: 1px;
-  align-self: stretch;
-  background-color: var(--primary-color);
-  flex-shrink: 0;
-  display: block;
-}
-
-/* ==========================================================================
-   NAVIGATION
-   ========================================================================== */
-.site-nav {
-  background-color: #E1DDDD !important;
-  position: sticky;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-
-.site-nav .nav-inner {
-  width: 100% !important;
-  max-width: 100% !important;
-  margin: 0 auto !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: space-between !important;
-  padding-top: 14px !important;
-  padding-bottom: 14px !important;
-  padding-left: 250px !important;
-  padding-right: 250px !important;
-  height: 85px !important;
-  box-sizing: border-box !important;
-}
-
-.site-nav .nav-logo {
-  display: flex !important;
-  align-items: center !important;
-  height: 48px !important;
-  max-height: 48px !important;
-}
-
-.site-nav .nav-logo img {
-  height: 48px !important;
-  max-height: 48px !important;
-  width: auto !important;
-  object-fit: contain !important;
-  display: block !important;
-}
-
-.nav-links a {
-  color: #142539 !important;
-}
-
-.nav-cta .insidan-btn {
-  background-color: #E1DDDD !important;
-  color: #142539 !important;
-}
-
-/* ==========================================================================
-   HERO SECTION & BLI MEDLEM-KNAPP
-   ========================================================================== */
-.hero-section {
-  background-image: url('../media/BILDTILLHEADER (1).png') !important;
-  background-size: 100% auto !important;
-  background-position: center center !important;
-  background-repeat: no-repeat !important;
-  height: 650px !important;
-  min-height: 750px !important;
-  display: flex !important;
-  align-items: center !important;
-  width: 100% !important;
-  box-sizing: border-box !important;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-}
-
-.hero-container {
-  width: 100% !important;
-  max-width: 100% !important;
-  margin: 0 !important;
-  box-sizing: border-box !important;
-  padding-left: 250px !important;
-  padding-right: 100px !important;
-}
-
-.hero-title {
-  font-family: 'DM Sans', sans-serif !important;
-  font-weight: 1000 !important;
-  color: #B72E58 !important;
-  margin: 0 !important;
-  text-align: left !important;
-}
-
-.hero-title .hero-title-small {
-  font-size: 150px !important;
-  line-height: 120px !important;
-  display: block !important;
-}
-
-.hero-title .hero-title-large {
-  font-size: 170px !important;
-  line-height: 180px !important;
-  display: block !important;
-}
-
-.hero-cta-btn {
-  display: inline-flex !important;
-  align-items: center !important;
-  gap: 12px !important;
-  font-family: 'PT Sans Narrow', 'DM Sans', sans-serif !important;
-  font-size: 30px !important;
-  font-weight: 700 !important;
-  color: #994006 !important;
-  text-decoration: none !important;
-  border-bottom: 3px solid #994006 !important;
-  padding-bottom: 4px !important;
-  margin-top: 25px !important;
-  background: transparent !important;
-  transition: transform 0.2s ease, opacity 0.2s ease !important;
-}
-
-.hero-cta-btn .arrow {
-  font-size: 30px !important;
-  font-weight: 700 !important;
-  line-height: 2 !important;
-}
-
-.hero-cta-btn:hover {
-  opacity: 0.85 !important;
-  transform: translateY(-2px) !important;
-}
-
-/* ==========================================================================
-   SEKTION 2: BRÖDTEXT (ENKEL SPALT)
-   ========================================================================== */
-.single-column-section {
-  width: 100% !important;
-  max-width: 100% !important;
-  margin: 0 !important;
-  padding-top: 60px !important;
-  padding-bottom: 40px !important;
-  padding-left: 250px !important;
-  padding-right: 150px !important;
-  box-sizing: border-box !important;
-}
-
-.single-column-section .text-column {
-  max-width: 1100px !important;
-  width: 100% !important;
-  box-sizing: border-box !important;
-}
-
-.single-column-section .text-column p,
-body .single-column-section p {
-  font-family: 'PT Sans Narrow', sans-serif !important;
-  font-weight: 500 !important;
-  font-size: 32px !important;
-  line-height: 48px !important;
-  letter-spacing: 0.02em !important;
-  color: #121212 !important;
-  margin-bottom: 2rem !important;
-}
-
-/* ==========================================================================
-   SEKTION 3: VILL DU BO HÄR?
+   SEKTION 3: VILL DU BO HÄR? (EXAKTA FIGMA-MÅTT)
    ========================================================================== */
 .join-section {
   width: 100% !important;
@@ -199,14 +7,14 @@ body .single-column-section p {
   margin: 0 !important;
   padding-top: 40px !important;
   padding-bottom: 80px !important;
-  padding-left: 250px !important; /* Samma padding som sektion två */
+  padding-left: 250px !important; /* Linjerar med sektion 2 */
   padding-right: 150px !important;
   box-sizing: border-box !important;
 }
 
 .join-section .section-title {
   font-family: 'PT Sans Narrow', sans-serif !important;
-  font-size: 50px !important; /* Storlek 50 från Figma */
+  font-size: 50px !important;
   font-weight: 700 !important;
   color: #121212 !important;
   margin-top: 0 !important;
@@ -214,28 +22,36 @@ body .single-column-section p {
   text-transform: uppercase !important;
 }
 
+/* Flexbox som placerar bild till vänster, text till höger */
 .join-content {
   display: flex !important;
+  flex-direction: row !important;
   gap: 50px !important;
   align-items: flex-start !important;
   width: 100% !important;
-  max-width: 1100px !important;
 }
 
+/* Bildbehållare: Exakt 518px x 422px enligt Figma */
 .join-image {
-  flex: 0 0 45% !important;
-  max-width: 500px !important;
+  width: 518px !important;
+  height: 422px !important;
+  flex-shrink: 0 !important;
 }
 
 .join-image img {
-  width: 100% !important;
-  height: auto !important;
+  width: 518px !important;
+  height: 422px !important;
+  object-fit: cover !important; /* Bevarar bildens proportioner utan att den blir utdragen */
   display: block !important;
-  border-radius: 4px !important;
+  border-radius: 0px !important;
 }
 
+/* Textbehållare: Exakt 415px x 420px enligt Figma */
 .join-text {
-  flex: 1 1 55% !important;
+  width: 415px !important;
+  min-height: 420px !important;
+  flex-shrink: 0 !important;
+  box-sizing: border-box !important;
 }
 
 .join-text p,
@@ -243,162 +59,17 @@ body .single-column-section p {
   font-family: 'PT Sans Narrow', sans-serif !important;
   font-weight: 500 !important;
   font-size: 32px !important;
-  line-height: 48px !important;
+  line-height: 44px !important;
   letter-spacing: 0.02em !important;
   color: #121212 !important;
-  margin-bottom: 1.5rem !important;
+  margin-bottom: 1.2rem !important;
 }
 
 .join-text ul {
-  padding-left: 1.5rem !important;
-  margin-bottom: 1.5rem !important;
+  padding-left: 1.2rem !important;
+  margin-bottom: 1.2rem !important;
 }
 
 .join-text ul li {
-  margin-bottom: 0.8rem !important;
-}
-
-/* ==========================================================================
-   FEATURED PRODUCT SECTION
-   ========================================================================== */
-.featured-section {
-  width: 100% !important;
-  max-width: 100% !important;
-  margin: 0 auto !important;
-  padding-top: 40px !important;
-  padding-bottom: 60px !important;
-  padding-left: 250px !important;
-  padding-right: 150px !important;
-  box-sizing: border-box !important;
-  text-align: center !important;
-}
-
-.featured-section img {
-  width: 100% !important;
-  height: auto !important;
-  display: block !important;
-  margin: 0 auto !important;
-  border-radius: 0px !important;
-}
-
-/* ==========================================================================
-   FOOTER
-   ========================================================================== */
-footer {
-  background-color: #214F2A;
-  padding: var(--space-lg) 100px !important;
-  text-align: left;
-}
-
-footer, footer h3, footer p, footer a {
-  color: #B72E58 !important;
-}
-
-footer .footer-inner {
-  max-width: 100%;
-  margin: 0 auto;
-}
-
-/* ==========================================================================
-   RESPONSIVITET (MEDIA QUERIES)
-   ========================================================================== */
-@media (max-width: 992px) {
-  .hero-section {
-    height: 450px !important;
-    min-height: 450px !important;
-  }
-
-  .site-nav .nav-inner,
-  .hero-container,
-  .single-column-section,
-  .join-section,
-  .featured-section {
-    padding-left: 40px !important;
-    padding-right: 40px !important;
-  }
-
-  .join-content {
-    flex-direction: column !important;
-  }
-
-  .join-image {
-    max-width: 100% !important;
-    width: 100% !important;
-  }
-
-  .hero-title .hero-title-small {
-    font-size: 60px !important;
-    line-height: 70px !important;
-  }
-
-  .hero-title .hero-title-large {
-    font-size: 80px !important;
-    line-height: 90px !important;
-  }
-
-  .hero-cta-btn {
-    font-size: 26px !important;
-  }
-
-  .join-text p,
-  .join-text ul li,
-  .text-column p {
-    font-size: 22px !important;
-    line-height: 34px !important;
-  }
-}
-
-@media (max-width: 576px) {
-  .container {
-    padding: 0 20px !important;
-  }
-
-  .site-nav .nav-inner {
-    height: auto !important;
-    padding: 14px 20px !important;
-  }
-
-  .hero-section {
-    height: auto !important;
-    min-height: auto !important;
-    padding: 60px 20px !important;
-    background-size: cover !important;
-  }
-
-  .hero-container {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
-
-  .hero-title .hero-title-small {
-    font-size: 40px !important;
-    line-height: 48px !important;
-  }
-
-  .hero-title .hero-title-large {
-    font-size: 60px !important;
-    line-height: 68px !important;
-  }
-
-  .hero-cta-btn {
-    font-size: 24px !important;
-  }
-
-  .single-column-section,
-  .join-section,
-  .featured-section {
-    padding-left: 20px !important;
-    padding-right: 20px !important;
-  }
-
-  .join-text p,
-  .join-text ul li,
-  .text-column p {
-    font-size: 18px !important;
-    line-height: 27px !important;
-  }
-
-  footer {
-    padding: var(--space-md) 20px !important;
-  }
+  margin-bottom: 0.5rem !important;
 }
