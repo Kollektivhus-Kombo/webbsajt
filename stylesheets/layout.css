@@ -160,7 +160,7 @@ html, body, section, main, .container {
 }
 
 /* ==========================================================================
-   SEKTION 2: BRÖDTEXT (ENKEL SPALT)
+   SEKTION 2: BRÖDTEXT (ENKEL SPALT - FULL BREDD)
    ========================================================================== */
 .single-column-section {
   width: 100% !important;
@@ -168,13 +168,13 @@ html, body, section, main, .container {
   margin: 0 !important;
   padding-top: 50px !important;
   padding-bottom: 0 !important;
-  padding-left: 200px !important; /* Linjerar med headern */
-  padding-right: 60px !important;
+  padding-left: 200px !important; /* Startar i linje med headern */
+  padding-right: 100px !important; /* Avstånd till högerkanten */
   box-sizing: border-box !important;
 }
 
 .single-column-section .text-column {
-  max-width: 1000px !important; /* Bredare radlängd så det inte blir tomrum till höger */
+  max-width: none !important; /* Tar bort begränsningen helt! */
   width: 100% !important;
   box-sizing: border-box !important;
 }
