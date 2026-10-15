@@ -108,7 +108,7 @@ html, body, section, main, .container {
   max-width: 100% !important;
   margin: 0 !important;
   box-sizing: border-box !important;
-  padding-left: 400px !important;
+  padding-left: 250px !important; /* Matcha navens vänsterlinje */
   padding-right: 100px !important;
 }
 
@@ -160,29 +160,33 @@ html, body, section, main, .container {
 }
 
 /* ==========================================================================
-   SEKTION 2: BRÖDTEXT (ENKEL SPALT - FULL BREDD)
+   SEKTION 2: BRÖDTEXT (ENKEL SPALT - TYDLIG SKÄRMSTORLEK)
    ========================================================================== */
 .single-column-section {
-  width: 90% !important;
-  max-width: 70% !important;
+  width: 100% !important;
+  max-width: 100% !important;
   margin: 0 !important;
-  padding-top: 50px !important;
-  padding-bottom: 0 !important;
-  padding-left: 400px !important; /* Startar i linje med headern */
-  padding-right: 300px !important; /* Avstånd till högerkanten */
+  padding-top: 60px !important;
+  padding-bottom: 40px !important;
+  padding-left: 250px !important; /* Linjerar med naven & headern */
+  padding-right: 150px !important;
   box-sizing: border-box !important;
 }
 
+.single-column-section .text-column {
+  max-width: 1100px !important; /* Tillåter raderna att sträcka ut sig ordentligt */
+  width: 100% !important;
+  box-sizing: border-box !important;
 }
 
 .text-column p {
   font-family: 'PT Sans Narrow', sans-serif !important;
   font-weight: 500 !important;
-  font-size: 40px !important;
-  line-height: 46px !important;
+  font-size: 24px !important; /* Stor, läsbar brödtext */
+  line-height: 36px !important; /* 150% radavstånd för WCAG */
   letter-spacing: 0.01em !important;
   color: #121212 !important;
-  margin-bottom: 1.5rem !important;
+  margin-bottom: 1.8rem !important;
 }
 
 /* ==========================================================================
@@ -194,8 +198,8 @@ html, body, section, main, .container {
   margin: 0 auto !important;
   padding-top: 40px !important;
   padding-bottom: 60px !important;
-  padding-left: 200px !important;
-  padding-right: 100px !important;
+  padding-left: 250px !important;
+  padding-right: 150px !important;
   box-sizing: border-box !important;
   text-align: center !important;
 }
@@ -235,10 +239,11 @@ footer .footer-inner {
     min-height: 450px !important;
   }
 
+  .site-nav .nav-inner,
   .hero-container,
   .single-column-section,
   .featured-section {
-    padding-left: 100px !important;
+    padding-left: 40px !important;
     padding-right: 40px !important;
   }
 
@@ -254,6 +259,11 @@ footer .footer-inner {
 
   .hero-cta-btn {
     font-size: 26px !important;
+  }
+
+  .text-column p {
+    font-size: 20px !important;
+    line-height: 30px !important;
   }
 }
 
@@ -297,6 +307,11 @@ footer .footer-inner {
   .featured-section {
     padding-left: 20px !important;
     padding-right: 20px !important;
+  }
+
+  .text-column p {
+    font-size: 18px !important;
+    line-height: 27px !important;
   }
 
   footer {
