@@ -164,12 +164,12 @@ html, body, section, main, .container {
    ========================================================================== */
 .single-column-section {
   width: 90% !important;
-  max-width: 90% !important;
+  max-width: 70% !important;
   margin: 0 !important;
   padding-top: 50px !important;
   padding-bottom: 0 !important;
   padding-left: 400px !important; /* Startar i linje med headern */
-  padding-right: 100px !important; /* Avstånd till högerkanten */
+  padding-right: 300px !important; /* Avstånd till högerkanten */
   box-sizing: border-box !important;
 }
 
