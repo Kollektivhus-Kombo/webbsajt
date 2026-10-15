@@ -108,7 +108,7 @@ html, body, section, main, .container {
   max-width: 100% !important;
   margin: 0 !important;
   box-sizing: border-box !important;
-  padding-left: 250px !important; /* Matcha navens vänsterlinje */
+  padding-left: 250px !important;
   padding-right: 100px !important;
 }
 
@@ -160,7 +160,7 @@ html, body, section, main, .container {
 }
 
 /* ==========================================================================
-   SEKTION 2: BRÖDTEXT (ÖKAD SPECIFICITET OCH FONTSTORLEK)
+   SEKTION 2: BRÖDTEXT (ENKEL SPALT)
    ========================================================================== */
 .single-column-section {
   width: 100% !important;
@@ -168,7 +168,7 @@ html, body, section, main, .container {
   margin: 0 !important;
   padding-top: 60px !important;
   padding-bottom: 40px !important;
-  padding-left: 250px !important; /* Linjerar med naven & headern */
+  padding-left: 250px !important;
   padding-right: 150px !important;
   box-sizing: border-box !important;
 }
@@ -179,16 +179,83 @@ html, body, section, main, .container {
   box-sizing: border-box !important;
 }
 
-/* Ökad specificitet genom att inkludera hela vägen från sektionen */
 .single-column-section .text-column p,
 body .single-column-section p {
   font-family: 'PT Sans Narrow', sans-serif !important;
   font-weight: 500 !important;
-  font-size: 32px !important; /* Rejält ökad storlek för att kompensera det smala typsnittet */
-  line-height: 48px !important; /* Proportionerligt radavstånd (1.5x) */
+  font-size: 32px !important;
+  line-height: 48px !important;
   letter-spacing: 0.02em !important;
   color: #121212 !important;
   margin-bottom: 2rem !important;
+}
+
+/* ==========================================================================
+   SEKTION 3: VILL DU BO HÄR?
+   ========================================================================== */
+.join-section {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding-top: 40px !important;
+  padding-bottom: 80px !important;
+  padding-left: 250px !important; /* Samma padding som sektion två */
+  padding-right: 150px !important;
+  box-sizing: border-box !important;
+}
+
+.join-section .section-title {
+  font-family: 'PT Sans Narrow', sans-serif !important;
+  font-size: 50px !important; /* Storlek 50 från Figma */
+  font-weight: 700 !important;
+  color: #121212 !important;
+  margin-top: 0 !important;
+  margin-bottom: 40px !important;
+  text-transform: uppercase !important;
+}
+
+.join-content {
+  display: flex !important;
+  gap: 50px !important;
+  align-items: flex-start !important;
+  width: 100% !important;
+  max-width: 1100px !important;
+}
+
+.join-image {
+  flex: 0 0 45% !important;
+  max-width: 500px !important;
+}
+
+.join-image img {
+  width: 100% !important;
+  height: auto !important;
+  display: block !important;
+  border-radius: 4px !important;
+}
+
+.join-text {
+  flex: 1 1 55% !important;
+}
+
+.join-text p,
+.join-text ul li {
+  font-family: 'PT Sans Narrow', sans-serif !important;
+  font-weight: 500 !important;
+  font-size: 32px !important;
+  line-height: 48px !important;
+  letter-spacing: 0.02em !important;
+  color: #121212 !important;
+  margin-bottom: 1.5rem !important;
+}
+
+.join-text ul {
+  padding-left: 1.5rem !important;
+  margin-bottom: 1.5rem !important;
+}
+
+.join-text ul li {
+  margin-bottom: 0.8rem !important;
 }
 
 /* ==========================================================================
@@ -244,9 +311,19 @@ footer .footer-inner {
   .site-nav .nav-inner,
   .hero-container,
   .single-column-section,
+  .join-section,
   .featured-section {
     padding-left: 40px !important;
     padding-right: 40px !important;
+  }
+
+  .join-content {
+    flex-direction: column !important;
+  }
+
+  .join-image {
+    max-width: 100% !important;
+    width: 100% !important;
   }
 
   .hero-title .hero-title-small {
@@ -263,9 +340,11 @@ footer .footer-inner {
     font-size: 26px !important;
   }
 
+  .join-text p,
+  .join-text ul li,
   .text-column p {
-    font-size: 20px !important;
-    line-height: 30px !important;
+    font-size: 22px !important;
+    line-height: 34px !important;
   }
 }
 
@@ -306,11 +385,14 @@ footer .footer-inner {
   }
 
   .single-column-section,
+  .join-section,
   .featured-section {
     padding-left: 20px !important;
     padding-right: 20px !important;
   }
 
+  .join-text p,
+  .join-text ul li,
   .text-column p {
     font-size: 18px !important;
     line-height: 27px !important;
