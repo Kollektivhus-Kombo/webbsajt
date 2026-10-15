@@ -160,7 +160,7 @@ html, body, section, main, .container {
 }
 
 /* ==========================================================================
-   SEKTION 2: BRÖDTEXT (ENKEL SPALT - TYDLIG SKÄRMSTORLEK)
+   SEKTION 2: BRÖDTEXT (ÖKAD SPECIFICITET OCH FONTSTORLEK)
    ========================================================================== */
 .single-column-section {
   width: 100% !important;
@@ -174,19 +174,21 @@ html, body, section, main, .container {
 }
 
 .single-column-section .text-column {
-  max-width: 1100px !important; /* Tillåter raderna att sträcka ut sig ordentligt */
+  max-width: 1100px !important;
   width: 100% !important;
   box-sizing: border-box !important;
 }
 
-.text-column p {
+/* Ökad specificitet genom att inkludera hela vägen från sektionen */
+.single-column-section .text-column p,
+body .single-column-section p {
   font-family: 'PT Sans Narrow', sans-serif !important;
   font-weight: 500 !important;
-  font-size: 24px !important; /* Stor, läsbar brödtext */
-  line-height: 36px !important; /* 150% radavstånd för WCAG */
-  letter-spacing: 0.01em !important;
+  font-size: 32px !important; /* Rejält ökad storlek för att kompensera det smala typsnittet */
+  line-height: 48px !important; /* Proportionerligt radavstånd (1.5x) */
+  letter-spacing: 0.02em !important;
   color: #121212 !important;
-  margin-bottom: 1.8rem !important;
+  margin-bottom: 2rem !important;
 }
 
 /* ==========================================================================
