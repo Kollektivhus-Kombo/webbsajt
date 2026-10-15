@@ -184,6 +184,85 @@ html, body, section, main, .container {
 }
 
 /* ==========================================================================
+   SEKTION 3: VILL DU BO HÄR?
+   ========================================================================== */
+.join-section {
+  width: 90% !important;
+  max-width: 70% !important;
+  margin: 0 !important;
+  padding-top: 50px !important;
+  padding-bottom: 60px !important;
+  padding-left: 400px !important; /* Exakt samma padding som sektion 2 */
+  padding-right: 300px !important; /* Exakt samma padding som sektion 2 */
+  box-sizing: border-box !important;
+}
+
+/* Rubrik "VILL DU BO HÄR?" */
+.join-section .section-title {
+  font-family: 'PT Sans Narrow', sans-serif !important;
+  font-size: 50px !important;
+  font-weight: 700 !important;
+  color: #121212 !important;
+  margin-top: 0 !important;
+  margin-bottom: 30px !important;
+  text-transform: uppercase !important;
+}
+
+/* Flexbox som lägger bilden till vänster och texten till höger */
+.join-content {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: flex-start !important;
+  gap: 40px !important;
+  width: 100% !important;
+}
+
+/* Bildbehållare till vänster */
+.join-image {
+  flex: 0 0 45% !important;
+  max-width: 500px !important;
+}
+
+.join-image img {
+  width: 100% !important;
+  height: auto !important;
+  display: block !important;
+  object-fit: cover !important;
+  border-radius: 0px !important;
+}
+
+/* Textbehållare till höger */
+.join-text {
+  flex: 1 1 auto !important;
+}
+
+.join-text p,
+.join-text ul li {
+  font-family: 'PT Sans Narrow', sans-serif !important;
+  font-weight: 500 !important;
+  font-size: 40px !important;
+  line-height: 46px !important;
+  letter-spacing: 0.01em !important;
+  color: #121212 !important;
+  margin-bottom: 1.5rem !important;
+}
+
+.join-text ul {
+  padding-left: 1.5rem !important;
+  margin-bottom: 1.5rem !important;
+}
+
+.join-text ul li {
+  margin-bottom: 0.5rem !important;
+}
+
+/* "Bli medlem"-knappen placerad under texten */
+.join-text .hero-cta-btn {
+  margin-top: 15px !important;
+  display: inline-flex !important;
+}
+
+/* ==========================================================================
    FEATURED PRODUCT SECTION
    ========================================================================== */
 .featured-section {
@@ -235,9 +314,19 @@ footer .footer-inner {
 
   .hero-container,
   .single-column-section,
+  .join-section,
   .featured-section {
     padding-left: 100px !important;
     padding-right: 40px !important;
+  }
+
+  .join-content {
+    flex-direction: column !important;
+  }
+
+  .join-image {
+    max-width: 100% !important;
+    width: 100% !important;
   }
 
   .hero-title .hero-title-small {
@@ -292,6 +381,7 @@ footer .footer-inner {
   }
 
   .single-column-section,
+  .join-section,
   .featured-section {
     padding-left: 20px !important;
     padding-right: 20px !important;
