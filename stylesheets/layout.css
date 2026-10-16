@@ -200,11 +200,11 @@ html, body, section, main, .container {
 /* Rubrik "VILL DU BO HÄR?" - Ökat avstånd till bilden */
 .join-section .section-title {
   font-family: 'Merriweather', sans-serif !important;
-  font-size: 50px !important;
+  font-size: 60px !important;
   font-weight: 500 !important;
   color: #121212 !important;
   margin-top: 0 !important;
-  margin-bottom: 35px !important; /* Ökat avstånd nedåt mot bilden/texten */
+  margin-bottom: 45px !important; /* Ökat avstånd nedåt mot bilden/texten */
   text-transform: uppercase !important;
 }
 
