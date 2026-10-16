@@ -38,7 +38,7 @@ html, body, section, main, .container {
    NAVIGATION
    ========================================================================== */
 .site-nav {
-  background-color: #994006 !important;
+  background-color: #E1DDDD !important;
   position: sticky;
   top: 0;
   width: 100%;
@@ -55,8 +55,8 @@ html, body, section, main, .container {
   justify-content: space-between !important;
   padding-top: 14px !important;
   padding-bottom: 14px !important;
-  padding-left: 300px !important;
-  padding-right: 300px !important;
+  padding-left: 250px !important;
+  padding-right: 250px !important;
   height: 85px !important;
   box-sizing: border-box !important;
 }
@@ -76,20 +76,34 @@ html, body, section, main, .container {
   display: block !important;
 }
 
-.nav-links a {
-  color: #E1DDDD !important;
+.nav-links {
+  display: flex !important;
+  gap: 25px !important;
+  align-items: center !important;
 }
 
-/* ==========================================================================
-   INSIDAN-KNAPP (UPPDATERAD MED BRUN BAKGRUND OCH PIL)
-   ========================================================================== */
-.nav-cta .insidan-btn {
+.nav-links a {
+  color: #142539 !important;
+  text-decoration: none !important;
+}
+
+.nav-cta {
+  display: flex !important;
+  align-items: center !important;
+  margin-left: auto !important;
+}
+
+/* INSIDAN-KNAPP (SÄKERSTÄLLD BRUN BAKGRUND MED LJUS TEXT OCH PIL) */
+.nav-cta .insidan-btn,
+.site-nav .nav-cta a.insidan-btn,
+a.insidan-btn {
   background-color: #994006 !important;
   color: #E1DDDD !important;
   display: inline-flex !important;
   align-items: center !important;
+  justify-content: center !important;
   gap: 8px !important;
-  padding: 8px 18px !important;
+  padding: 10px 20px !important;
   border-radius: 4px !important;
   text-decoration: none !important;
   font-family: 'PT Sans Narrow', 'DM Sans', sans-serif !important;
@@ -98,7 +112,8 @@ html, body, section, main, .container {
   transition: transform 0.2s ease, opacity 0.2s ease !important;
 }
 
-.nav-cta .insidan-btn .arrow {
+.nav-cta .insidan-btn .arrow,
+.site-nav .nav-cta a.insidan-btn .arrow {
   color: #E1DDDD !important;
   font-size: 18px !important;
   font-weight: 700 !important;
@@ -109,7 +124,6 @@ html, body, section, main, .container {
   opacity: 0.9 !important;
   transform: translateY(-1px) !important;
 }
-
 
 /* ==========================================================================
    HERO SECTION & BLI MEDLEM-KNAPP
@@ -135,11 +149,11 @@ html, body, section, main, .container {
   margin: 0 !important;
   box-sizing: border-box !important;
   padding-left: 400px !important;
-  padding-right: 50px !important;
+  padding-right: 100px !important;
 }
 
 .hero-title {
-  font-family: 'Righteous', sans-serif !important;
+  font-family: 'DM Sans', sans-serif !important;
   font-weight: 1000 !important;
   color: #B72E58 !important;
   margin: 0 !important;
@@ -148,13 +162,13 @@ html, body, section, main, .container {
 
 .hero-title .hero-title-small {
   font-size: 150px !important;
-  line-height: 160px !important;
+  line-height: 120px !important;
   display: block !important;
 }
 
 .hero-title .hero-title-large {
-  font-size: 150px !important;
-  line-height: 160px !important;
+  font-size: 170px !important;
+  line-height: 180px !important;
   display: block !important;
 }
 
@@ -194,8 +208,8 @@ html, body, section, main, .container {
   margin: 0 !important;
   padding-top: 50px !important;
   padding-bottom: 0 !important;
-  padding-left: 400px !important; /* Startar i linje med headern */
-  padding-right: 300px !important; /* Avstånd till högerkanten */
+  padding-left: 400px !important;
+  padding-right: 300px !important;
   box-sizing: border-box !important;
 }
 
@@ -218,23 +232,21 @@ html, body, section, main, .container {
   margin: 0 !important;
   padding-top: 50px !important;
   padding-bottom: 90px !important;
-  padding-left: 400px !important; /* Exakt samma padding som sektion 2 */
-  padding-right: 100px !important; /* Exakt samma padding som sektion 2 */
+  padding-left: 400px !important;
+  padding-right: 100px !important;
   box-sizing: border-box !important;
 }
 
-/* Rubrik "VILL DU BO HÄR?" - Ökat avstånd till bilden */
 .join-section .section-title {
   font-family: 'Merriweather', sans-serif !important;
-  font-size: 60px !important;
+  font-size: 50px !important;
   font-weight: 500 !important;
   color: #121212 !important;
   margin-top: 0 !important;
-  margin-bottom: 45px !important; /* Ökat avstånd nedåt mot bilden/texten */
+  margin-bottom: 35px !important;
   text-transform: uppercase !important;
 }
 
-/* Flexbox med 50/50-fördelning */
 .join-content {
   display: flex !important;
   flex-direction: row !important;
@@ -243,7 +255,6 @@ html, body, section, main, .container {
   width: 100% !important;
 }
 
-/* Bildbehållare till vänster (50% bredd) */
 .join-image {
   flex: 0 0 calc(50% - 20px) !important;
   max-width: calc(50% - 20px) !important;
@@ -258,7 +269,6 @@ html, body, section, main, .container {
   border-radius: 0px !important;
 }
 
-/* Textbehållare till höger (50% bredd) */
 .join-text {
   flex: 0 0 calc(50% - 20px) !important;
   max-width: calc(50% - 20px) !important;
@@ -268,7 +278,7 @@ html, body, section, main, .container {
 .join-text p,
 .join-text ul li {
   font-family: 'Merriweather', sans-serif !important;
-  font-weight: 500 !important; /* Samma font-weight som sektion 2 */
+  font-weight: 500 !important;
   font-size: 25px !important;
   line-height: 35px !important;
   letter-spacing: 0.01em !important;
@@ -285,7 +295,6 @@ html, body, section, main, .container {
   margin-bottom: 0.5rem !important;
 }
 
-/* "Bli medlem"-knappen placerad under texten */
 .join-text .hero-cta-btn {
   margin-top: 15px !important;
   display: inline-flex !important;
@@ -314,16 +323,15 @@ html, body, section, main, .container {
   border-radius: 0px !important;
 }
 
-
 /* ==========================================================================
    FOOTER
    ========================================================================== */
 footer {
-  background-color: #994006 !important; /* Semikolon tillagt */
+  background-color: #994006 !important;
   padding-top: var(--space-lg) !important;
   padding-bottom: var(--space-lg) !important;
-  padding-left: 400px !important; /* Exakt samma vänsterpadding som sektion 2 & 3 */
-  padding-right: 300px !important; /* Exakt samma högerpadding */
+  padding-left: 400px !important;
+  padding-right: 300px !important;
   text-align: left !important;
   box-sizing: border-box !important;
   width: 100% !important;
@@ -338,7 +346,7 @@ footer p,
 footer a, 
 footer span, 
 footer li {
-  color: #E1DDDD !important; /* Ljusgrå/beige textfärg för god kontrast */
+  color: #E1DDDD !important;
 }
 
 footer .footer-inner {
@@ -355,6 +363,7 @@ footer .footer-inner {
     min-height: 450px !important;
   }
 
+  .site-nav .nav-inner,
   .hero-container,
   .single-column-section,
   .join-section,
