@@ -1,51 +1,43 @@
 <!DOCTYPE html>
 <html lang="sv">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kollektivhuset Kombo</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kollektivhuset Kombo</title>
+  <link rel="stylesheet" href="stylesheets/globals.css?v=10024" />
+  <link rel="stylesheet" href="stylesheets/navigation.css?v=10024" />
+  <link rel="stylesheet" href="stylesheets/layout.css?v=10024" />
+</head>
+<body>
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,800;1,9..40,800&family=PT+Sans+Narrow:wght@400;700&family=Source+Sans+3:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- Stylesheets med cache-buster (rad 17) -->
-    <link rel="stylesheet" href="stylesheets/globals.css?v=10002" />
-    <link rel="stylesheet" href="stylesheets/navigation.css?v=10007" />
-    <link rel="stylesheet" href="stylesheets/layout.css?v=10007" />
-  </head>
-
-  <body>
-    <!-- === NAVIGATION === -->
-    <nav class="site-nav">
-      <div class="nav-inner">
-        <a class="nav-logo" href="index.html">
-          <img src="media/kombo-logga2026-vit.png" alt="Kollektivhuset Kombo logotyp" />
+  <!-- NAVIGATION -->
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <div class="nav-logo">
+        <a href="index.html">
+          <img src="media/logo.png" alt="Kollektivhuset Kombo Logotyp" />
         </a>
+      </div>
 
-        <ul class="nav-links">
-          <li><a href="medlem.html">Medlemskap</a></li>
-          <li><a href="lagenheter.html">Lediga lägenheter</a></li>
-          <li><a href="stadgar.html">Stadgar</a></li>
-          <li><a href="kontakt.html">Kontakt</a></li>
-        </ul>
+      <div class="nav-links">
+        <a href="#medlemskap">Medlemskap</a>
+        <a href="#lediga-lagenheter">Lediga lägenheter</a>
+        <a href="#stadgar">Stadgar</a>
+        <a href="#kontakt">Kontakt</a>
+      </div>
 
       <div class="nav-cta">
-  <a href="insidan.html" class="insidan-btn">
-    INSIDAN <span class="arrow">↗</span>
-  </a>
-</div>
-          >
-        </div>
+        <a href="insidan.html" class="insidan-btn">
+          INSIDAN <span class="arrow">↗</span>
+        </a>
       </div>
-    </nav>
+    </div>
+  </nav>
 
-    <!-- === HERO === -->
-    <section class="hero-section">
+  <!-- MAIN CONTENT -->
+  <main>
+    <!-- HERO SECTION -->
+    <section class="container hero-section">
       <div class="hero-container">
         <h1 class="hero-title">
           <span class="hero-title-small">VÄLKOMMEN TILL</span>
@@ -57,71 +49,62 @@
       </div>
     </section>
 
-    <!-- === SECTION 2: OM HUSET (ENKEL SPALT - 720PX BREDA RADER) === -->
-    <section class="container">
-      <div class="single-column-section">
-        <div class="text-column">
+    <!-- SEKTION 2: BRÖDTEXT -->
+    <section class="container single-column-section">
+      <div class="text-column">
+        <p>
+          Vi som bor i KOMBO drivs av en tro på att kollektivhus är det bästa alternativet för ett hållbart boende ur ett både mänskligt och miljömässigt perspektiv.
+        </p>
+        <p>
+          Här hjälps vi åt med matlagning, städning och annat för att få vardagen att fungera så smidigt som möjligt. Utöver våra privata lägenheter har vi även tillgång till ca 300 - 400 kvm gemensamma utrymmen som storkök, matsal (med uteplats, lekplats och trädgård), allrum, aktivitetsrum, två gästrum, snickeri samt två stora takterrasser, inklusive ett terrassrum med pentry och toalett. Från terrasserna har vi en fantastisk utsikt i alla väderstreck från vårt hus på Hägerstensåsen. Vi har dessutom bara några steg till närmsta tunnelbana med vilken du är inne i stan på bara 10 minuter.
+        </p>
+        <p>
+          För att ta hand om det gemensamma är vi indelade i ett antal städ- och matlag som kräver deltagande högst ett par-tre gånger per termin så det är inte särskilt betungande. Utöver det finns arbets- och intressegrupper för allt från skötsel av våra uteplatser och trädgård till snickeri och körsång. Om du vill kan du gå med i någon av dessa, eller varför inte starta en ny med något som du är intresserad av?
+        </p>
+      </div>
+    </section>
+
+    <!-- SEKTION 3: VILL DU BO HÄR? -->
+    <section class="container join-section">
+      <h2 class="section-title">VILL DU BO HÄR?</h2>
+      <div class="join-content">
+        <!-- Vänster: Bild -->
+        <div class="join-image">
+          <img src="media/allrum" alt="Allrum i Kollektivhuset Kombo" />
+        </div>
+
+        <!-- Höger: Text & Knapp -->
+        <div class="join-text">
           <p>
-            Vi som bor i KOMBO drivs av en tro på att kollektivhus är det bästa alternativet för ett hållbart boende ur ett både mänskligt och miljömässigt perspektiv.
+            För att bo här krävs att du är medlem i vår förening. Men alla som är intresserade av att bo i vårt kollektivhus kan bli medlemmar i KOMBO – så kallad extern medlem.
           </p>
-          <p>
-            Här hjälps vi åt med matlagning, städning och annat för att få vardagen att fungera så smidigt som möjligt. Utöver våra privata lägenheter har vi även tillgång till ca 300 - 400 kvm gemensamma utrymmen som storkök, matsal (med uteplats, lekplats och trädgård), allrum, aktivitetsrum, två gästrum, snickeri samt två stora takterrasser, inklusive ett terrassrum med pentry och toalett. Från terrasserna har vi en fantastisk utsikt i alla väderstreck från vårt hus på Hägerstensåsen. Vi har dessutom bara några steg till närmsta tunnelbana med vilken du är inne i stan på bara 10 minuter.
-          </p>
-          <p>
-            För att ta hand om det gemensamma är vi indelade i ett antal städ- och matlag som kräver deltagande högst ett par-tre gånger per termin så det är inte särskilt betungande. Utöver det finns arbets- och intressegrupper för allt från skötsel av våra uteplatser och trädgård till snickeri och körsång. Om du vill kan du gå med i någon av dessa, eller varför inte starta en ny med något som du är intresserad av?
-          </p>
-          <p>
-            Deltagande i städ- och matlag är obligatoriskt för alla som bor här men att gå med i en arbets- eller intressegrupp är frivilligt och mycket uppskattat!
-          </p>
+          <p>Som extern medlem får du:</p>
+          <ul>
+            <li>information om när det finns lediga lägenheter i huset och kan ställa dig i vår interna bostadskö.</li>
+            <li>pröva på att vara med i ett matlag och laga och äta middag tillsammans med oss som bor i huset.</li>
+          </ul>
+          <p>Medlemskap i KOMBO kostar 200 kr per år.</p>
+
+          <a href="medlem.html" class="hero-cta-btn">
+            BLI MEDLEM <span class="arrow">↗</span>
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- === SECTION 3: VILL DU BO HÄR? === -->
-<section class="container join-section">
-  <h2 class="section-title">VILL DU BO HÄR?</h2>
-  <div class="join-content">
-    <!-- Vänster: Bild utan filändelse -->
-    <div class="join-image">
-      <img src="media/allrum" alt="Allrum i Kollektivhuset Kombo" />
-    </div>
-
-    <!-- Höger: Text & Knapp -->
-    <div class="join-text text-column">
-      <p>
-        För att bo här krävs att du är medlem i vår förening. Men alla som är intresserade av att bo i vårt kollektivhus kan bli medlemmar i KOMBO – så kallad extern medlem.
-      </p>
-      <p>Som extern medlem får du:</p>
-      <ul>
-        <li>information om när det finns lediga lägenheter i huset och kan ställa dig i vår interna bostadskö.</li>
-        <li>pröva på att vara med i ett matlag och laga och äta middag tillsammans med oss som bor i huset.</li>
-      </ul>
-      <p>Medlemskap i KOMBO kostar 200 kr per år.</p>
-
-      <a href="medlem.html" class="hero-cta-btn">
-        BLI MEDLEM <span class="arrow">↗</span>
-      </a>
-    </div>
-  </div>
-</section>
-
-    <!-- === SECTION 3: FEATURED PRODUCT === -->
+    <!-- FEATURED PRODUCT SECTION -->
     <section class="container featured-section">
-      <img src="media/Featured product.png" alt="Utvald produkt" />
+      <!-- Innehåll för utvalt element/galleri -->
     </section>
+  </main>
 
-    <!-- === FOOTER === -->
-    <footer>
-      <div class="footer-inner">
-        <h3>Kontakt</h3>
-        <p>
-          <a href="mailto:styrelse@kollektivhuskombo.se">styrelse@kollektivhuskombo.se</a>
-        </p>
-        <p>
-          Inteckningsvägen 100<br />
-          129 31 Hägersten
-        </p>
-      </div>
-    </footer>
-  </body>
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <h3>Kollektivhuset Kombo</h3>
+      <p>Adress och kontaktuppgifter här.</p>
+    </div>
+  </footer>
+
+</body>
 </html>
