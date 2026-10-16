@@ -197,18 +197,18 @@ html, body, section, main, .container {
   box-sizing: border-box !important;
 }
 
-/* Rubrik "VILL DU BO HÄR?" */
+/* Rubrik "VILL DU BO HÄR?" - Ökat avstånd till bilden */
 .join-section .section-title {
   font-family: 'Merriweather', sans-serif !important;
   font-size: 50px !important;
   font-weight: 500 !important;
   color: #121212 !important;
   margin-top: 0 !important;
-  margin-bottom: 0px !important;
+  margin-bottom: 35px !important; /* Ökat avstånd nedåt mot bilden/texten */
   text-transform: uppercase !important;
 }
 
-/* Flexbox som lägger bilden till vänster och texten till höger */
+/* Flexbox med 50/50-fördelning */
 .join-content {
   display: flex !important;
   flex-direction: row !important;
@@ -217,10 +217,11 @@ html, body, section, main, .container {
   width: 100% !important;
 }
 
-/* Bildbehållare till vänster */
+/* Bildbehållare till vänster (50% bredd) */
 .join-image {
-  flex: 0 0 70% !important;
-  max-width: 500px !important;
+  flex: 0 0 calc(50% - 20px) !important;
+  max-width: calc(50% - 20px) !important;
+  width: calc(50% - 20px) !important;
 }
 
 .join-image img {
@@ -231,9 +232,11 @@ html, body, section, main, .container {
   border-radius: 0px !important;
 }
 
-/* Textbehållare till höger */
+/* Textbehållare till höger (50% bredd) */
 .join-text {
-  flex: 1 1 auto !important;
+  flex: 0 0 calc(50% - 20px) !important;
+  max-width: calc(50% - 20px) !important;
+  width: calc(50% - 20px) !important;
 }
 
 .join-text p,
@@ -324,70 +327,7 @@ footer .footer-inner {
     flex-direction: column !important;
   }
 
-  .join-image {
+  .join-image,
+  .join-text {
     max-width: 100% !important;
-    width: 100% !important;
-  }
-
-  .hero-title .hero-title-small {
-    font-size: 60px !important;
-    line-height: 70px !important;
-  }
-
-  .hero-title .hero-title-large {
-    font-size: 80px !important;
-    line-height: 90px !important;
-  }
-
-  .hero-cta-btn {
-    font-size: 26px !important;
-  }
-}
-
-@media (max-width: 576px) {
-  .container {
-    padding: 0 20px !important;
-  }
-
-  .site-nav .nav-inner {
-    height: auto !important;
-    padding: 14px 20px !important;
-  }
-
-  .hero-section {
-    height: auto !important;
-    min-height: auto !important;
-    padding: 60px 20px !important;
-    background-size: cover !important;
-  }
-
-  .hero-container {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
-
-  .hero-title .hero-title-small {
-    font-size: 40px !important;
-    line-height: 48px !important;
-  }
-
-  .hero-title .hero-title-large {
-    font-size: 60px !important;
-    line-height: 68px !important;
-  }
-
-  .hero-cta-btn {
-    font-size: 24px !important;
-  }
-
-  .single-column-section,
-  .join-section,
-  .featured-section {
-    padding-left: 20px !important;
-    padding-right: 20px !important;
-  }
-
-  footer {
-    padding: var(--space-md) 20px !important;
-  }
-}
+    width: 100
