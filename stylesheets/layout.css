@@ -191,7 +191,7 @@ html, body, section, main, .container {
   max-width: 80% !important;
   margin: 0 !important;
   padding-top: 50px !important;
-  padding-bottom: 60px !important;
+  padding-bottom: 90px !important;
   padding-left: 400px !important; /* Exakt samma padding som sektion 2 */
   padding-right: 100px !important; /* Exakt samma padding som sektion 2 */
   box-sizing: border-box !important;
@@ -200,7 +200,7 @@ html, body, section, main, .container {
 /* Rubrik "VILL DU BO HÄR?" */
 .join-section .section-title {
   font-family: 'Merriweather', sans-serif !important;
-  font-size: 40px !important;
+  font-size: 50px !important;
   font-weight: 500 !important;
   color: #121212 !important;
   margin-top: 0 !important;
@@ -219,7 +219,7 @@ html, body, section, main, .container {
 
 /* Bildbehållare till vänster */
 .join-image {
-  flex: 0 0 50% !important;
+  flex: 0 0 70% !important;
   max-width: 500px !important;
 }
 
