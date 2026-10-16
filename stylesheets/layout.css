@@ -292,7 +292,7 @@ html, body, section, main, .container {
    FOOTER
    ========================================================================== */
 footer {
-  background-color: #214F2A;
+  background-color: #994006
   padding: var(--space-lg) 100px !important;
   text-align: left;
 }
