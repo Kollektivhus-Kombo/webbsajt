@@ -288,22 +288,36 @@ html, body, section, main, .container {
   border-radius: 0px !important;
 }
 
+
 /* ==========================================================================
    FOOTER
    ========================================================================== */
 footer {
-  background-color: #994006
-  padding: var(--space-lg) 100px !important;
-  text-align: left;
+  background-color: #994006 !important; /* Semikolon tillagt */
+  padding-top: var(--space-lg) !important;
+  padding-bottom: var(--space-lg) !important;
+  padding-left: 400px !important; /* Exakt samma vänsterpadding som sektion 2 & 3 */
+  padding-right: 300px !important; /* Exakt samma högerpadding */
+  text-align: left !important;
+  box-sizing: border-box !important;
+  width: 100% !important;
 }
 
-footer, footer h3, footer p, footer a {
-  color: #994006 !important;
+footer, 
+footer h1, 
+footer h2, 
+footer h3, 
+footer h4, 
+footer p, 
+footer a, 
+footer span, 
+footer li {
+  color: #E1DDDD !important; /* Ljusgrå/beige textfärg för god kontrast */
 }
 
 footer .footer-inner {
-  max-width: 100%;
-  margin: 0 auto;
+  max-width: 100% !important;
+  margin: 0 auto !important;
 }
 
 /* ==========================================================================
