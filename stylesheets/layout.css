@@ -187,8 +187,8 @@ html, body, section, main, .container {
    SEKTION 3: VILL DU BO HÄR?
    ========================================================================== */
 .join-section {
-  width: 90% !important;
-  max-width: 70% !important;
+  width: 100% !important;
+  max-width: 100% !important;
   margin: 0 !important;
   padding-top: 50px !important;
   padding-bottom: 60px !important;
@@ -199,8 +199,8 @@ html, body, section, main, .container {
 
 /* Rubrik "VILL DU BO HÄR?" */
 .join-section .section-title {
-  font-family: 'PT Sans Narrow', sans-serif !important;
-  font-size: 50px !important;
+  font-family: 'Merriweather', sans-serif !important;
+  font-size: 25px !important;
   font-weight: 700 !important;
   color: #121212 !important;
   margin-top: 0 !important;
@@ -219,7 +219,7 @@ html, body, section, main, .container {
 
 /* Bildbehållare till vänster */
 .join-image {
-  flex: 0 0 45% !important;
+  flex: 0 0 50% !important;
   max-width: 500px !important;
 }
 
