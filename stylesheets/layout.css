@@ -330,4 +330,69 @@ footer .footer-inner {
   .join-image,
   .join-text {
     max-width: 100% !important;
-    width: 100
+    width: 100% !important;
+    flex: 1 1 100% !important;
+  }
+
+  .hero-title .hero-title-small {
+    font-size: 60px !important;
+    line-height: 70px !important;
+  }
+
+  .hero-title .hero-title-large {
+    font-size: 80px !important;
+    line-height: 90px !important;
+  }
+
+  .hero-cta-btn {
+    font-size: 26px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 0 20px !important;
+  }
+
+  .site-nav .nav-inner {
+    height: auto !important;
+    padding: 14px 20px !important;
+  }
+
+  .hero-section {
+    height: auto !important;
+    min-height: auto !important;
+    padding: 60px 20px !important;
+    background-size: cover !important;
+  }
+
+  .hero-container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .hero-title .hero-title-small {
+    font-size: 40px !important;
+    line-height: 48px !important;
+  }
+
+  .hero-title .hero-title-large {
+    font-size: 60px !important;
+    line-height: 68px !important;
+  }
+
+  .hero-cta-btn {
+    font-size: 24px !important;
+  }
+
+  .single-column-section,
+  .join-section,
+  .featured-section {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  footer {
+    padding: var(--space-md) 20px !important;
+  }
+}
