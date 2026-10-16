@@ -55,8 +55,8 @@ html, body, section, main, .container {
   justify-content: space-between !important;
   padding-top: 14px !important;
   padding-bottom: 14px !important;
-  padding-left: 250px !important;
-  padding-right: 250px !important;
+  padding-left: 300px !important;
+  padding-right: 300px !important;
   height: 85px !important;
   box-sizing: border-box !important;
 }
