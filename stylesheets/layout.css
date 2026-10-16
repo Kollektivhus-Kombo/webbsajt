@@ -113,7 +113,7 @@ html, body, section, main, .container {
 }
 
 .hero-title {
-  font-family: 'DM Sans', sans-serif !important;
+  font-family: 'Righteous', sans-serif !important;
   font-weight: 1000 !important;
   color: #B72E58 !important;
   margin: 0 !important;
@@ -127,8 +127,8 @@ html, body, section, main, .container {
 }
 
 .hero-title .hero-title-large {
-  font-size: 170px !important;
-  line-height: 180px !important;
+  font-size: 150px !important;
+  line-height: 120px !important;
   display: block !important;
 }
 
