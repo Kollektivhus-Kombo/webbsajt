@@ -193,7 +193,7 @@ html, body, section, main, .container {
   padding-top: 50px !important;
   padding-bottom: 60px !important;
   padding-left: 400px !important; /* Exakt samma padding som sektion 2 */
-  padding-right: 300px !important; /* Exakt samma padding som sektion 2 */
+  padding-right: 100px !important; /* Exakt samma padding som sektion 2 */
   box-sizing: border-box !important;
 }
 
@@ -239,7 +239,7 @@ html, body, section, main, .container {
 .join-text p,
 .join-text ul li {
   font-family: 'Merriweather', sans-serif !important;
-  font-weight: 500 !important;
+  font-weight: 250 !important;
   font-size: 25px !important;
   line-height: 35px !important;
   letter-spacing: 0.01em !important;
