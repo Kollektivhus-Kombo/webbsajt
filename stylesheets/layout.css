@@ -80,12 +80,36 @@ html, body, section, main, .container {
   color: #E1DDDD !important;
 }
 
-<div class="nav-cta">
-  <a href="insidan.html" class="insidan-btn">
-    INSIDAN <span class="arrow">↗</span>
-  </a>
-</div>
+/* ==========================================================================
+   INSIDAN-KNAPP (UPPDATERAD MED BRUN BAKGRUND OCH PIL)
+   ========================================================================== */
+.nav-cta .insidan-btn {
+  background-color: #994006 !important;
+  color: #E1DDDD !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 8px 18px !important;
+  border-radius: 4px !important;
+  text-decoration: none !important;
+  font-family: 'PT Sans Narrow', 'DM Sans', sans-serif !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  transition: transform 0.2s ease, opacity 0.2s ease !important;
 }
+
+.nav-cta .insidan-btn .arrow {
+  color: #E1DDDD !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  line-height: 1 !important;
+}
+
+.nav-cta .insidan-btn:hover {
+  opacity: 0.9 !important;
+  transform: translateY(-1px) !important;
+}
+
 
 /* ==========================================================================
    HERO SECTION & BLI MEDLEM-KNAPP
