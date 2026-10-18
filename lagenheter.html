@@ -10,13 +10,13 @@
       rel="stylesheet"
     />
 
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="stylesheets/globals.css" />
-    <link rel="stylesheet" href="stylesheets/navigation.css" />
-    <link rel="stylesheet" href="stylesheets/layout.css" />
+    <!-- Stylesheets (med cache-busting) -->
+    <link rel="stylesheet" href="stylesheets/globals.css?v=10026" />
+    <link rel="stylesheet" href="stylesheets/navigation.css?v=10026" />
+    <link rel="stylesheet" href="stylesheets/layout.css?v=10026" />
 
     <style>
-      /* === FOOTER STYLES (Samma som på index.html) === */
+      /* === FOOTER STYLES === */
       footer, 
       footer h3, 
       footer p, 
@@ -31,63 +31,60 @@
     <nav class="site-nav">
       <div class="nav-inner">
         <a class="nav-logo" href="index.html">
-          <img src="media/kombo-logga2026-vit.png" alt="Kollektivhuset Kombo logotyp" />
+          <img src="media/logo.png" alt="Kollektivhuset Kombo logotyp" />
         </a>
 
-        <ul class="nav-links">
-          <li><a href="medlem.html">Medlemskap</a></li>
-          <li><a href="lagenheter.html">Kombos lägenheter</a></li>
-          <li><a href="stadgar.html">Stadgar</a></li>
-          <li><a href="kontakt.html">Kontakt</a></li>
-        </ul>
+        <div class="nav-links">
+          <a href="medlem.html">Medlemskap</a>
+          <a href="lagenheter.html">Kombos lägenheter</a>
+          <a href="stadgar.html">Stadgar</a>
+          <a href="kontakt.html">Kontakt</a>
+        </div>
 
         <div class="nav-cta">
           <a
             href="https://insidan.kollektivhuskombo.se/"
             target="_blank"
             class="insidan-btn"
-            >Insidan</a
+            >INSIDAN <span class="arrow">↗</span></a
           >
         </div>
       </div>
     </nav>
 
-    <!-- Innehåll -->
-    <main class="container" style="margin-top: var(--space-sm);">
-
+    <!-- === MAIN CONTENT === -->
+    <main>
       <!-- Om lägenheterna section -->
-      <section class="section" style="margin-top: var(--space-lg);">
-        <div class="text">
-          <h2 style="margin-bottom: var(--space-md);">Om Kombos lägenheter</h2>
-          <div style="font-size: 1rem;">
-            <p>I kollektivhuset finns totalt 44 lägenheter i olika storlekar:</p>
-            <ul style="margin-bottom: var(--space-sm); padding-left: 1.5rem;">
-              <li>Ettor, 26,5 kvm, ca 9100 kr.</li>
-              <li>Ett och ett halvt rum, 45,5 kvm, ca 12 600 kr.</li>
-              <li>Tvåor, 60 kvm, ca 14 900 kr.</li>
-              <li>Treor, 73,5 kvm, ca 17 500 kr.</li>
-              <li>Fyror, 90,5 kvm, ca 20 500 kr.</li>
-            </ul>
-            <p>Alla lägenheter har stora balkonger på ca 7m². Familjebostäder tillämpar så kallade presumtionshyror på nyproduktion.</p>
-            <p>Titta gärna i <a href="media/bofaktablad.pdf" target="_blank" style="text-decoration: underline; color: var(--primary-color);">Bofaktabladet</a> för att se planlösningar för samtliga lägenheter.</p>
-          </div>
-        </div>
-        <div style="width: 35%; min-width: 300px; border-radius: 4px 4px 35px 4px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-          <img src="media/image-15-17.png" alt="Interiör" />
+      <section class="container single-column-section">
+        <div class="text-column">
+          <h2 class="section-title">Om Kombos lägenheter</h2>
+          <p>I kollektivhuset finns totalt 44 lägenheter i olika storlekar:</p>
+          <ul>
+            <li>Ettor, 26,5 kvm, ca 9100 kr.</li>
+            <li>Ett och ett halvt rum, 45,5 kvm, ca 12 600 kr.</li>
+            <li>Tvåor, 60 kvm, ca 14 900 kr.</li>
+            <li>Treor, 73,5 kvm, ca 17 500 kr.</li>
+            <li>Fyror, 90,5 kvm, ca 20 500 kr.</li>
+          </ul>
+          <p>
+            Alla lägenheter har stora balkonger på ca 7m². Familjebostäder tillämpar så kallade presumtionshyror på nyproduktion.
+          </p>
+          <p>
+            Titta gärna i <a href="media/bofaktablad.pdf" target="_blank" style="text-decoration: underline; color: #994006;">Bofaktabladet</a> för att se planlösningar för samtliga lägenheter.
+          </p>
         </div>
       </section>
 
       <!-- Gemensamma utrymmen section -->
-      <section class="section reverse">
-        <div class="text">
-          <h2 style="margin-bottom: var(--space-md);">Mer än bara en lägenhet</h2>
-          <div style="font-size: 1rem;">
-            <p>När du bor i Kombo får du, förutom din lägenhet, tillgång till alla våra fantastiska gemensamma utrymmen!</p>
-            <p>Ta ditt morgonkaffe i solen på takterrass med morgonsol och en AW på den med eftermiddagssol, låt dina barn leka av sig i lekrummet efter maten. Vi har även två gästrum du kan boka åt vänner och familj som kommer långväga.</p>
-          </div>
-        </div>
-        <div style="width: 35%; min-width: 300px; border-radius: 35px 0 0 0; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-          <img src="media/kombo terass.jpg" alt="Takterrass" />
+      <section class="container single-column-section" style="padding-top: 20px !important;">
+        <div class="text-column">
+          <h2 class="section-title">Mer än bara en lägenhet</h2>
+          <p>
+            När du bor i Kombo får du, förutom din lägenhet, tillgång till alla våra fantastiska gemensamma utrymmen!
+          </p>
+          <p>
+            Ta ditt morgonkaffe i solen på takterrass med morgonsol och en AW på den med eftermiddagssol, låt dina barn leka av sig i lekrummet efter maten. Vi har även två gästrum du kan boka åt vänner och familj som kommer långväga.
+          </p>
         </div>
       </section>
     </main>
