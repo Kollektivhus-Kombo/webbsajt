@@ -11,11 +11,16 @@
     />
 
     <!-- Stylesheets (med cache-busting) -->
-    <link rel="stylesheet" href="stylesheets/globals.css?v=10026" />
-    <link rel="stylesheet" href="stylesheets/navigation.css?v=10026" />
-    <link rel="stylesheet" href="stylesheets/layout.css?v=10026" />
+    <link rel="stylesheet" href="stylesheets/globals.css?v=10027" />
+    <link rel="stylesheet" href="stylesheets/navigation.css?v=10027" />
+    <link rel="stylesheet" href="stylesheets/layout.css?v=10027" />
 
     <style>
+      /* Specifik bakgrundsbild för lägenhetssidans hero */
+      .hero-section.lagenheter-hero {
+        background-image: url('../media/kollektivhuset_kvällssol.png') !important;
+      }
+
       /* === FOOTER STYLES === */
       footer, 
       footer h3, 
@@ -54,6 +59,15 @@
 
     <!-- === MAIN CONTENT === -->
     <main>
+      <!-- HERO SECTION -->
+      <section class="container hero-section lagenheter-hero">
+        <div class="hero-container">
+          <h1 class="hero-title">
+            <span class="hero-title-large">LÄGENHETER I KOMBO</span>
+          </h1>
+        </div>
+      </section>
+
       <!-- Om lägenheterna section -->
       <section class="container single-column-section">
         <div class="text-column">
