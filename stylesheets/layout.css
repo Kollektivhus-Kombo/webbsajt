@@ -38,7 +38,7 @@ html, body, section, main, .container {
    NAVIGATION
    ========================================================================== */
 .site-nav {
-  background-color: #E1DDDD !important;
+  background-color: #994006 !important;
   position: sticky;
   top: 0;
   width: 100%;
@@ -83,7 +83,7 @@ html, body, section, main, .container {
 }
 
 .nav-links a {
-  color: #142539 !important;
+  color: #E1DDDD !important;
   text-decoration: none !important;
 }
 
@@ -115,7 +115,7 @@ a.insidan-btn {
 .nav-cta .insidan-btn .arrow,
 .site-nav .nav-cta a.insidan-btn .arrow {
   color: #E1DDDD !important;
-  font-size: 18px !important;
+  font-size: 20px !important;
   font-weight: 700 !important;
   line-height: 1 !important;
 }
