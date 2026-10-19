@@ -1,61 +1,38 @@
 <!DOCTYPE html>
 <html lang="sv">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kollektivhuset Kombo | Kombos lägenheter</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kollektivhuset Kombo</title>
+  <link rel="stylesheet" href="stylesheets/globals.css?v=10024" />
+  <link rel="stylesheet" href="stylesheets/navigation.css?v=10024" />
+  <link rel="stylesheet" href="stylesheets/layout.css?v=10024" />
+</head>
+<body>
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- Stylesheets (med cache-busting) -->
-    <link rel="stylesheet" href="stylesheets/globals.css?v=10030" />
-    <link rel="stylesheet" href="stylesheets/navigation.css?v=10030" />
-    <link rel="stylesheet" href="stylesheets/layout.css?v=10030" />
-
-    <style>
-      /* Specifik bakgrundsbild för lägenhetssidans hero */
-      .hero-section.lagenheter-hero {
-        background-image: url('../media/HEADERlägenheter.png') !important;
-      }
-
-      /* === FOOTER STYLES === */
-      footer, 
-      footer h3, 
-      footer p, 
-      footer a {
-        color: #E1DDDD !important;
-      }
-    </style>
-  </head>
-
-  <body>
-    <!-- === NAVIGATION === -->
-    <nav class="site-nav">
-      <div class="nav-inner">
-        <a class="nav-logo" href="index.html">
-          <img src="media/logo.png" alt="Kollektivhuset Kombo logotyp" />
+  <!-- NAVIGATION -->
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <div class="nav-logo">
+        <a href="index.html">
+          <img src="media/kombo-logga2026-vit.png" alt="Kollektivhuset Kombo Logotyp" />
         </a>
-
-        <div class="nav-links">
-          <a href="medlem.html">Medlemskap</a>
-          <a href="lagenheter.html">Kombos lägenheter</a>
-          <a href="stadgar.html">Stadgar</a>
-          <a href="kontakt.html">Kontakt</a>
-        </div>
-
-        <div class="nav-cta">
-          <a
-            href="https://insidan.kollektivhuskombo.se/"
-            target="_blank"
-            class="insidan-btn"
-            >INSIDAN <span class="arrow">↗</span></a
-          >
-        </div>
       </div>
-    </nav>
+
+    <ul class="nav-links">
+  <li><a href="medlem.html">Medlemskap</a></li>
+  <li><a href="lagenheter.html">Kombos lägenheter</a></li>
+  <li><a href="stadgar.html">Stadgar</a></li>
+  <li><a href="kontakt.html">Kontakt</a></li>
+</ul>
+
+      <div class="nav-cta">
+        <a href="insidan.html" class="insidan-btn">
+          INSIDAN <span class="arrow">↗</span>
+        </a>
+      </div>
+    </div>
+  </nav>
 
     <!-- === MAIN CONTENT === -->
     <main>
@@ -64,69 +41,63 @@
         <div class="hero-container">
           <h1 class="hero-title">
             <span class="hero-title-small">LÄGENHETER I</span>
-            <span class="hero-title-large">KOMBO</span>
+            <span class="hero-title-small">KOMBO</span>
           </h1>
         </div>
       </section>
 
-      <!-- SEKTION 1: OM KOMBOS LÄGENHETER -->
-      <section class="container join-section">
-        <h2 class="section-title">OM KOMBOS LÄGENHETER</h2>
-        <div class="join-content">
-          <!-- Vänster: Bild -->
-          <div class="join-image">
-            <img src="media/image-15-17.png" alt="Interiör i kombos lägenheter" />
-          </div>
 
-          <!-- Höger: Text & Knapp -->
-          <div class="join-text">
-            <p>I kollektivhuset finns totalt 44 lägenheter i olika storlekar:</p>
-            <ul>
-              <li>Ettor, 26,5 kvm, ca 9100 kr.</li>
-              <li>Ett och ett halvt rum, 45,5 kvm, ca 12 600 kr.</li>
-              <li>Tvåor, 60 kvm, ca 14 900 kr.</li>
-              <li>Treor, 73,5 kvm, ca 17 500 kr.</li>
-              <li>Fyror, 90,5 kvm, ca 20 500 kr.</li>
-            </ul>
-            <p>
-              Alla lägenheter har stora balkonger på ca 7m². Familjebostäder tillämpar så kallade presumtionshyror på nyproduktion.
-            </p>
-            <p>
-              Titta gärna i <a href="media/bofaktablad.pdf" target="_blank" style="text-decoration: underline; color: #994006;">Bofaktabladet</a> för att se planlösningar för samtliga lägenheter.
-            </p>
+    <!-- SEKTION 2: BRÖDTEXT -->
+    <section class="container single-column-section">
+      <div class="text-column">
+        <p>
+       I kollektivhuset finns totalt 44 lägenheter i olika storlekar:
+        </p>
+Ettor, 26,5 kvm, ca 9100 kr.
+Ett och ett halvt rum, 45,5 kvm, ca 12 600 kr.
+Tvåor, 60 kvm, ca 14 900 kr.
+Treor, 73,5 kvm, ca 17 500 kr.
+Fyror, 90,5 kvm, ca 20 500 kr.
+        <p>
+        </p>
+        
+        <p>
+kallade presumtionshyror på nyproduktion.
+Titta gärna i Bofaktabladet för att se planlösningar för samtliga lägenheter.
 
-            <a href="medlem.html" class="hero-cta-btn">
-              BLI MEDLEM <span class="arrow">↗</span>
-            </a>
-          </div>
+När du bor i Kombo får du, förutom din lägenhet, tillgång till alla våra fantastiska gemensamma utrymmen!
+Ta ditt morgonkaffe i solen på takterrass med morgonsol och en AW på den med eftermiddagssol, låt dina barn leka av sig i lekrummet efter maten. Vi har även två gästrum du kan boka åt vänner och familj som kommer långväga.        </p>
+      </div>
+    </section>
+
+    <!-- SEKTION 3: VILL DU BO HÄR? -->
+    <section class="container join-section">
+      <h2 class="section-title">VILL DU BO HÄR?</h2>
+      <div class="join-content">
+        <!-- Vänster: Bild -->
+        <div class="join-image">
+          <img src="media/allrum" alt="Allrum i Kollektivhuset Kombo" />
         </div>
-      </section>
 
-      <!-- SEKTION 2: MER ÄN BARA EN LÄGENHET -->
-      <section class="container join-section" style="padding-top: 0px !important;">
-        <h2 class="section-title">MER ÄN BARA EN LÄGENHET</h2>
-        <div class="join-content">
-          <!-- Vänster: Bild -->
-          <div class="join-image">
-            <img src="media/kombo terass.jpg" alt="Takterrass i Kollektivhuset Kombo" />
-          </div>
+        <!-- Höger: Text & Knapp -->
+        <div class="join-text">
+          <p>
+            För att bo här krävs att du är medlem i vår förening. Men alla som är intresserade av att bo i vårt kollektivhus kan bli medlemmar i KOMBO – så kallad extern medlem.
+          </p>
+          <p>Som extern medlem får du:</p>
+          <ul>
+            <li>information om när det finns lediga lägenheter i huset och kan ställa dig i vår interna bostadskö.</li>
+            <li>pröva på att vara med i ett matlag och laga och äta middag tillsammans med oss som bor i huset.</li>
+          </ul>
+          <p>Medlemskap i KOMBO kostar 200 kr per år.</p>
 
-          <!-- Höger: Text & Knapp -->
-          <div class="join-text">
-            <p>
-              När du bor i Kombo får du, förutom din lägenhet, tillgång till alla våra fantastiska gemensamma utrymmen!
-            </p>
-            <p>
-              Ta ditt morgonkaffe i solen på takterrass med morgonsol och en AW på den med eftermiddagssol, låt dina barn leka av sig i lekrummet efter maten. Vi har även två gästrum du kan boka åt vänner och familj som kommer långväga.
-            </p>
-
-            <a href="medlem.html" class="hero-cta-btn">
-              BLI MEDLEM <span class="arrow">↗</span>
-            </a>
-          </div>
+          <a href="medlem.html" class="hero-cta-btn">
+            BLI MEDLEM <span class="arrow">↗</span>
+          </a>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
+
 
     <!-- === FOOTER === -->
     <footer>
