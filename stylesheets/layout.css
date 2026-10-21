@@ -1,6 +1,7 @@
 /* ==========================================================================
    GLOBAL LAYOUT & CONTAINER OVERRIDES (Figma High-Fidelity Specs)
    ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
 
 /* Bakgrundsfärg på hela sidan (#E9E0D7) */
 html, body, section, main, .container {
