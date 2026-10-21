@@ -154,11 +154,21 @@ a.insidan-btn {
 }
 
 .hero-title {
-  font-family: 'Fredoka', Fredoka !important;
+  font-family: 'Fredoka', sans-serif !important;
+  font-size: 100px !important;
+  line-height: 110px !important;
+  letter-spacing: -0.02em !important; /* -2% motsvarar -0.02em */
   font-weight: 500 !important;
-  color: #B72E58 !important;
+  
+  /* Textfyllning (Fill: #FFFFFF med 20% opacitet) */
+  color: rgba(255, 255, 255, 0.2) !important;
+  
+  /* Kontur (Stroke: 5px i färgen #B72E58) */
+  -webkit-text-stroke: 5px #B72E58 !important;
+  
   margin: 0 !important;
   text-align: left !important;
+}
 }
 
 .hero-title .hero-title-small {
